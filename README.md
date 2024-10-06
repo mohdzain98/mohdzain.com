@@ -10,7 +10,7 @@
 Contains several projects done
 
 ## Blogs Page
-Contains blog written by zain on several topics and thesis written on <strong>Color Images Cryptosystem</strong> <a href='https://mohdzain.com/blogs'>read here</a>
+Contains blog written by zain on several topics and thesis written on <strong>Color Images Cryptosystem</strong> <a href='https://mohdzain.com/blogs' target='_blank'>read here</a>
 
 ## Vitae 
 The CV page
