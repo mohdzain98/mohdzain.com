@@ -10,7 +10,7 @@ const Footer = () => {
                 <p className='text-center' style={{fontSize:'14px'}}> &copy; 2024 Mohd Zain</p>
             </div>
             <div>
-                <Link to='https://mohdzain.com' target='_blank' rel='noopener' style={{textDecoration:'none', color:'white'}}><p className='text-center' style={{fontSize:'14px'}}>
+                <Link to='https://old.mohdzain.com' target='_blank' rel='noopener' style={{textDecoration:'none', color:'white'}}><p className='text-center' style={{fontSize:'14px'}}>
                 Old Site <i class="fa-solid fa-arrow-up-right-from-square fa-xs ms-1"></i></p></Link>
             </div>
             <div>

@@ -3,7 +3,7 @@ const projects =[
     {
         Name:'Docschat',
         Desc:'Docschat is an innovative project designed to revolutionize how users interact with documents. By leveraging the power of Large Language Models (LLMs), Docschat enables intuitive, conversational interactions with Documents. Additionally it contains content retrieval tools.',
-        Techs:['MERN Stack,','Python Flask,','Redis'],
+        Techs:['LangChain,','MERN Stack,','Python Flask,','Redis'],
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://docschat.in',
         href:'Live App'
@@ -11,7 +11,7 @@ const projects =[
     {
         Name:'SurfMind',
         Desc:'SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit',
-        Techs:['React,','Python Flask'],
+        Techs:['LangChain,','React,','Python Flask'],
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj',
         href:'Add To Chrome'
@@ -38,7 +38,7 @@ const allprojects = [
     {
         Name:'Docschat',
         Desc:'Docschat is an innovative project designed to revolutionize how users interact with documents. By leveraging the power of Large Language Models (LLMs), Docschat enables intuitive, conversational interactions with Documents. Additionally it contains content retrieval tools.',
-        Techs:['MERN Stack,','Python Flask,','Redis'],
+        Techs:['LangChain,','MERN Stack,','Python Flask,','Redis'],
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://docschat.in',
         img:'docschat.jpg',
@@ -47,7 +47,7 @@ const allprojects = [
     {
         Name:'SurfMind',
         Desc:'SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit',
-        Techs:['React,','Python Flask'],
+        Techs:['LangChain,','React,','Python Flask'],
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj',
         img:'surfmind.jpg',

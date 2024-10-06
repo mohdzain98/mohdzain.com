@@ -17,7 +17,7 @@ const References = () => {
                 <p className='justified-ref'>X. Chai, X. Fu, Z. Gan, Y. Lu, Y. Chen, A color image cryptosystem based on dynamic DNA encryption and chaos, Signal Process. 155 (2019) 44–62, <Link to=' https://doi.org/10.1016/j.sigpro.2018.09.029. '> https://doi.org/10.1016/j.sigpro.2018.09.029. </Link></p>
             </li>
             <li>
-                <p className='justified-ref'>Abolfazl Yaghouti Niyat & Mohammad Hossein Moattar, Color image encryption based on hybrid chaotic system and DNA sequences<Link to='https://link.springer.com/article/10.1007/s11042-019-08247-z'>https://link.springer.com/article/10.1007/s11042-019-08247-z</Link></p>
+                <p className='justified-ref'>Abolfazl Yaghouti Niyat & Mohammad Hossein Moattar, Color image encryption based on hybrid chaotic system and DNA sequences<Link to='https://link.springer.com/article/10.1007/s11042-019-08247-z'><br/>https://link.springer.com/article/10.1007/s11042-019-08247-z</Link></p>
             </li>
             <li>
                 <p className='justified-ref'>X. Chai, J. Bi, Z. Gan, X. Liu, Y. Zhang, Y. Chen, Color image compression and encryption scheme based on compressive sensing and double random encryption strategy, Signal Process. 176 (2020) 107684. <Link to='http://dx.doi.org/10.1016/j.sigpro.2020.107684'>http://dx.doi.org/10.1016/j.sigpro.2020.107684</Link></p>
@@ -45,7 +45,7 @@ const References = () => {
             </li><li>
                 <p className='justified-ref'> Y. Wu, J.P. Noonan, S. Agaian, et al., NPCR and UACI randomness tests for image encryption, Cyber J.: Multidiscip. J. Sci. Technol. J. Sel. Areas Telecommun. (JSAT) 1 (2) (2011) 31–38. <Link to='http://refhub.elsevier.com/S0923-5965(21)00173-9/sb26'>http://refhub.elsevier.com/S0923-5965(21)00173-9/sb26</Link></p>
             </li><li>
-                <p className='justified-ref'>] X. Chai, H. Wu, Z. Gan, D. Han, Y. Zhang, Y. Chen, An efficient approach for encrypting double color images into a visually meaningful cipher image using 2D compressive sensing, Inform. Sci. 556 (2021) 305–340. <Link to='http://dx.doi.org/10.1016/j.ins.2020.10.007'>http://dx.doi.org/10.1016/j.ins.2020.10.007</Link></p>
+                <p className='justified-ref'>X. Chai, H. Wu, Z. Gan, D. Han, Y. Zhang, Y. Chen, An efficient approach for encrypting double color images into a visually meaningful cipher image using 2D compressive sensing, Inform. Sci. 556 (2021) 305–340. <Link to='http://dx.doi.org/10.1016/j.ins.2020.10.007'>http://dx.doi.org/10.1016/j.ins.2020.10.007</Link></p>
             </li><li>
                 <p className='justified-ref'>X. Wang, L. Feng, H. Zhao, Fast image encryption algorithm based on parallel computing system, Inform. Sci. 486 (2019) 340– 358, <Link to=' http://dx.doi.org/10.1016/ j.ins.2019.02.049.'> http://dx.doi.org/10.1016/ j.ins.2019.02.049.</Link></p>
             </li><li>

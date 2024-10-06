@@ -114,7 +114,7 @@ const Results = () => {
                         {`\\[ \\varepsilon(S) = \\sum_{i=1}^{n} p_i \\cdot \\log \\left( \\frac{1}{p_i} \\right) \\]`}
                         </MathJax>
                     </MathJaxContext>
-                    Entropy of plain images is low, but that of cipher images should be close to 8 high bits/symbol. Table demonstrates that the crypted images produced by the suggested technique have an entropy larger than 7.9950 , indicating a high degree of randomness.
+                    Entropy of plain images is low, but that of cipher images should be close to 8 high bits/symbol. Table demonstrates that the crypted images produced by the suggested technique have an entropy larger than <span style={{fontWeight:'bold'}}>7.9950</span> , indicating a high degree of randomness.
                     </p>
                 </div>
                 <div className='col-md-5 col-xs-12'>

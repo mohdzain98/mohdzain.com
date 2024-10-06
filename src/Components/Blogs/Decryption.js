@@ -28,7 +28,7 @@ const Decryption = () => {
                     <li>
                     <span className="text-decoration-underline"> Reverse Operator (⊗R)</span> : For further steps of decryption we reverse the operator ⊗ in decryption algorithm as reverse operator which satisfy every condition and property of operator defined in paper<ScrollLink to='references' smooth={true} duration={50} style={{cursor:'pointer',color:'blue'}}>[9]</ScrollLink>.
                     <MathJax dynamic inline={false} style={{fontSize:'13px'}}>
-                    {`\\[ (a \\otimes^R b) = \\left( (a + 1) * \\text{modinv}(b + 1, p) \\right) \\mod p - 1 \\]`}
+                    {`\\[ (a \\otimes^R b) = \\left((a + 1)* \\text{modinv}(b + 1, p) \\right)mod p - 1 \\]`}
                     </MathJax>
                     </li>
                     <li>
