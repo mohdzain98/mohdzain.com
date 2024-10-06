@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MathJaxContext, MathJax } from 'better-react-mathjax'
 import "../Styling/Blogs.css";
 import Encryption from "./Encryption";
@@ -10,6 +10,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import Conclusion from "./Conclusion";
 
 const CimagesCrypt = () => {
+  const navigate = useNavigate()
   const [active, setActive] = useState('enc')
   const [encr, setEncr] = useState(true)
   useEffect(() => {
@@ -19,9 +20,12 @@ const CimagesCrypt = () => {
     setEncr(true)
     setActive('enc')
   }
-const dec = ()=>{
+  const dec = ()=>{
     setEncr(false)
     setActive('dec')
+  }
+  const handleClick = ()=>{
+    navigate('/')
   }
   return (
     <div id="cic" style={{ padding: "2%" }}>
@@ -178,7 +182,7 @@ const dec = ()=>{
 
             <p className="justified mt-4">After obtaining required values we can proceed for Chaiotic Map</p>
             <MathJaxContext>
-              <p className="justified">These equations are used to construct the 2D MCCM as specified in [11]</p>
+              <p className="justified">These equations are used to construct the 2D MCCM as specified in <ScrollLink to='references' smooth={true} duration={50} style={{cursor:'pointer',color:'blue'}}>[11]</ScrollLink></p>
               <MathJax dynamic inline={false} style={{fontSize:'13px'}}>
                 {`\\[ X_{n+1} = \\arctan\\left(\\frac{q}{10 \\cdot p \\cdot y_n} + \\tan(p \\cdot \\pi \\cdot x_n)\\right) \\]`}
                 {`\\[ Y_{n+1} = \\arctan\\left(\\frac{q}{p \\cdot x_n} + \\tan(10 \\cdot p \\cdot \\pi \\cdot y_n)\\right) \\]`}
@@ -242,7 +246,14 @@ const dec = ()=>{
           <div id="footnotes">
             <h3>Foot Notes</h3>
             <hr style={{width:'50%'}}/>
-            <p>This blogs shows limited content, for full content get Thesis</p>
+            <p style={{textAlign:'justify'}}>This work was co-authored by  
+               <span className="mx-1" style={{cursor:'pointer'}} onClick={handleClick}><u>Mohd Zain</u></span>
+               and 
+               <Link to='https://www.linkedin.com/in/chiranjeev-bhaya-6b8603189' target="_blank" rel="noopener" style={{color:'black'}} className="mx-1">Chiranjeev Bhaya</Link>, 
+               whose invaluable assistance helped shape the development of the algorithm. The project was carried out under the supervision of 
+               <Link to='https://people.iitism.ac.in/~abhay/' target="_blank" rel="noopener" style={{color:'black'}} className="mx-1">Prof. Abhay Kumar Singh</Link>,
+               whose guidance and expertise greatly contributed to the success of this research.</p>
+            <p className="text-muted">Wan't to lear more ? Get Thesis...</p>
             <div style={{display:'flex', flexWrap:'wrap',justifyContent:'center',gap:'15px'}}>
               <Link to='https://github.com/mohdzain98/Design_of_DNA_based_Color_Images_Cryptosystem' target="_blank" rel="noopener"><button className="btn btn-dark ftd"><i className="fa-brands fa-github"></i> Code Notebook</button></Link>
               <a href={require("../../Assets/DDBCICSRP.pdf")} download="CIC Research Paper">

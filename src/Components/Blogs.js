@@ -14,11 +14,11 @@ const Blogs = () => {
             </center>
             <hr/>
             <div className='my-4' id='top'>
-            <ul style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',gap:'5%'}}>
-                <li><p className='topic'>Machine Learning</p></li>
-                <li><p className='topic'>Deep Learning</p></li>
-                <li><p className='topic'>Web Development</p></li>
-                <li><p className='topic'>Large Language Models</p></li>
+            <ul style={{display:'flex',justifyContent:'center',alignItems:'center',rowGap:'0px',columnGap:'40px',flexWrap:'wrap',padding:'0'}}>
+                <li><p className='topic me-2'>Machine Learning</p></li>
+                <li><p className='topic me-2'>Deep Learning</p></li>
+                <li><p className='topic me-2'>Web Development</p></li>
+                <li><p className='topic '>Large Language Models</p></li>
             </ul>
             </div>
             <hr/>

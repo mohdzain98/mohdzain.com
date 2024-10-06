@@ -10,6 +10,8 @@ const Home = (props) => {
   useEffect(() => {
     document.title = "Mohd Zain"; 
   }, [])
+
+
   return (
     <>
     <Intro setProgress={props.setProgress} />
