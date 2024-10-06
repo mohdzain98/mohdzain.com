@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+ *{
+    font-family: 'Nunito',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* transition: .2s linear; */
+}
+
+section{
+    padding: 2rem 9% ;
+}
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    /* min-height: 100vh; */
+    align-items: center;
+    justify-content: center; 
+    background-image:radial-gradient(50% 70% at top left,#abcfca 55%,#8df0d9 92%, transparent 90%),
+    radial-gradient(70% 50% at bottom right,#8df0d9 55%,#abcfca 92%, transparent 90%);
+    background-repeat:no-repeat;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+}
+
+.home .content .name{
+    padding-top: -10rem;
+    font-size: 3rem;
+    margin-top: 5%;
+    color:  #2a201c;
+}
+.home .content .title{
+    font-size: 1.6rem;
+    /* color: #fff; */
+    color: #000;
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.home .content .description{
+    /* color: #fff; */
+    color : #000;
+    font-weight: normal;
+    line-height: 1.8;
+    padding: 1.1rem 0;
+}
+.home .content .title span{
+    display: inline;
+    color: #d3ad7f;
+}
+.home .content .description span{
+    color: #ec2308;
+}
+
+.home .image img{
+    transition: transform 0.3s ease;
+    border: 10px solid white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+.home .image img:hover {
+    transform: scale(1.2);
+}
+
+#typing span{
+    color: black;
+    display: inline;
+}
+#typing .typing-cursor {
+    display: inline-block;
+    width: 2px; /* Slim vertical bar as cursor */
+    height: 0.1em;
+    background-color: black;
+    animation: blink 0.7s infinite;
+    margin-left: 4px;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+

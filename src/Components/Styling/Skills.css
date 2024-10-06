@@ -1,0 +1,30 @@
+.skill{
+    background-color: beige;
+}
+
+
+.skill .stype{
+    display: flex;
+    height: 80px;
+    border-left: solid 2px;
+    align-items: flex-start;
+    top: 50%;
+}
+
+.skill .head{
+    margin-top: 7%;
+}
+.skill .lname{
+    border-radius: 12px;
+    border-color: #b5b5ba;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #000000;
+    padding: 1px 5px 1px 5px;
+    margin-top: 20px;
+}

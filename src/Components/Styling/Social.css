@@ -1,0 +1,36 @@
+#soc{
+    background: #F0FFFF;
+}
+
+#soc .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#soc .social a{
+    margin:5px 10px 0 10px;
+    color: #fff;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 28px;
+    text-align: center;
+    transform: all 0.2s ease-out;
+    vertical-align: bottom;  
+    padding-top: 6px;
+}
+
+#soc .social a.insta{
+    background-color: #dc3545;
+}
+
+#soc .social a.blue{
+    background-color: #0d6efd;
+}
+
+#soc .social a.black{
+    background-color: #333;
+}

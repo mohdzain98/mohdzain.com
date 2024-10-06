@@ -1,0 +1,47 @@
+#blogs .head{
+    color: black;
+}
+#blogs .head:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+#blogs #top ul li{
+    color: grey;
+}
+#blogs .topic{
+    color: maroon;
+    font-weight: lighter;
+}
+
+#blogs .inf{
+    font-size: 15px;
+}
+
+#cic .justified{
+    text-align: justify;
+    margin:auto;
+    font-size: 15px;
+}
+#cic .justified-ref{
+    text-align: justify;
+    margin:auto;
+    font-size: 13px;
+}
+#cryptol li{
+    margin-bottom: 15px;
+}
+#cic .ftd .fts{
+    transition: background-color 0.3s, transform 0.5s;
+}
+
+#cic .ftd:hover{
+    background-color: aliceblue;
+    color: black;
+    scale: 1.05;
+}
+#cic .fts:hover{
+    background-color: blue;
+    color:azure;
+    scale: 1.05;
+}
