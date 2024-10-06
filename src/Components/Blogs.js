@@ -24,7 +24,7 @@ const Blogs = () => {
             <hr/>
             <div style={{margin:'50px 0'}}>
                 <h4><Link to='/blogs/color-images-cryptosystem' style={{textDecoration:'none'}} className='head'>
-                Design of DNA based Color Images Cryptosystem and Its Security Analysis</Link><i className="fas fa-external-link-alt fa-xs ms-2" style={{color:'blue'}}></i></h4>
+                Design of DNA based Color Images Cryptosystem and Its Security Analysis<i className="fas fa-external-link-alt fa-xs ms-2" style={{color:'blue'}}></i></Link></h4>
                 <ul className='mt-4'>
                     <li><p style={{color:'black'}}>DNA based color images refer to the encoding of the color images into DNA sequences called as DNA computing. By encoding information into DNA strands, scientists can create vast amounts of data storage in a space smaller than a single grain of sand.</p></li>
                     <li><p style={{color:'black'}}>Instead of representing images using traditional pixel values the image data is converted into a sequence of DNA nucleotides (Adenine-A, Thymine-T, Cytosine-C and Guanine-G). The process of converting color images's pixel values into a DNA sequence involve mapping the pixel value of a image to specific sequence of DNA bases.</p></li>
