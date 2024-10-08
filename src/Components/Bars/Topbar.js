@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const Topbar = () => {
-  const [progress, setProgress] = useState(5)
+  const [progress, setProgress] = useState(0)
   useEffect(()=>{
     const handleScroll = ()=>{
       const windowHeigth = window.innerHeight;

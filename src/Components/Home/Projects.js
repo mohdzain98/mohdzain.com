@@ -28,7 +28,7 @@ const Projects = () => {
                                         return(<li className='list-inline-item' style={{fontSize:'14px'}}>{e}</li>)
                                     })}
                                 </ul>
-                                <p className='text-muted' style={{fontSize:'12px'}}>{item.Desc}</p>
+                                <p className='text-muted' style={{fontSize:'12px',textAlign:'justify'}}>{item.Desc}</p>
                                 <p className='d-inline'>Tools:  </p>
                                 <ul className='d-inline list-inline'>
                                     {item.Tools.map((f)=>{

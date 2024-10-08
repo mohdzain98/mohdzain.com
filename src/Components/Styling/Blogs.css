@@ -17,6 +17,15 @@
 #blogs .inf{
     font-size: 15px;
 }
+#blogs .justified{
+    text-align: justify;
+    margin:auto;
+    font-size: 15px;
+}
+
+#blogs #aboutBlog li{
+    margin: 10px 0;
+}
 
 #cic .justified{
     text-align: justify;

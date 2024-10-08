@@ -27,7 +27,7 @@ const Allprojects = () => {
                 {allprojects.map((item)=>{
                     return(
                         <div className='col-md-4 col-xs-12 my-4'>
-                        <div class="card h-100" style={{width: "18rem;"}}>
+                        <div class="card h-100 p-1" style={{width: "17rem;"}}>
                             <AnimatedOnScroll animationIn="animate__animated animate__zoomIn">
                             <img src={require(`../Assets/Projects/${item.img}`)} class="card-img-top" alt="..."  height={170} />
                             </AnimatedOnScroll>
@@ -39,7 +39,7 @@ const Allprojects = () => {
                                         return(<li className='list-inline-item' style={{fontSize:'13px'}}>{e}</li>)
                                     })}
                                 </ul>
-                                <p class="card-text text-muted" style={{fontSize:'13px'}}>{item.Desc}</p>
+                                <p class="card-text text-muted" style={{fontSize:'13px', textAlign:'justify'}}>{item.Desc}</p>
                                 <p style={{marginBottom:'-1%'}}>Tools: </p>
                                 <ul className='list-inline'>
                                     {item.Tools.map((f)=>{

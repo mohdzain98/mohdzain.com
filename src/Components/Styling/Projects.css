@@ -25,7 +25,7 @@
 #projects .box:hover{
     border:solid 1px;
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #projects .tline{
