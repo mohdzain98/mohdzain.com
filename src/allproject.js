@@ -6,7 +6,8 @@ const projects =[
         Techs:['LangChain,','MERN Stack,','Python Flask,','Redis'],
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://docschat.in',
-        href:'Live App'
+        href:'Live App',
+        details:[]
     },
     {
         Name:'SurfMind',
@@ -14,7 +15,8 @@ const projects =[
         Techs:['LangChain,','React,','Python Flask'],
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj',
-        href:'Add To Chrome'
+        href:'Add To Chrome',
+        details:[]
     },
     {
         Name:'Car Sales Prediction',
@@ -22,7 +24,8 @@ const projects =[
         Techs:['Python,','Pandas,','Sklearn'],
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Car_Sales_Prediciton',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'Football Player Market Value Prediction',
@@ -30,7 +33,8 @@ const projects =[
         Techs:['Python,','Pandas,','Sklearn,','Keras'],
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Football-Player-s-Market_value_Prediction',
-        href:'Github'
+        href:'Github',
+        details:[]
     }
 ]
 
@@ -42,7 +46,8 @@ const allprojects = [
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://docschat.in',
         img:'docschat.jpg',
-        href:'Live App'
+        href:'Live App',
+        details:[]
     },
     {
         Name:'SurfMind',
@@ -51,7 +56,8 @@ const allprojects = [
         Tools:['VS Code','Jupyter NB','PowerShell','Git'],
         Live:'https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj',
         img:'surfmind.jpg',
-        href:'Add To Chrome'
+        href:'Add To Chrome',
+        details:[]
     },
     {
         Name:'Car Sales Prediction',
@@ -60,7 +66,8 @@ const allprojects = [
         Tools:['Jupyter NB',"Git"],
         Live:'https://github.com/mohdzain98/Car_Sales_Prediciton',
         img:'csp.png',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'Football Player Market Value Prediction',
@@ -69,7 +76,8 @@ const allprojects = [
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Football-Player-s-Market_value_Prediction',
         img:'fpmp.jpg',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'NewsLookUp',
@@ -78,7 +86,8 @@ const allprojects = [
         Tools:['VS Code','Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/newslookup',
         img:'nlookup.jpg',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'Skin Cancer Detection',
@@ -87,7 +96,8 @@ const allprojects = [
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Skin_Cancer_Detection',
         img:'scd.webp',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'Air Pollution Prediction',
@@ -96,7 +106,8 @@ const allprojects = [
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Air_Pollution_Prediction',
         img:'app.png',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'Retail Price Optimization',
@@ -105,7 +116,8 @@ const allprojects = [
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Retail_price_optimization',
         img:'rpo.webp',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'NoteSwift',
@@ -114,7 +126,8 @@ const allprojects = [
         Tools:['VS Code','MongoDB Atlas','Vercel'],
         Live:'https://noteswift-pi.vercel.app/',
         img:'noteswift.webp',
-        href:'Live App'
+        href:'Live App',
+        details:[]
     },
     {
         Name:'TechBooks',
@@ -123,7 +136,8 @@ const allprojects = [
         Tools:['Netbeans','Git','AWS','phpmyadmin'],
         Live:'https://github.com/mohdzain98/techbooks',
         img:'techbooks.jpg',
-        href:'Github'
+        href:'Github',
+        details:[]
     },
     {
         Name:'BracketsBay',
@@ -132,7 +146,8 @@ const allprojects = [
         Tools:['Sublime Text','Git','phpmyadmin'],
         Live:'https://github.com/mohdzain98/bracketsBay',
         img:'bb.jpg',
-        href:'Github'
+        href:'Github',
+        details:[]
     }
 ]
 
