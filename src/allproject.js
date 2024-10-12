@@ -25,7 +25,7 @@ const projects =[
         Tools:['Jupyter NB','Git'],
         Live:'https://github.com/mohdzain98/Car_Sales_Prediciton',
         href:'Github',
-        details:[]
+        details:['cars_sales_prediction.html']
     },
     {
         Name:'Football Player Market Value Prediction',
@@ -67,7 +67,7 @@ const allprojects = [
         Live:'https://github.com/mohdzain98/Car_Sales_Prediciton',
         img:'csp.png',
         href:'Github',
-        details:[]
+        details:['cars_sales_prediction.html']
     },
     {
         Name:'Football Player Market Value Prediction',
@@ -77,7 +77,7 @@ const allprojects = [
         Live:'https://github.com/mohdzain98/Football-Player-s-Market_value_Prediction',
         img:'fpmp.jpg',
         href:'Github',
-        details:[]
+        details:['fpmvp.html']
     },
     {
         Name:'NewsLookUp',
@@ -97,7 +97,7 @@ const allprojects = [
         Live:'https://github.com/mohdzain98/Skin_Cancer_Detection',
         img:'scd.webp',
         href:'Github',
-        details:[]
+        details:['skin_cancer_detection.html']
     },
     {
         Name:'Air Pollution Prediction',
@@ -107,7 +107,7 @@ const allprojects = [
         Live:'https://github.com/mohdzain98/Air_Pollution_Prediction',
         img:'app.png',
         href:'Github',
-        details:[]
+        details:['air_pollution_prediction.html']
     },
     {
         Name:'Retail Price Optimization',
@@ -117,7 +117,7 @@ const allprojects = [
         Live:'https://github.com/mohdzain98/Retail_price_optimization',
         img:'rpo.webp',
         href:'Github',
-        details:[]
+        details:['retail_price_optimization.html']
     },
     {
         Name:'NoteSwift',
