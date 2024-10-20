@@ -227,7 +227,7 @@ const allprojects = [
         button:[
             {
                 name:'Demo',
-                link:'demo/techbooks/',
+                link:'https://mohdzain.com/projects/demo/techbooks/',
                 icon:'fa-solid fa-arrow-pointer',
                 bg:'success',
                 ref:'_self'
@@ -250,7 +250,7 @@ const allprojects = [
         button:[
             {
                 name:'Demo',
-                link:'demo/bracketsbay/',
+                link:'https://mohdzain.com/projects/demo/bracketsbay/',
                 icon:'fa-solid fa-arrow-pointer',
                 bg:'success',
                 ref:'_self'
