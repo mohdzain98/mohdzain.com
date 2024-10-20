@@ -48,8 +48,11 @@ const Allprojects = () => {
                                 </ul>
                                 </AnimatedOnScroll> 
                                 <div className='foot mt-auto'>
-                                    {item.details.length > 0?<Link to={`https://old.mohdzain.com/projects/${item.details[0]}`} className='btn btn-primary btn-sm me-2'><i class="fa-solid fa-circle-info me-2"></i>Details</Link>:''}
-                                    <Link to={item.Live} target='_blank' rel='noopener' className={`btn ${item.href==='Github'?'btn-dark':'btn-danger'} btn-sm `} style={{bottom:'0'}}><i className={`${item.href==='Github'?"fa-brands fa-github":"fas fa-stream"} me-2`}></i>{item.href}</Link>
+                                    {item.button.map((val)=>{
+                                        return(
+                                            <Link to={val.link} className={`btn btn-${val.bg} btn-sm ms-2`} style={{bottom:'0'}} target={val.ref}><i className={`${val.icon} me-2`}></i>{val.name}</Link>
+                                        )
+                                    })}
                                 </div>
                             </div>
                             
