@@ -230,7 +230,7 @@ const allprojects = [
                 link:'https://mohdzain.com/projects/demo/techbooks/',
                 icon:'fa-solid fa-arrow-pointer',
                 bg:'success',
-                ref:'_self'
+                ref:'_blank'
             },
             {
                 name:'Github',
@@ -253,7 +253,7 @@ const allprojects = [
                 link:'https://mohdzain.com/projects/demo/bracketsbay/',
                 icon:'fa-solid fa-arrow-pointer',
                 bg:'success',
-                ref:'_self'
+                ref:'_blank'
             },
             {
                 name:'Github',
