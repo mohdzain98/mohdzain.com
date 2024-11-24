@@ -8,11 +8,13 @@ import Results from "./Results";
 import References from "./References";
 import { Link as ScrollLink } from "react-scroll";
 import Conclusion from "./Conclusion";
+import { useMediaQuery } from "react-responsive";
 
 const CimagesCrypt = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState("enc");
   const [encr, setEncr] = useState(true);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   useEffect(() => {
     document.title = "cic | blogs | Mohd Zain";
   }, []);
@@ -28,7 +30,7 @@ const CimagesCrypt = () => {
     navigate("/");
   };
   return (
-    <div id="cic" className="p-5">
+    <div id="cic" className={`${isTabletOrMobile ? "p-1" : "p-5"}`}>
       <div className="container p-4">
         <div className="my-2">
           <nav aria-label="breadcrumb">
