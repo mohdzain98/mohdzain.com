@@ -1,6 +1,15 @@
 // eslint-disable-next-line
 const projects = [
   {
+    Name: "Curlmin",
+    Desc: "Curlmin is an advanced URL shortening and management platform designed to make sharing links faster, smarter, and more efficient. Whether you need shortened URLs, QR codes, barcodes, or Curltags, Curlmin provides a seamless solution for individuals.",
+    Techs: ["MERN Stack,", "Nginx,", "MySQL"],
+    Tools: ["Git"],
+    Live: "https://curlmin.com",
+    href: "Live App",
+    details: [],
+  },
+  {
     Name: "Docschat",
     Desc: "Docschat is an innovative project designed to revolutionize how users interact with documents. By leveraging the power of Large Language Models (LLMs), Docschat enables intuitive, conversational interactions with Documents. Additionally it contains content retrieval tools.",
     Techs: ["LangChain,", "MERN Stack,", "Python Flask,", "Nginx,", "Redis"],
@@ -27,18 +36,25 @@ const projects = [
     href: "Add To Chrome",
     details: [],
   },
-  {
-    Name: "Car Sales Prediction",
-    Desc: "Employed a Machine Learning approach to forecast car sales using Multivariate Linear Regression with Stochastic Gradient Descent (SGD) and L2 Regularization. Updated model weights iteratively with SGD to minimize the loss function and applied L2 Regularization to prevent overfitting by penalizing large coefficients",
-    Techs: ["Python,", "Pandas,", "Sklearn"],
-    Tools: ["Jupyter NB", "Git"],
-    Live: "https://github.com/mohdzain98/Car_Sales_Prediciton",
-    href: "Github",
-    details: ["cars_sales_prediction.html"],
-  },
 ];
 
 const allprojects = [
+  {
+    Name: "Curlmin",
+    Desc: "Curlmin is an advanced URL shortening and management platform designed to make sharing links faster, smarter, and more efficient. Whether you need shortened URLs, QR codes, barcodes, or Curltags, Curlmin provides a seamless solution for individuals.",
+    Techs: ["MERN Stack,", "Nginx,", "MySQL"],
+    Tools: ["VS code", "PowerShell", "Git"],
+    img: "curlmin.png",
+    button: [
+      {
+        name: "Live App",
+        link: "https://curlmin.com",
+        icon: "fas fa-stream",
+        bg: "danger",
+        ref: "_blank",
+      },
+    ],
+  },
   {
     Name: "Docschat",
     Desc: "Docschat is an innovative project designed to revolutionize how users interact with documents. By leveraging the power of Large Language Models (LLMs), Docschat enables intuitive, conversational interactions with Documents. Additionally it contains content retrieval tools.",
@@ -243,13 +259,6 @@ const allprojects = [
     img: "techbooks.jpg",
     button: [
       {
-        name: "Demo",
-        link: "https://mohdzain.com/projects/demo/techbooks/",
-        icon: "fa-solid fa-arrow-pointer",
-        bg: "success",
-        ref: "_blank",
-      },
-      {
         name: "Github",
         link: "https://github.com/mohdzain98/techbooks",
         icon: "fa-brands fa-github",
@@ -265,13 +274,6 @@ const allprojects = [
     Tools: ["Sublime Text", "Git", "phpmyadmin"],
     img: "bb.jpg",
     button: [
-      {
-        name: "Demo",
-        link: "https://mohdzain.com/projects/demo/bracketsbay/",
-        icon: "fa-solid fa-arrow-pointer",
-        bg: "success",
-        ref: "_blank",
-      },
       {
         name: "Github",
         link: "https://github.com/mohdzain98/bracketsbay",
