@@ -1,6 +1,6 @@
 # Mohd Zain Portfolio
 ## Home Page
- - Intro
+ - About Me
  - Career Path
  - Skills
  - Projects
