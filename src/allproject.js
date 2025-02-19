@@ -72,6 +72,23 @@ const allprojects = [
     ],
   },
   {
+    Name: "Curlmin Chrome Extension",
+    Desc: " Curlmin Chrome Extension simplifies URL shortening with a single click. Quickly generate short links and save them to your CurlMin account for easy access. Fast, seamless, and efficient!",
+    Techs: ["React,", "Nginx"],
+    Tools: ["VS Code", "PowerShell", "Git"],
+    Live: "https://chromewebstore.google.com/detail/curlmin/nfgjgdpidaejbpnohadipbbikljiebbc",
+    img: "curlmin_ce.jpg",
+    button: [
+      {
+        name: "Add To Chrome",
+        link: "https://chromewebstore.google.com/detail/curlmin/nfgjgdpidaejbpnohadipbbikljiebbc",
+        icon: "fas fa-stream",
+        bg: "danger",
+        ref: "_blank",
+      },
+    ],
+  },
+  {
     Name: "LexiClick",
     Desc: " Elevate your reading experience with LexiClick, the intelligent Chrome extension that brings instant access to word definitions, examples, synonyms, and antonyms with just a double-click, plus AI-driven search for deeper insights",
     Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
