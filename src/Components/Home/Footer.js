@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-center" style={{ fontSize: "14px" }}>
-            Updated on : 15 Feb, 2025 V: 2.2
+            Updated on : 17 May, 2025 V: 2.3
           </p>
         </div>
       </div>
