@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b09a8ac.css",
-    "main.js": "/static/js/main.e5d7d8bb.js",
+    "main.css": "/static/css/main.d2992779.css",
+    "main.js": "/static/js/main.8de750e3.js",
     "static/js/453.5e13eb6b.chunk.js": "/static/js/453.5e13eb6b.chunk.js",
     "static/media/DDBCICST.pdf": "/static/media/DDBCICST.aed745bf19d1db7e07bd.pdf",
     "static/media/DDBCICSRP.pdf": "/static/media/DDBCICSRP.952ca350b0fe8f5cdd01.pdf",
     "static/media/rpo.webp": "/static/media/rpo.5180afcbf72ef386768e.webp",
     "static/media/curlmin.png": "/static/media/curlmin.eebb73ef94433e324c05.png",
-    "static/media/zain.JPG": "/static/media/zain.148a5f222dc95f0e4669.JPG",
     "static/media/csp.png": "/static/media/csp.7965a58cf9f45cdf76ae.png",
     "static/media/nlookup.jpg": "/static/media/nlookup.16d69e55c4224e16e84e.jpg",
     "static/media/app.png": "/static/media/app.1f356a41a9c0bd4470a6.png",
     "static/media/instant.png": "/static/media/instant.a21a19af9db20f81b80b.png",
+    "static/media/zain_updated.jpeg": "/static/media/zain_updated.e0e2ada699eff54d8156.jpeg",
     "static/media/fpmp.jpg": "/static/media/fpmp.4a5183896f1596829aab.jpg",
     "static/media/docschat.jpg": "/static/media/docschat.b9dfb6d023a029c7f872.jpg",
     "static/media/coer.jpg": "/static/media/coer.46aa5a0fe8189ef564c0.jpg",
@@ -43,12 +43,12 @@
     "static/media/spiral.jpg": "/static/media/spiral.9e3e6d473358f7ef03b5.jpg",
     "static/media/noteswift.webp": "/static/media/noteswift.9530e57fe5142a9bb0e9.webp",
     "index.html": "/index.html",
-    "main.4b09a8ac.css.map": "/static/css/main.4b09a8ac.css.map",
-    "main.e5d7d8bb.js.map": "/static/js/main.e5d7d8bb.js.map",
+    "main.d2992779.css.map": "/static/css/main.d2992779.css.map",
+    "main.8de750e3.js.map": "/static/js/main.8de750e3.js.map",
     "453.5e13eb6b.chunk.js.map": "/static/js/453.5e13eb6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b09a8ac.css",
-    "static/js/main.e5d7d8bb.js"
+    "static/css/main.d2992779.css",
+    "static/js/main.8de750e3.js"
   ]
 }
