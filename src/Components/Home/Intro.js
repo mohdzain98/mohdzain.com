@@ -17,11 +17,11 @@ const Intro = () => {
           <center>
             <div className="image flex-grow-1">
               <img
-                src={require("../../Assets/zain.JPG")}
+                src={require("../../Assets/zain_updated.jpeg")}
                 alt="mohdzain"
                 width={isTabletOrMobile ? 230 : 330}
                 height={isTabletOrMobile ? 230 : 330}
-                style={{ borderRadius: "50%" }}
+                style={{ borderRadius: "10%" }}
                 className="align-self-center"
               />
             </div>
@@ -59,13 +59,28 @@ const Intro = () => {
                   </p>
                   <p style={{ textAlign: "justify" }}>
                     {" "}
-                    I am working on revenue growth management econometrics,
-                    leveraging advanced statistical modeling and machine
-                    learning techniques to analyze pricing, demand elasticity,
-                    and market dynamics. My work involves developing econometric
-                    models, including LOESS, GAM, and mixed models, to drive
-                    data-driven decision-making for revenue and profit
-                    maximization.
+                    <ul>
+                      <li>
+                        Currently Building an interactive AI assistant to
+                        support lending institutions in evaluating loan
+                        approvals, borrower risk and fairness compliance. The
+                        assistant leverages LangGraph powered multi agent
+                        orchestration with LLM and provides visual insights via
+                        Streamlit
+                      </li>
+                      <li>
+                        Previously worked on descriptive analytics for Hanes PPA
+                        where we created advanced excel and python
+                        visualizations to analyze multi brand sales and pricing
+                        data.
+                      </li>
+                      <li>
+                        Prior to that, developed econometric models for revenue
+                        growth management, focusing on price elasticity and
+                        promotional effectiveness. Subsequently, performed price
+                        optimization using NLopt.
+                      </li>
+                    </ul>
                   </p>
                 </div>
                 <div className="ps-1">
