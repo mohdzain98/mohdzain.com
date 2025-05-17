@@ -18,8 +18,12 @@ const Head = () => {
           text="Data Science Trainee at Sigmoid Analytics"
           speed={50}
         />
-        <div className="description-text">
-          <p>Developing Econometrics models for revenue growth management</p>
+        <div className="description-text mt-4">
+          <p>Building a Multi-Agent AI assistant loan origination tool </p>
+          <p style={{ fontSize: "18px", marginTop: "-15px" }}>
+            Previously worked on descriptive analytics for Hanes PPA. Prior to
+            that Developed Econometrics models for revenue growth management
+          </p>
         </div>
         <div className="cta-buttons">
           {/* <Link
