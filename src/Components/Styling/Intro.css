@@ -233,7 +233,7 @@ section {
 
 .home .image img {
     transition: transform 0.3s ease;
-    border: 10px solid white;
+    border: 5px solid white;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
