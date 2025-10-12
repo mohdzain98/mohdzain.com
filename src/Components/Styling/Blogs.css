@@ -1,56 +1,63 @@
-#blogs .head{
+#blogs .head {
     color: black;
 }
-#blogs .head:hover{
+
+#blogs .head:hover {
     cursor: pointer;
     color: blue;
 }
 
-#blogs #top ul li{
+#blogs #top ul li {
     color: grey;
 }
-#blogs .topic{
+
+#blogs .topic {
     color: maroon;
     font-weight: lighter;
 }
 
-#blogs .inf{
-    font-size: 15px;
-}
-#blogs .justified{
-    text-align: justify;
-    margin:auto;
-    font-size: 15px;
+#blogs .inf {
+    font-size: 16px;
 }
 
-#blogs #aboutBlog li{
+#blogs .justified {
+    text-align: justify;
+    margin: auto;
+    font-size: 16px;
+}
+
+#blogs #aboutBlog li {
     margin: 10px 0;
 }
 
-#cic .justified{
+#cic .justified {
     text-align: justify;
-    margin:auto;
-    font-size: 15px;
+    margin: auto;
+    font-size: 16px;
 }
-#cic .justified-ref{
+
+#cic .justified-ref {
     text-align: justify;
-    margin:auto;
+    margin: auto;
     font-size: 13px;
 }
-#cryptol li{
-    margin-bottom: 15px;
+
+#cryptol li {
+    margin-bottom: 16px;
 }
-#cic .ftd .fts{
+
+#cic .ftd .fts {
     transition: background-color 0.3s, transform 0.5s;
 }
 
-#cic .ftd:hover{
+#cic .ftd:hover {
     background-color: aliceblue;
     color: black;
     scale: 1.05;
 }
-#cic .fts:hover{
+
+#cic .fts:hover {
     background-color: blue;
-    color:azure;
+    color: azure;
     scale: 1.05;
 }
