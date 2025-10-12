@@ -1,9 +1,9 @@
-.skill{
-    background-color: beige;
+.skill {
+    background-color: rgb(244, 238, 216);
 }
 
 
-.skill .stype{
+.skill .stype {
     display: flex;
     height: 80px;
     border-left: solid 2px;
@@ -11,10 +11,11 @@
     top: 50%;
 }
 
-.skill .head{
+.skill .head {
     margin-top: 7%;
 }
-.skill .lname{
+
+.skill .lname {
     border-radius: 12px;
     border-color: #b5b5ba;
     border-width: 1px;

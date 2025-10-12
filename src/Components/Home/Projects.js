@@ -12,7 +12,11 @@ const Projects = () => {
     window.open(`${href}`, "_blank");
   };
   return (
-    <div id="projects" className="p-4">
+    <div
+      id="projects"
+      className="p-4"
+      style={{ backgroundColor: " whitesmoke" }}
+    >
       <div className="container" style={{ marginTop: "1%" }}>
         <center>
           <div style={{ marginBottom: "50px" }}>
