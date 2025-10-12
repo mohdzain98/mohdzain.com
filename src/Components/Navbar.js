@@ -153,7 +153,7 @@ const Navbar = () => {
                 className={`nav-link ${
                   location.pathname === "/cv" ? "active" : ""
                 }`}
-                to="https://drive.google.com/file/d/1scIZdgKjrY5Rqy3HBUkR6FVJ9JTE3Ebu/view?usp=sharing"
+                to="https://drive.google.com/file/d/1vZUVvbGi8euOLnYXMRL75VORWNsQT0Py/view?usp=sharing"
                 target="_blank"
                 rel="noopener"
                 onClick={rollNavBack}
