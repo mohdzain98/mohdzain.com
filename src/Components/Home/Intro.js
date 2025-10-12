@@ -17,7 +17,7 @@ const Intro = () => {
           <center>
             <div className="image flex-grow-1">
               <img
-                src={require("../../Assets/zain_updated.jpeg")}
+                src={require("../../Assets/mypic.jpeg")}
                 alt="mohdzain"
                 width={isTabletOrMobile ? 230 : 330}
                 height={isTabletOrMobile ? 230 : 330}
@@ -46,9 +46,8 @@ const Intro = () => {
                   <p className="fw-bold" style={{ marginBottom: "1px" }}>
                     Sigmoid | Data Science Trainee{" "}
                     <span
-                      className={`float-end ${
-                        isTabletOrMobile ? "invisible" : ""
-                      }`}
+                      className={`float-end ${isTabletOrMobile ? "invisible" : ""
+                        }`}
                       style={{ fontSize: "14px" }}
                     >
                       Jan 2025 - present
@@ -61,12 +60,10 @@ const Intro = () => {
                     {" "}
                     <ul>
                       <li>
-                        Currently Building an interactive AI assistant to
-                        support lending institutions in evaluating loan
-                        approvals, borrower risk and fairness compliance. The
-                        assistant leverages LangGraph powered multi agent
-                        orchestration with LLM and provides visual insights via
-                        Streamlit
+                        Currently working on Gen AI projects, focusing on tracing LLMs and text-to-image generation.
+                      </li>
+                      <li>
+                        Built an interactive AI assistant to support lending institutions in evaluating loan approvals, borrower risk, and fairness compliance. The system leveraged LangGraph powered multi agent orchestration with LLMs and delivered visual insights via Streamlit
                       </li>
                       <li>
                         Previously worked on descriptive analytics for Hanes PPA
@@ -87,9 +84,8 @@ const Intro = () => {
                   <p className="fw-bold" style={{ marginBottom: "1px" }}>
                     Sigmoid | Data Science Intern{" "}
                     <span
-                      className={`float-end ${
-                        isTabletOrMobile ? "invisible" : ""
-                      }`}
+                      className={`float-end ${isTabletOrMobile ? "invisible" : ""
+                        }`}
                       style={{ fontSize: "14px" }}
                     >
                       Aug 2024 - Dec 2024
@@ -118,12 +114,6 @@ const Intro = () => {
                     </ul>
                   </p>
                 </div>
-                <h3 className="h4 mt-5 mb-3 fw-bold">Academic Research</h3>
-                <p style={{ textAlign: "justify" }}>
-                  Developed a DNA-based color image cryptosystem during my
-                  M.Tech thesis, focusing on secure image transmission through
-                  innovative binary functions and DNA-based encoding techniques.
-                </p>
               </div>
             </div>
           </div>
