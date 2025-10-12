@@ -30,7 +30,11 @@ const CimagesCrypt = () => {
     navigate("/");
   };
   return (
-    <div id="cic" className={`${isTabletOrMobile ? "p-1" : "p-5"}`}>
+    <div
+      id="cic"
+      className={`${isTabletOrMobile ? "p-1" : "p-4"}`}
+      style={isTabletOrMobile ? {} : { margin: "0 10%" }}
+    >
       <div className="container p-4">
         <div className="my-2">
           <nav aria-label="breadcrumb">
@@ -161,9 +165,19 @@ const CimagesCrypt = () => {
         </div>
         <div className="mt-4">
           <h3>
-            Design of DNA Based Color Images Cryptosystem and its Security
-            Analysis
+            A DNA based Color Image Cryptosystem using Chaotic Maps, Spiral
+            Mixing and Non - Linear Binary Operator
           </h3>
+          <Link
+            to={"https://www.nature.com/articles/s41598-025-04021-4"}
+            target="_blank"
+            rel="noopener"
+            style={{ textDecoration: "none" }}
+          >
+            <p className="text-primary fw-bolder">
+              <i className="fa-solid fa-book fa-sm"></i> research paper
+            </p>
+          </Link>
           <p className="text-muted" style={{ fontSize: "14px" }}>
             <span style={{ fontWeight: "bold", fontStyle: "italic" }}>
               keywords
@@ -184,26 +198,27 @@ const CimagesCrypt = () => {
             when there are network adversaries present. To ensure secrecy,
             images are subject to encryption to produce unintelligible cipher
             images; the techniques used for this process differ significantly
-            from those applied to text data. The majority of the cryptosystem
-            consider complicated or confusion-diffusion architectures that
-            changes and permute the values ofthe pixels. These frequently entail
-            binary operations like bitwise XOR, plus-minus, DNA operations, etc;
-            are carried out utilising chaotic maps, each of which have certain
-            limitations. This paper employs a binary function that can be
-            applied to both traditional and DNA techniques for coloured natural
-            images, and can be applied to any kind of image cryptosystem. Each
-            of thecolor component of the image follows some steps which start
-            with inter channel mixing and mix rows which takes the value from
-            initial vector and mixes it, then Arnold cat map algorithm is
-            applied to shuffle the pixels. Secondly spiral mixing of the pixel
-            is applied in four different directions to prevent differential
-            attack. Finally, encoding, substitution, and decoding based on DNA
-            is carried out. A multiple collapse chaotic map is used to derive
-            initialization vector, rule charts and DNA substitution map which
-            are used in encoding and decoding processes. Analysis and
-            experimental findings shows that our cryptosystem has significant
-            performance and different metrics shows it can withstand different
-            type of attacks
+            from those applied to text data. The majority of the cryptosystems
+            consider complicated or confusion–diffusion architectures that
+            change and permute the values of the pixels. These frequently entail
+            binary operations like bitwise , addition–subtraction, DNA
+            operations, etc, and are carried out utilizing chaotic maps, each
+            having certain limitations.This paper employs a non- linear binary
+            function applicable to traditional and DNA techniques for color
+            image cryptosystems.In the proposed method, each of the color
+            components of the image follows some steps which start with inter -
+            channel mixing and mix rows, taking the values from the initial
+            vector and mixing it.Arnold’s cat map algorithm is then applied to
+            shuffle the pixels, and a novel spiral mixing of the pixels is
+            applied in four different directions to prevent the differential
+            attack.Finally, encoding, substitution, and decoding based on DNA is
+            carried out.A multiple collapse chaotic map is used to derive
+            initialization vectors, rule maps, and DNA substitution maps which
+            are used in encoding and decoding processes.Experimental results and
+            analysis show that the proposed cryptosystem results in cipher
+            images that are resistant to different types of cryptographic
+            attacks, thereby providing a secure color image encryption and
+            decryption scheme.
           </p>
           <div id="introduction">
             <h3 className="mt-4">1. Introduction</h3>
@@ -675,15 +690,7 @@ const CimagesCrypt = () => {
             <h3>Foot Notes</h3>
             <hr style={{ width: "50%" }} />
             <p style={{ textAlign: "justify" }}>
-              This work was co-authored by
-              <span
-                className="mx-1"
-                style={{ cursor: "pointer" }}
-                onClick={handleClick}
-              >
-                <u>Mohd Zain</u>
-              </span>
-              and
+              This paper is a part of the PhD work of
               <Link
                 to="https://www.linkedin.com/in/chiranjeev-bhaya-6b8603189"
                 target="_blank"
@@ -693,8 +700,16 @@ const CimagesCrypt = () => {
               >
                 Chiranjeev Bhaya
               </Link>
-              , whose invaluable assistance helped shape the development of the
-              algorithm. The project was carried out under the supervision of
+              , who conceived the idea, experiments and proposed the algorithm.
+              <span
+                className="mx-1"
+                style={{ cursor: "pointer" }}
+                onClick={handleClick}
+              >
+                <u>Mohd Zain</u>
+              </span>
+              contributed in the implementation of the code and enhancement of
+              the algorithm.
               <Link
                 to="https://people.iitism.ac.in/~abhay/"
                 target="_blank"
@@ -704,8 +719,8 @@ const CimagesCrypt = () => {
               >
                 Prof. Abhay Kumar Singh
               </Link>
-              , whose guidance and expertise greatly contributed to the success
-              of this research.
+              verified the methodology, code and the results. All the authors
+              contributed in drafting and revising the overall manuscript.
             </p>
             <p className="text-muted">Wan't to lear more ? Get Thesis...</p>
             <div
