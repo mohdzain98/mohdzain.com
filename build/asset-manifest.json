@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.eb402991.css",
-    "main.js": "/static/js/main.b7e63074.js",
+    "main.js": "/static/js/main.6a593f8f.js",
     "static/js/453.5e13eb6b.chunk.js": "/static/js/453.5e13eb6b.chunk.js",
     "static/media/DDBCICST.pdf": "/static/media/DDBCICST.aed745bf19d1db7e07bd.pdf",
     "static/media/DDBCICSRP.pdf": "/static/media/DDBCICSRP.23bb3ae5d999a0700339.pdf",
@@ -47,14 +47,11 @@
     "static/media/bb.jpg": "/static/media/bb.2470af7fe87f5b220a1e.jpg",
     "static/media/scd.webp": "/static/media/scd.35fbdb1e0f50a63f6d6c.webp",
     "static/media/spiral.jpg": "/static/media/spiral.9e3e6d473358f7ef03b5.jpg",
-    "static/media/noteswift.webp": "/static/media/noteswift.9530e57fe5142a9bb0e9.webp",
     "index.html": "/index.html",
+    "static/media/noteswift.webp": "/static/media/noteswift.9530e57fe5142a9bb0e9.webp",
     "main.eb402991.css.map": "/static/css/main.eb402991.css.map",
-    "main.b7e63074.js.map": "/static/js/main.b7e63074.js.map",
+    "main.6a593f8f.js.map": "/static/js/main.6a593f8f.js.map",
     "453.5e13eb6b.chunk.js.map": "/static/js/453.5e13eb6b.chunk.js.map"
   },
-  "entrypoints": [
-    "static/css/main.eb402991.css",
-    "static/js/main.b7e63074.js"
-  ]
+  "entrypoints": ["static/css/main.eb402991.css", "static/js/main.6a593f8f.js"]
 }
