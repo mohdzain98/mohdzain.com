@@ -1,7 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
-import './ProgressBar.css'; // You can add your CSS here
+import { useEffect, useState, useRef } from "react";
+import "./ProgressBar.css"; // You can add your CSS here
 
-const ProgressBar = ({ targetProgress = 80, height = 20, width = '100%', backgroundColor = '#e0e0e0', progressColor = '#76c7c0' }) => {
+const ProgressBar = ({
+  targetProgress = 80,
+  height = 20,
+  width = "100%",
+  backgroundColor = "#e0e0e0",
+  progressColor = "#76c7c0",
+}) => {
   const [progress, setProgress] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false); // Track if the animation has occurred
   const progressRef = useRef(null);
@@ -33,25 +39,35 @@ const ProgressBar = ({ targetProgress = 80, height = 20, width = '100%', backgro
   }, [targetProgress, hasAnimated]);
 
   return (
-    <div ref={progressRef} style={{ width, height, backgroundColor, borderRadius: '10px', position: 'relative', overflow: 'hidden' }}>
+    <div
+      ref={progressRef}
+      style={{
+        width,
+        height,
+        backgroundColor,
+        borderRadius: "10px",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <div
         style={{
           width: `${progress}%`,
-          height: '100%',
+          height: "100%",
           backgroundColor: progressColor,
-          transition: 'width 0.35s ease-in-out',
+          transition: "width 0.35s ease-in-out",
         }}
       />
       {/* Display the progress value */}
       <span
         style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          color: '#fff',
-          fontWeight: 'bold',
-          fontSize: '10px',
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          color: "#fff",
+          fontWeight: "bold",
+          fontSize: "10px",
         }}
       >
         {progress}%

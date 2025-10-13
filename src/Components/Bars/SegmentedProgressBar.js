@@ -1,6 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
 
-const SegmentedProgressBar = ({ steps = 5, targetSteps = 3, barWidth = '100%', barHeight = '30px', activeColor = '#76c7c0', inactiveColor = '#e0e0e0' }) => {
+const SegmentedProgressBar = ({
+  steps = 5,
+  targetSteps = 3,
+  barWidth = "100%",
+  barHeight = "30px",
+  activeColor = "#76c7c0",
+  inactiveColor = "#e0e0e0",
+}) => {
   const [completedSteps, setCompletedSteps] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const progressRef = useRef(null);
@@ -37,8 +44,8 @@ const SegmentedProgressBar = ({ steps = 5, targetSteps = 3, barWidth = '100%', b
     <div
       ref={progressRef}
       style={{
-        display: 'flex',
-        justifyContent: 'space-between',
+        display: "flex",
+        justifyContent: "space-between",
         width: barWidth,
         height: barHeight,
       }}
@@ -48,10 +55,11 @@ const SegmentedProgressBar = ({ steps = 5, targetSteps = 3, barWidth = '100%', b
           key={index}
           style={{
             flex: 1,
-            height: '100%',
-            backgroundColor: index < completedSteps ? activeColor : inactiveColor,
-            marginRight: index < steps - 1 ? '4px' : '0', // Add space between segments
-            transition: 'background-color 0.3s ease-in-out', // Smooth transition for the animation
+            height: "100%",
+            backgroundColor:
+              index < completedSteps ? activeColor : inactiveColor,
+            marginRight: index < steps - 1 ? "4px" : "0", // Add space between segments
+            transition: "background-color 0.3s ease-in-out", // Smooth transition for the animation
           }}
         />
       ))}
