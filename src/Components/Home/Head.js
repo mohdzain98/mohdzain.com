@@ -19,10 +19,14 @@ const Head = () => {
           speed={50}
         />
         <div className="description-text mt-4">
-          <p>Currently working on text-to-image generation models, exploring diffusion and transformer-based architectures.</p>
+          <p>
+            Currently working on text-to-image generation models, exploring
+            diffusion and transformer-based architectures.
+          </p>
           <p style={{ fontSize: "18px", marginTop: "-15px" }}>
-            Built a multi-agent AI assistant for loan origination to streamline decision making and enhance risk evaluation.
-            Previously worked on descriptive analytics for Hanes PPA.
+            Built a multi-agent AI assistant for loan origination to streamline
+            decision making and enhance risk evaluation. Previously worked on
+            descriptive analytics for Hanes PPA.
           </p>
         </div>
         <div className="cta-buttons">
@@ -36,8 +40,9 @@ const Head = () => {
           </Link> */}
           <Link
             to="mailto:zainmohd1998@gmail.com"
-            className={`btn btn-primary ${isTabletOrMobile ? "btn-sm" : "btn-lg"
-              } mx-2`}
+            className={`btn btn-primary ${
+              isTabletOrMobile ? "btn-sm" : "btn-lg"
+            } mx-2`}
           >
             Contact Me
           </Link>
@@ -56,7 +61,7 @@ const Head = () => {
             <i className="fab fa-linkedin"></i>
           </Link>
           <Link
-            to="https:/github.com/mohdzain98/"
+            to="https://github.com/mohdzain98/"
             target="_blank"
             rel="noopener"
             className="social-icon"
