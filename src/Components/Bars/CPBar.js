@@ -1,8 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from "react";
 
-
-const CPBar = ({ targetProgress = 100, size = 150, strokeWidth = 10,fsize=20  }) => {
-    const [progress, setProgress] = useState(0);
+const CPBar = ({
+  targetProgress = 100,
+  size = 150,
+  strokeWidth = 10,
+  fsize = 20,
+}) => {
+  const [progress, setProgress] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false); // Track if animation has occurred
   const progressRef = useRef(null);
 
@@ -10,7 +14,8 @@ const CPBar = ({ targetProgress = 100, size = 150, strokeWidth = 10,fsize=20  })
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) { // Check if it hasn't animated yet
+        if (entry.isIntersecting && !hasAnimated) {
+          // Check if it hasn't animated yet
           let start = 0;
           const interval = setInterval(() => {
             if (start <= targetProgress) {
@@ -59,7 +64,7 @@ const CPBar = ({ targetProgress = 100, size = 150, strokeWidth = 10,fsize=20  })
           strokeDasharray={circumference}
           strokeDashoffset={strokeDashoffset}
           strokeLinecap="round"
-          style={{ transition: 'stroke-dashoffset 0.35s' }}
+          style={{ transition: "stroke-dashoffset 0.35s" }}
         />
         <text
           x={size / 2}
@@ -68,13 +73,13 @@ const CPBar = ({ targetProgress = 100, size = 150, strokeWidth = 10,fsize=20  })
           textAnchor="middle"
           fontSize="20px"
           fill="#333"
-          style={{fontSize:`${fsize}px`}}
+          style={{ fontSize: `${fsize}px` }}
         >
           {progress}%
         </text>
       </svg>
     </div>
-    )
-}
+  );
+};
 
-export default CPBar
+export default CPBar;

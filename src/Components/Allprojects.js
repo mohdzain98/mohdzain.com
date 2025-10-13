@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { allprojects } from "../allproject";
 import { Link } from "react-router-dom";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
