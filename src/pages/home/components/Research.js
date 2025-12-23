@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Styling/Intro.css";
 import "animate.css";
-import Ribbon from "../Ribbon";
+import Ribbon from "../../../components/layout/Ribbon";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 

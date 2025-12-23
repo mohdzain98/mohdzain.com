@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
-import "../Styling/Blogs.css";
+import "../../home/Styling/Blogs.css";
 import Encryption from "./Encryption";
 import Decryption from "./Decryption";
 import Results from "./Results";
@@ -429,7 +429,7 @@ const CimagesCrypt = () => {
             <hr style={{ width: "50%" }} className="mb-3" />
             <center>
               <img
-                src={require("../../Assets/blogs/efchart.jpg")}
+                src={require("../../../Assets/blogs/efchart.jpg")}
                 alt="chart"
                 className="img-fluid"
               />
@@ -497,7 +497,7 @@ const CimagesCrypt = () => {
             </p>
             <center>
               <img
-                src={require("../../Assets/blogs/key.jpg")}
+                src={require("../../../Assets/blogs/key.jpg")}
                 alt="key"
                 className="img-fluid"
               />
@@ -601,7 +601,7 @@ const CimagesCrypt = () => {
               </p>
               <center>
                 <img
-                  src={require("../../Assets/blogs/rm.jpg")}
+                  src={require("../../../Assets/blogs/rm.jpg")}
                   alt="rulemap"
                   className="img-fluid my-4"
                 />
@@ -741,7 +741,7 @@ const CimagesCrypt = () => {
                 </button>
               </Link>
               <a
-                href={require("../../Assets/DDBCICSRP.pdf")}
+                href={require("../../../Assets/DDBCICSRP.pdf")}
                 download="CIC Research Paper"
               >
                 <button className="btn btn-success fts">
@@ -750,7 +750,7 @@ const CimagesCrypt = () => {
                 </button>
               </a>
               <a
-                href={require("../../Assets/DDBCICST.pdf")}
+                href={require("../../../Assets/DDBCICST.pdf")}
                 download="CIC Thesis"
               >
                 <button className="btn btn-success fts">

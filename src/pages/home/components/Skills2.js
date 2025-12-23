@@ -1,4 +1,4 @@
-import Ribbon from "../Ribbon";
+import Ribbon from "../../../components/layout/Ribbon";
 import { useState } from "react";
 // import { useMediaQuery } from "react-responsive";
 
@@ -150,7 +150,7 @@ const Skills2 = () => {
   // right image panel: uses a layered background where
   // gradient fades from left (white) -> transparent so image blends in
   const rightImageStyle = {
-    backgroundImage: ` url(${require(`../../Assets/skills/${IMAGES[active]}`)})`,
+    backgroundImage: ` url(${require(`../../../Assets/skills/${IMAGES[active]}`)})`,
     backgroundSize: "cover",
     backgroundPosition: "left center",
     height: "100%",

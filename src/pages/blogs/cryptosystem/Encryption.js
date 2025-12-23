@@ -1,5 +1,5 @@
 import { MathJaxContext, MathJax } from "better-react-mathjax";
-import "../Styling/Blogs.css";
+import "../../home/Styling/Blogs.css";
 import { Link as ScrollLink } from "react-scroll";
 
 const Encryption = ({ setActive, setEncr }) => {
@@ -122,7 +122,7 @@ const Encryption = ({ setActive, setEncr }) => {
                 </div>
                 <div className="col-md-9 col-xs-12">
                   <img
-                    src={require("../../Assets/blogs/spiral.jpg")}
+                    src={require("../../../Assets/blogs/spiral.jpg")}
                     alt="spiral"
                     className="img-fluid"
                   />
@@ -140,7 +140,7 @@ const Encryption = ({ setActive, setEncr }) => {
               <br />
               <center>
                 <img
-                  src={require("../../Assets/blogs/encoding.jpg")}
+                  src={require("../../../Assets/blogs/encoding.jpg")}
                   alt="encdoding"
                   className="img-fluid"
                 />
@@ -159,7 +159,7 @@ const Encryption = ({ setActive, setEncr }) => {
               Substitution Process Illustration : <br />
               <center>
                 <img
-                  src={require("../../Assets/blogs/subs.jpg")}
+                  src={require("../../../Assets/blogs/subs.jpg")}
                   alt="subs"
                   className="img-fluid"
                 />
@@ -176,7 +176,7 @@ const Encryption = ({ setActive, setEncr }) => {
               image. Below is decoding process: <br />
               <center>
                 <img
-                  src={require("../../Assets/blogs/decoding.jpg")}
+                  src={require("../../../Assets/blogs/decoding.jpg")}
                   alt="decoding"
                   className="img-fluid"
                 />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../Styling/Intro.css";
+import "../../pages/home/Styling/Intro.css";
 
 const TypingEffect = ({ className, text, speed }) => {
   const [displayedText, setDisplayedText] = useState("");

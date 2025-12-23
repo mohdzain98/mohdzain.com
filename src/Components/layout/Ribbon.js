@@ -1,5 +1,5 @@
 import React from 'react'
-import './Styling/Ribbon.css'
+import '../../pages/home/Styling/Ribbon.css'
 
 const Ribbon = ({value, color="#75e0ee"}) => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Styling/Blogs.css";
+import "./home/Styling/Blogs.css";
 import { useMediaQuery } from "react-responsive";
 
 const Blogs = () => {

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { allprojects } from "../allproject";
+import { allprojects } from "../config/allproject";
 import { Link } from "react-router-dom";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
-import "./Styling/Projects.css";
+import "./home/Styling/Projects.css";
 import "animate.css";
 
 const Allprojects = () => {

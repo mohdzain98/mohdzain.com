@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { Link as ScrollLink } from "react-scroll";
-import "../App.css";
+import "../../App.css";
 
 const Navbar = () => {
   const ref = useRef();

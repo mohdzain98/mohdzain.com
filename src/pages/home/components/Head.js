@@ -1,5 +1,5 @@
 import React from "react";
-import TypingEffect from "./TypingEffect";
+import TypingEffect from "../../../components/layout/TypingEffect";
 import "../Styling/Intro.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";

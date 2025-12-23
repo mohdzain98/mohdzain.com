@@ -1,5 +1,5 @@
 import { MathJaxContext, MathJax } from "better-react-mathjax";
-import "../Styling/Blogs.css";
+import "../../home/Styling/Blogs.css";
 import { Link as ScrollLink } from "react-scroll";
 
 const Decryption = () => {
@@ -9,7 +9,7 @@ const Decryption = () => {
         <h5 className="mt-4">2.3 Decryption Algorithm Flow Chart</h5>
         <center>
           <img
-            src={require("../../Assets/blogs/dec.jpg")}
+            src={require("../../../Assets/blogs/dec.jpg")}
             alt="decryption"
             className="img-fluid"
           />

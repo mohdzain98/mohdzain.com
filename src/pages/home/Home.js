@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import Intro from "./Home/Intro";
-import Careerpath from "./Home/Careerpath";
-// import Skills from "./Home/Skills";
-import Projects from "./Home/Projects";
-import Social from "./Home/Social";
-import Footer from "./Home/Footer";
-import Head from "./Home/Head";
-import Research from "./Home/Research";
-import Skills2 from "./Home/Skills2";
+import Intro from "./components/Intro";
+import Careerpath from "./components/Careerpath";
+// import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Social from "./components/Social";
+import Footer from "./components/Footer";
+import Head from "./components/Head";
+import Research from "./components/Research";
+import Skills2 from "./components/Skills2";
 
 const Home = (props) => {
   useEffect(() => {

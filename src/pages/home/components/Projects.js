@@ -1,10 +1,10 @@
 import React from "react";
-import { projects } from "../../allproject";
+import { projects } from "../../../config/allproject";
 import "../Styling/Projects.css";
 import { Link } from "react-router-dom";
 import "animate.css";
 import { useMediaQuery } from "react-responsive";
-import Ribbon from "../Ribbon";
+import Ribbon from "../../../components/layout/Ribbon";
 
 const Projects = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });

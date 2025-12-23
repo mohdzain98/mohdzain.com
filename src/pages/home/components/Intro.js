@@ -2,7 +2,7 @@ import React from "react";
 import "../Styling/Intro.css";
 import "animate.css";
 import { useMediaQuery } from "react-responsive";
-import Ribbon from "../Ribbon";
+import Ribbon from "../../../components/layout/Ribbon";
 
 const Intro = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -17,7 +17,7 @@ const Intro = () => {
           <center>
             <div className="image flex-grow-1">
               <img
-                src={require("../../Assets/mypic.jpeg")}
+                src={require("../../../Assets/mypic.jpeg")}
                 alt="mohdzain"
                 width={isTabletOrMobile ? 230 : 330}
                 height={isTabletOrMobile ? 230 : 330}
@@ -46,8 +46,9 @@ const Intro = () => {
                   <p className="fw-bold" style={{ marginBottom: "1px" }}>
                     Sigmoid | Data Science Trainee{" "}
                     <span
-                      className={`float-end ${isTabletOrMobile ? "invisible" : ""
-                        }`}
+                      className={`float-end ${
+                        isTabletOrMobile ? "invisible" : ""
+                      }`}
                       style={{ fontSize: "14px" }}
                     >
                       Jan 2025 - present
@@ -60,10 +61,15 @@ const Intro = () => {
                     {" "}
                     <ul>
                       <li>
-                        Currently working on Gen AI projects, focusing on tracing LLMs and text-to-image generation.
+                        Currently working on Gen AI projects, focusing on
+                        tracing LLMs and text-to-image generation.
                       </li>
                       <li>
-                        Built an interactive AI assistant to support lending institutions in evaluating loan approvals, borrower risk, and fairness compliance. The system leveraged LangGraph powered multi agent orchestration with LLMs and delivered visual insights via Streamlit
+                        Built an interactive AI assistant to support lending
+                        institutions in evaluating loan approvals, borrower
+                        risk, and fairness compliance. The system leveraged
+                        LangGraph powered multi agent orchestration with LLMs
+                        and delivered visual insights via Streamlit
                       </li>
                       <li>
                         Previously worked on descriptive analytics for Hanes PPA
@@ -84,8 +90,9 @@ const Intro = () => {
                   <p className="fw-bold" style={{ marginBottom: "1px" }}>
                     Sigmoid | Data Science Intern{" "}
                     <span
-                      className={`float-end ${isTabletOrMobile ? "invisible" : ""
-                        }`}
+                      className={`float-end ${
+                        isTabletOrMobile ? "invisible" : ""
+                      }`}
                       style={{ fontSize: "14px" }}
                     >
                       Aug 2024 - Dec 2024

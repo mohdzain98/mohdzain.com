@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import repo from "../allrepos";
+import repo from "../config/allrepos";
 import { Link } from "react-router-dom";
-import "./Styling/Repos.css";
+import "./home/Styling/Repos.css";
 import "animate.css";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import { useMediaQuery } from "react-responsive";

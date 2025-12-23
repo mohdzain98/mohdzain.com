@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "animate.css";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
 import { useMediaQuery } from "react-responsive";
-import Ribbon from "../Ribbon";
+import Ribbon from "../../../components/layout/Ribbon";
 
 const Careerpath = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -25,7 +25,7 @@ const Careerpath = () => {
               <center>
                 <Link to="https://sigmoid.com" target="_blank" rel="noopener">
                   <img
-                    src={require("../../Assets/sig.png")}
+                    src={require("../../../Assets/sig.png")}
                     alt="company"
                     className="image"
                   />
@@ -44,7 +44,7 @@ const Careerpath = () => {
                   rel="noopener"
                 >
                   <img
-                    src={require("../../Assets/iit.png")}
+                    src={require("../../../Assets/iit.png")}
                     alt="mtech"
                     className="image"
                   />
@@ -62,7 +62,7 @@ const Careerpath = () => {
               <center>
                 <Link to="https://uktech.ac.in/" target="_blank" rel="noopener">
                   <img
-                    src={require("../../Assets/utu.png")}
+                    src={require("../../../Assets/utu.png")}
                     alt="btech"
                     className="image"
                   />
@@ -84,7 +84,7 @@ const Careerpath = () => {
                   rel="noopener"
                 >
                   <img
-                    src={require("../../Assets/isc.png")}
+                    src={require("../../../Assets/isc.png")}
                     alt="12th"
                     className="image"
                   />

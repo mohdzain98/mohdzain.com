@@ -1,4 +1,4 @@
-import "../Styling/Blogs.css";
+import "../../home/Styling/Blogs.css";
 import { Link } from "react-router-dom";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { Link as ScrollLink } from "react-scroll";
@@ -14,14 +14,14 @@ const Results = () => {
       <div className="row row-cols-2">
         <div className="col">
           <img
-            src={require("../../Assets/blogs/res1.jpg")}
+            src={require("../../../Assets/blogs/res1.jpg")}
             alt="result"
             className="img-fluid"
           />
         </div>
         <div className="col">
           <img
-            src={require("../../Assets/blogs/res2.jpg")}
+            src={require("../../../Assets/blogs/res2.jpg")}
             alt="result"
             className="img-fluid"
           />
@@ -185,7 +185,7 @@ const Results = () => {
           </p>
           <center className="my-3">
             <img
-              src={require("../../Assets/blogs/keysens.jpg")}
+              src={require("../../../Assets/blogs/keysens.jpg")}
               alt="key sensitivity"
               className="img-fluid"
             />
@@ -234,7 +234,7 @@ const Results = () => {
                 greater than 5400.
               </p>
               <img
-                src={require("../../Assets/blogs/var.jpg")}
+                src={require("../../../Assets/blogs/var.jpg")}
                 alt="variance"
                 className="img-fluid mt-3"
               />
@@ -247,17 +247,17 @@ const Results = () => {
             <div className="col">
               <center>
                 <img
-                  src={require("../../Assets/blogs/h1.jpg")}
+                  src={require("../../../Assets/blogs/h1.jpg")}
                   alt="histogram"
                   className="img-fluid"
                 />
                 <img
-                  src={require("../../Assets/blogs/h2.jpg")}
+                  src={require("../../../Assets/blogs/h2.jpg")}
                   alt="histogram"
                   className="img-fluid"
                 />
                 <img
-                  src={require("../../Assets/blogs/h3.jpg")}
+                  src={require("../../../Assets/blogs/h3.jpg")}
                   alt="histogram"
                   className="img-fluid"
                 />
@@ -305,7 +305,7 @@ const Results = () => {
             </div>
             <div className="col-md-4 col-xs-12">
               <img
-                src={require("../../Assets/blogs/chi.jpg")}
+                src={require("../../../Assets/blogs/chi.jpg")}
                 alt="chi square"
                 className="img-fluid"
               />
@@ -365,7 +365,7 @@ const Results = () => {
             </div>
             <div className="col-md-5 col-xs-12">
               <img
-                src={require("../../Assets/blogs/entropy.jpg")}
+                src={require("../../../Assets/blogs/entropy.jpg")}
                 alt="entropy"
                 className="img-fluid my-3"
               />
@@ -418,7 +418,7 @@ const Results = () => {
             </div>
             <div className="col-md-6 col-xs-12">
               <img
-                src={require("../../Assets/blogs/coer.jpg")}
+                src={require("../../../Assets/blogs/coer.jpg")}
                 alt="correlation"
                 className="img-fluid"
               />
@@ -467,12 +467,12 @@ const Results = () => {
             </div>
             <div className="col-md-4 col-xs-12">
               <img
-                src={require("../../Assets/blogs/npcr.jpg")}
+                src={require("../../../Assets/blogs/npcr.jpg")}
                 alt="npcr"
                 className="img-fluid"
               />
               <img
-                src={require("../../Assets/blogs/uaci.jpg")}
+                src={require("../../../Assets/blogs/uaci.jpg")}
                 alt="uaci"
                 className="img-fluid"
               />
@@ -517,7 +517,7 @@ const Results = () => {
             </div>
             <div className="col-md-4 col-xs-12">
               <img
-                src={require("../../Assets/blogs/nist.png")}
+                src={require("../../../Assets/blogs/nist.png")}
                 alt="nist"
                 className="img-fluid"
               />
@@ -572,7 +572,7 @@ const Results = () => {
           </div>
           <div className="col-md-6 col-xs-12">
             <img
-              src={require("../../Assets/blogs/comp.jpg")}
+              src={require("../../../Assets/blogs/comp.jpg")}
               alt="comparison"
               className="img-fluid float-end"
             />
