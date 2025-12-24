@@ -28,7 +28,9 @@ const Projects = () => {
             return (
               <div className="col-md-3 col-xs-12">
                 <div
-                  className={`box p-4 mb-4 ${isTabletOrMobile ? "" : "h-100"}`}
+                  className={`box shadow-sm p-4 mb-4 ${
+                    isTabletOrMobile ? "" : "h-100"
+                  }`}
                   onClick={() => handleClick(item.Live)}
                 >
                   <h5 className="text-primary">{item.Name}</h5>
@@ -68,7 +70,7 @@ const Projects = () => {
             );
           })}
         </div>
-        <p className="text-center mt-4">
+        <p className="text-center mt-5">
           <Link
             to="/projects"
             style={{

@@ -27,7 +27,7 @@ const Intro = () => {
             </div>
           </center>
           <div className="text-secondary mt-auto">
-            <h3 className="h4 mb-4 mt-2 fw-bold">About</h3>
+            <h3 className="h4 mb-4 mt-2 fw-bold text-dark">About</h3>
             <p className="mt-4">
               📚 M.Tech in Data Analytics from IIT (ISM) Dhanbad
               <br />
@@ -41,9 +41,15 @@ const Intro = () => {
           <div className="row align-items-center">
             <div className="mx-auto">
               <div className="text-secondary">
-                <h3 className="h4 mb-4 fw-bold">Work Experience</h3>
-                <div className="ps-1">
-                  <p className="fw-bold" style={{ marginBottom: "1px" }}>
+                <h3 className="h4 mb-4 fw-bold text-dark">Work Experience</h3>
+                <div
+                  className="ps-1"
+                  style={{ maxHeight: "300px", overflow: "auto" }}
+                >
+                  <p
+                    className="fw-bold text-dark"
+                    style={{ marginBottom: "1px" }}
+                  >
                     Sigmoid | Data Science Trainee{" "}
                     <span
                       className={`float-end ${
@@ -61,8 +67,12 @@ const Intro = () => {
                     {" "}
                     <ul>
                       <li>
-                        Currently working on Gen AI projects, focusing on
-                        tracing LLMs and text-to-image generation.
+                        Currently working on RGMx for CPG client related to data
+                        refresh and model drift.
+                      </li>
+                      <li>
+                        Worked on Gen AI projects, focusing on tracing LLMs and
+                        text-to-image generation.
                       </li>
                       <li>
                         Built an interactive AI assistant to support lending
@@ -87,7 +97,10 @@ const Intro = () => {
                   </p>
                 </div>
                 <div className="ps-1">
-                  <p className="fw-bold" style={{ marginBottom: "1px" }}>
+                  <p
+                    className="fw-bold text-dark"
+                    style={{ marginBottom: "2px" }}
+                  >
                     Sigmoid | Data Science Intern{" "}
                     <span
                       className={`float-end ${

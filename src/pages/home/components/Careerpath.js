@@ -27,7 +27,7 @@ const Careerpath = () => {
                   <img
                     src={require("../../../Assets/sig.png")}
                     alt="company"
-                    className="image"
+                    className="image shadow-sm border border-opacity-50"
                   />
                 </Link>
                 <p class="p5">Sigmoid</p>
@@ -46,7 +46,7 @@ const Careerpath = () => {
                   <img
                     src={require("../../../Assets/iit.png")}
                     alt="mtech"
-                    className="image"
+                    className="image shadow-sm border border-opacity-50"
                   />
                 </Link>
                 <p class="p5">IIT ISM Dhanbad</p>
@@ -64,7 +64,7 @@ const Careerpath = () => {
                   <img
                     src={require("../../../Assets/utu.png")}
                     alt="btech"
-                    className="image"
+                    className="image shadow-sm border border-opacity-50"
                   />
                 </Link>
                 <p class="p5">Uttarakhand Technical University</p>
@@ -86,11 +86,11 @@ const Careerpath = () => {
                   <img
                     src={require("../../../Assets/isc.png")}
                     alt="12th"
-                    className="image"
+                    className="image shadow-sm border border-opacity-50"
                   />
                 </Link>
-                <p class="p5">CISCE</p>
-                <p class="p5">2017</p>
+                <p class="p5">St Mary's School</p>
+                <p class="p5">CISCE, 2017</p>
               </center>
             </div>
           </AnimatedOnScroll>
