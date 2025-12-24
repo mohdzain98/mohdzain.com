@@ -56,6 +56,11 @@ const SKILLS = {
       level: "Intermediate",
     },
     { name: "LangGraph", icon: "fa-solid fa-sitemap", level: "Intermediate" },
+    {
+      name: "RAG",
+      icon: "fa-solid fa-coins",
+      level: "Intermediate",
+    },
     { name: "A2A-MCP", icon: "fa-solid fa-robot", level: "Basic" },
     {
       name: "LLM Tracing",
@@ -74,6 +79,7 @@ const SKILLS = {
       level: "Intermediate",
     },
     { name: "Express", icon: "fa-solid fa-server", level: "Intermediate" },
+    { name: "FastAPI", icon: "fa-solid fa-bolt", level: "Intermediate" },
     { name: "Flask", icon: "fa-solid fa-flask", level: "Intermediate" },
   ],
   database: [
@@ -218,7 +224,7 @@ const Skills2 = () => {
                     return (
                       <div key={s.name} className="col-12 col-sm-6">
                         <div
-                          className="d-flex align-items-center p-3 rounded-3 h-100"
+                          className="d-flex align-items-center p-3 rounded-3 h-100 border border-opacity-50"
                           style={{
                             backgroundColor: "#fff",
                             boxShadow: "0 4px 16px rgba(15,23,42,0.06)",
