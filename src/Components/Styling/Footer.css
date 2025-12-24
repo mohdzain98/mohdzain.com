@@ -1,9 +1,0 @@
-#copy{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    position: relative;
-    justify-content:space-around;
-    align-items: center; 
-}

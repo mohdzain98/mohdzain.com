@@ -1,19 +1,17 @@
 # Mohd Zain Portfolio
-## Home Page
- - About Me
- - Career Path
- - Skills
- - Projects
- - Social
 
-## Projects Page
-Contains several projects done
+Personal portfolio website showcasing professional work, projects, research, and blog posts.
 
-## Blogs Page
-Contains blog written by zain on several topics and thesis written on <strong>Color Images Cryptosystem</strong> <a href='https://mohdzain.com/blogs' target='_blank'>read here</a>
+## Sections
+- Home: About, experience, skills, projects, and social links
+- Projects: selected work with details and links
+- Research/Blogs: articles and thesis highlights
+- Vitae: CV and background
+- GitHub Repositories: additional work and experiments
 
-## Vitae 
-The CV page
+## Live
+- https://mohdzain.com
 
-## Github Repositories 
-Contains several Github Repositiories to demonstrate some other works also.
+## Highlights
+- Live projects: Docschat, Curlmin
+- Chrome extensions: SurfMind, LexiClick
