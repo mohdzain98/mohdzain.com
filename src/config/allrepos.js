@@ -1,5 +1,13 @@
 const repo = [
   {
+    name: "Loanlens AI",
+    lang: "Python",
+    visible: "Public",
+    color: "blue",
+    define: "Intelligent Loan Processing and Fraud Detection",
+    url: "https://github.com/mohdzain98/loanlens-ai",
+  },
+  {
     name: "curlm.in",
     lang: "JavaScript",
     visible: "Public",
@@ -14,7 +22,7 @@ const repo = [
     visible: "Public",
     color: "blue",
     define: "Applying NLP on collection of articles to extract keywords.",
-    url: "https://github.com/mohdzain98/Automated_Keyword_Extraction",
+    url: "https://github.com/mohdzain98/applied-ml-projects/tree/main/automated-keyword-extraction",
   },
   {
     name: "Alarm_clock",
@@ -22,7 +30,7 @@ const repo = [
     visible: "Public",
     color: "orange",
     define: "Simple Alarm clock using JS",
-    url: "https://github.com/mohdzain98/Alarm_Clock",
+    url: "https://github.com/mohdzain98/alarm-clock",
   },
   {
     name: "Text Utils",
@@ -31,22 +39,6 @@ const repo = [
     color: "orange",
     define: "A Text utility made with React",
     url: "https://github.com/mohdzain98/textutils",
-  },
-  {
-    name: "pennrangers",
-    lang: "HTML",
-    visible: "Public",
-    color: "red",
-    define: "Clash of Clans webpage to display clans stats",
-    url: "https://github.com/mohdzain98/pennrangers",
-  },
-  {
-    name: "cocwl",
-    lang: "PHP",
-    visible: "Public",
-    color: "violet",
-    define: "Clash of clans Clan Wars Database Management System",
-    url: "https://github.com/mohdzain98/cocwl",
   },
   {
     name: "chatApplication",
@@ -62,7 +54,7 @@ const repo = [
     visible: "Public",
     color: "blue",
     define: "DNA Based color images encryption",
-    url: "https://github.com/mohdzain98/Design_of_DNA_based_Color_Images_Cryptosystem",
+    url: "https://github.com/mohdzain98/dna-based-color-images-cryptosystem",
   },
   {
     name: "Fees Management System",

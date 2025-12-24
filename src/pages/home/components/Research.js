@@ -101,7 +101,7 @@ const ResearchItem = ({
   );
 };
 
-const Research = ({ paper }) => {
+const Research = () => {
   const researchPapers = [
     {
       title:

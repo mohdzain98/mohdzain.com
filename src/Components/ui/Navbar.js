@@ -62,6 +62,18 @@ const Navbar = () => {
                   <li>
                     <ScrollLink
                       className="dropdown-item"
+                      to="research"
+                      smooth={true}
+                      duration={50}
+                      onClick={rollNavBack}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Research
+                    </ScrollLink>
+                  </li>
+                  <li>
+                    <ScrollLink
+                      className="dropdown-item"
                       to="cp"
                       smooth={true}
                       duration={50}
@@ -86,6 +98,18 @@ const Navbar = () => {
                   <li>
                     <ScrollLink
                       className="dropdown-item"
+                      to="achievements"
+                      smooth={true}
+                      duration={50}
+                      onClick={rollNavBack}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Achievements
+                    </ScrollLink>
+                  </li>
+                  <li>
+                    <ScrollLink
+                      className="dropdown-item"
                       to="projects"
                       smooth={true}
                       duration={50}
@@ -93,6 +117,18 @@ const Navbar = () => {
                       style={{ cursor: "pointer" }}
                     >
                       Projects
+                    </ScrollLink>
+                  </li>
+                  <li>
+                    <ScrollLink
+                      className="dropdown-item"
+                      to="experience"
+                      smooth={true}
+                      duration={50}
+                      onClick={rollNavBack}
+                      style={{ cursor: "pointer" }}
+                    >
+                      Industry
                     </ScrollLink>
                   </li>
                   <li>

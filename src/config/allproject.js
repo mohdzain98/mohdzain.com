@@ -137,7 +137,7 @@ const allprojects = [
       },
       {
         name: "Github",
-        link: "https://github.com/mohdzain98/Car_Sales_Prediciton",
+        link: "https://github.com/mohdzain98/applied-ml-projects/tree/main/car-sales-prediciton",
         icon: "fa-brands fa-github",
         bg: "dark",
         ref: "_blank",
@@ -160,7 +160,7 @@ const allprojects = [
       },
       {
         name: "Github",
-        link: "https://github.com/mohdzain98/Football-Player-s-Market_value_Prediction",
+        link: "https://github.com/mohdzain98/applied-ml-projects/tree/main/football-player-market-value-prediction",
         icon: "fa-brands fa-github",
         bg: "dark",
         ref: "_blank",
@@ -199,7 +199,7 @@ const allprojects = [
       },
       {
         name: "Github",
-        link: "https://github.com/mohdzain98/Skin_Cancer_Detection",
+        link: "https://github.com/mohdzain98/applied-ml-projects/tree/main/skin-cancer-detection",
         icon: "fa-brands fa-github",
         bg: "dark",
         ref: "_blank",
@@ -222,7 +222,7 @@ const allprojects = [
       },
       {
         name: "Github",
-        link: "https://github.com/mohdzain98/Air_Pollution_Prediction",
+        link: "https://github.com/mohdzain98/applied-ml-projects/tree/main/air-pollution-prediction",
         icon: "fa-brands fa-github",
         bg: "dark",
         ref: "_blank",

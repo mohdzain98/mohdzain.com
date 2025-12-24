@@ -20,13 +20,14 @@ const Head = () => {
         />
         <div className="description-text mt-4">
           <p>
-            Currently working on text-to-image generation models, exploring
-            diffusion and transformer-based architectures.
+            Currently working on RGMx for CPG client regarding data refresh and
+            model drift.
           </p>
           <p style={{ fontSize: "18px", marginTop: "-15px" }}>
-            Built a multi-agent AI assistant for loan origination to streamline
-            decision making and enhance risk evaluation. Previously worked on
-            descriptive analytics for Hanes PPA.
+            Worked on text-to-image generation models, explored diffusion and
+            transformer-based architectures. Previously Built a multi-agent AI
+            assistant for loan origination to streamline decision making and
+            enhance risk evaluation.
           </p>
         </div>
         <div className="cta-buttons">
