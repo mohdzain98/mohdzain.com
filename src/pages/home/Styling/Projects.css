@@ -1,59 +1,59 @@
-#projects .box{
-    width: auto;
-    position: relative;
-    background: rgb(255,255,255);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-    border: groove 1px;
-    transition: transform 0.3s ease;
+#projects .box {
+  width: auto;
+  position: relative;
+  background: rgb(255, 255, 255);
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); */
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border: groove 1px;
+  transition: transform 0.3s ease;
 }
-#projects .text{
-    color: #2a201c;
-    font-size: 40px;
-    font-weight: 700;
-  }
-  
-#projects .underline{
-    width: 130px;
-    height:6px;
-    background: #2a201c;
-    border-radius: 9px;
+#projects .text {
+  color: #2a201c;
+  font-size: 40px;
+  font-weight: 700;
 }
 
-#projects .box:hover{
-    border:solid 1px;
-    cursor: pointer;
-    transform: scale(1.05);
+#projects .underline {
+  width: 130px;
+  height: 6px;
+  background: #2a201c;
+  border-radius: 9px;
 }
 
-#projects .tline{
-    border-radius: 6px;
-    padding: 4px 4px; 
-    background-color: cornsilk;
+#projects .box:hover {
+  border: solid 1px;
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
-#allproject .tline{
-    border-radius: 6px;
-    padding: 4px 4px; 
-    background-color: cornsilk;
+#projects .tline {
+  border-radius: 6px;
+  padding: 4px 4px;
+  background-color: cornsilk;
 }
 
-#allproject .foot{
-    align-self:last baseline;
-}
-#allproject{
-    background-color: #FAEBD7;
+#allproject .tline {
+  border-radius: 6px;
+  padding: 4px 4px;
+  background-color: cornsilk;
 }
 
-#allproject .card{
-    border-radius: 15px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    border: groove 1px;
-    transition: transform 0.3s ease;
+#allproject .foot {
+  align-self: last baseline;
 }
-#allproject .card img{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+#allproject {
+  background-color: #faebd7;
+}
+
+#allproject .card {
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  border: groove 1px;
+  transition: transform 0.3s ease;
+}
+#allproject .card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }

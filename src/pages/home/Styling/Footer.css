@@ -3,7 +3,45 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 30px;
+    row-gap: 12px;
     position: relative;
     justify-content:space-around;
-    align-items: center; 
+    align-items: center;
+}
+
+.footer-item {
+    text-align: center;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-link:hover {
+    color: #9fd3ff;
+    transform: translateY(-1px);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icon:hover {
+    color: #9fd3ff;
+    transform: translateY(-2px);
 }
