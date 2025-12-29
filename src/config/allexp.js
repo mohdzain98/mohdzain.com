@@ -22,15 +22,13 @@ const exp = [
       "scancode",
       "mypy",
       "jscpd",
-      "AST",
-      "regex",
     ],
     icon: "fa-shield-halved",
   },
   {
     name: "Sigscan CLI",
     desc: "Code can be analyzed by uploading a ZIP file through the web interface or, when uploads are restricted, via a CLI that scans locally and outputs a JSON report viewable in the platform.",
-    techs: ["sigscan all", "cli"],
+    techs: ["AST", "regex", "sigscan all", "cli"],
     icon: "fa-terminal",
   },
 ];

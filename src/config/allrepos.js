@@ -1,5 +1,14 @@
 const repo = [
   {
+    name: "GNOST",
+    lang: "Python",
+    visible: "Public",
+    color: "blue",
+    define:
+      "GNOST helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
+    url: "https://github.com/mohdzain98/gnost",
+  },
+  {
     name: "Loanlens AI",
     lang: "Python",
     visible: "Public",

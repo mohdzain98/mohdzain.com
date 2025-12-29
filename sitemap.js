@@ -5,6 +5,7 @@ const path = require("path");
 routes = [
   { url: "/", changefreq: "daily", priority: 1.0 },
   { url: "/projects", changefreq: "monthly", priority: 0.8 },
+  { url: "/projects/gnost", changefreq: "monthly", priority: 0.8 },
   { url: "/blogs", changefreq: "monthly", priority: 0.8 },
   {
     url: "/blogs/color-images-cryptosystem",

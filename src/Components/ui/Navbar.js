@@ -162,7 +162,10 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 className={`nav-link ${
-                  location.pathname === "/projects" ? "active" : ""
+                  location.pathname === "/projects" ||
+                  location.pathname === "/projects/gnost"
+                    ? "active"
+                    : ""
                 }`}
                 to="/projects"
                 onClick={rollNavBack}

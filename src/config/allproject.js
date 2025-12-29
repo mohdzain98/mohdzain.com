@@ -40,6 +40,22 @@ const projects = [
 
 const allprojects = [
   {
+    Name: "GNOST - Codebase Knowledge",
+    Desc: "GNOST helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
+    Techs: ["python,", "pypi"],
+    Tools: ["VS code", "Git"],
+    img: "gnost.png",
+    button: [
+      {
+        name: "Details",
+        link: "/projects/gnost",
+        icon: "fa-solid fa-circle-info",
+        bg: "primary",
+        ref: "_self",
+      },
+    ],
+  },
+  {
     Name: "Curlmin",
     Desc: "Curlmin is an advanced URL shortening and management platform designed to make sharing links faster, smarter, and more efficient. Whether you need shortened URLs, QR codes, barcodes, or Curltags, Curlmin provides a seamless solution for individuals.",
     Techs: ["MERN Stack,", "Nginx,", "MySQL"],

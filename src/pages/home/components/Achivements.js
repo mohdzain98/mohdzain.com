@@ -4,18 +4,21 @@ import Ribbon from "../../../components/layout/Ribbon";
 
 const Achivements = () => {
   return (
-    <section
-      className="py-5"
+    <div
+      className="py-5 px-3"
       id="achievements"
       style={{ backgroundColor: "#dfe5faff" }}
     >
       <center>
         <Ribbon value={"Achievements"} color={"grey"} />
       </center>
-      <div className="container mt-5">
+      <div className="container px-md-5 mt-5">
         <div className="row g-4">
-          <div className="col-12">
-            <div className="card border-0 shadow-sm">
+          <div className="col-12 col-md-12">
+            <div
+              className="card border shadow-sm"
+              style={{ borderRadius: "15px" }}
+            >
               <div className="card-body p-4">
                 <div className="d-flex flex-column flex-md-row align-items-md-start gap-3">
                   <div className="text-primary fs-2">
@@ -80,7 +83,10 @@ const Achivements = () => {
           </div>
 
           <div className="col-12 col-md-12">
-            <div className="card border-0 shadow-sm h-100">
+            <div
+              className="card border shadow-sm h-100"
+              style={{ borderRadius: "15px" }}
+            >
               <div className="card-body p-4">
                 <div className="d-flex align-items-center gap-3 mb-2">
                   <div className="text-success fs-3">
@@ -100,7 +106,7 @@ const Achivements = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

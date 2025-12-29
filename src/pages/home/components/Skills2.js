@@ -170,7 +170,7 @@ const Skills2 = () => {
   };
   return (
     <section
-      className="py-5"
+      className="py-5 px-2"
       id="skill"
       style={{ padding: 0, backgroundColor: " rgb(244, 238, 216)" }}
     >
