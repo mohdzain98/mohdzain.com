@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 import Blogs from "./pages/Blogs";
 import CimagesCrypt from "./pages/blogs/cryptosystem/CimagesCrypt";
 import Gitrepos from "./pages/Gitrepos";
+import Gnost from "./pages/Gnost";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/projects" element={<Allprojects />}></Route>
+          <Route exact path="/projects/gnost" element={<Gnost />}></Route>
           <Route exact path="/blogs" element={<Blogs />}></Route>
           <Route
             exact
