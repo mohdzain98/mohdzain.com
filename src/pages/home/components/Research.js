@@ -34,20 +34,33 @@ const ResearchItem = ({
       </p>
 
       {/* Tags */}
-      {tags && tags.length > 0 && (
-        <div className="mb-3">
-          {tags.map((tag, idx) => (
-            <span
-              key={idx}
-              className={`badge bg-primary bg-opacity-10 text-primary me-2 ${
-                isTabletOrMobile ? "mb-2" : ""
-              }`}
-            >
-              {tag}
-            </span>
-          ))}
+      <div className="d-flex justify-content-between flex-row">
+        <div>
+          {tags && tags.length > 0 && (
+            <div className="mb-3">
+              {tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className={`badge bg-primary bg-opacity-10 text-primary me-2 ${
+                    isTabletOrMobile ? "mb-2" : ""
+                  }`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+        <div>
+          <span
+            className={`badge bg-warning bg-opacity-10 text-secondary me-2 ${
+              isTabletOrMobile ? "mb-2" : ""
+            }`}
+          >
+            M.Tech Thesis
+          </span>
+        </div>
+      </div>
 
       {/* Abstract */}
       <div className="mb-3">

@@ -41,7 +41,7 @@ const projects = [
 const allprojects = [
   {
     Name: "GNOST - Codebase Knowledge",
-    Desc: "GNOST helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
+    Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
     Techs: ["python,", "pypi"],
     Tools: ["VS code", "Git"],
     img: "gnost.png",

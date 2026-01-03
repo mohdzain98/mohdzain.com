@@ -5,7 +5,7 @@ const Gnost = () => {
   const [copied, setCopied] = useState(false);
   const command = "pip install gnost";
   useEffect(() => {
-    document.title = "gnost | Mohd Zain";
+    document.title = "GNOST - Codebase Knowledge";
   }, []);
 
   const handleCopy = async () => {
@@ -27,6 +27,9 @@ const Gnost = () => {
           <li className="breadcrumb-item">
             <Link to="/">Home</Link>
           </li>
+          <li className="breadcrumb-item">
+            <Link to="/projects">Projects</Link>
+          </li>
           <li className="breadcrumb-item active" aria-current="page">
             Gnost
           </li>
@@ -39,10 +42,11 @@ const Gnost = () => {
           <div className="col-12 col-lg-8">
             <div className="py-4 pe-4">
               <p style={{ textAlign: "justify" }}>
-                GNOST helps understand unfamiliar codebases by automatically
-                identifying entry points, execution flow, and core logic. It
-                provides a quick starting point for navigating large
-                repositories and building a mental model of how a project works.
+                GNOST is a python package that helps understand unfamiliar
+                codebases by automatically identifying entry points, execution
+                flow, and core logic. It provides a quick starting point for
+                navigating large repositories and building a mental model of how
+                a project works.
               </p>
               <p style={{ textAlign: "justify" }}>
                 The name GNOST is inspired by{" "}
@@ -56,6 +60,7 @@ const Gnost = () => {
                 <li>Detects where execution starts</li>
                 <li>Infers high-level execution flow</li>
                 <li>Identifies hotspot files (most important code)</li>
+                <li>Identify caution codes</li>
                 <li>Generates onboarding documentation</li>
                 <li>Produces Mermaid flow diagrams</li>
                 <li>Works across multiple languages</li>
