@@ -15,10 +15,10 @@ const Footer = () => {
         <div className="d-flex justify-content-around align-items-center">
           <div className="footer-item">
             <p className="text-center mb-1" style={{ fontSize: "14px" }}>
-              &copy; 2024 Mohd Zain
+              &copy; 2025 Mohd Zain
             </p>
             <p className="text-center mb-0" style={{ fontSize: "12px" }}>
-              Updated on : 24 Dec, 2025 V: 2.6
+              Updated on : 04 Jan, 2025 V: 2.6.1
             </p>
           </div>
           <div
