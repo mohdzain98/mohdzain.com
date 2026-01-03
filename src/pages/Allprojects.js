@@ -54,8 +54,8 @@ const Allprojects = () => {
                     <p
                       class="card-text text-muted"
                       style={{
-                        fontSize: "13px",
-                        textAlign: "justify",
+                        fontSize: "14px",
+                        // textAlign: "justify",
                       }}
                     >
                       {item.Desc}
