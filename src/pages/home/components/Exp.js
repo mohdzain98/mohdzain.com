@@ -30,10 +30,7 @@ const Exp = () => {
                     </div>
                     <h3 className="h5 fw-bold mb-0">{item.name}</h3>
                   </div>
-                  <p
-                    className="text-muted"
-                    style={{ textAlign: "justify", fontSize: "14px" }}
-                  >
+                  <p className="text-muted" style={{ fontSize: "15px" }}>
                     {item.desc}
                   </p>
                   <div className="d-flex flex-wrap gap-2 mt-auto">
