@@ -46,10 +46,7 @@ const Projects = () => {
                       );
                     })}
                   </ul>
-                  <p
-                    className="text-muted"
-                    style={{ fontSize: "12px", textAlign: "justify" }}
-                  >
+                  <p className="text-muted" style={{ fontSize: "14px" }}>
                     {item.Desc}
                   </p>
                   <p className="d-inline">Tools: </p>

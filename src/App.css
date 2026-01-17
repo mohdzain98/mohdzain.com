@@ -1,12 +1,110 @@
-#nav .nav-item{
-  font-size: large;
+#nav .nav-item {
   margin-right: 8px;
 }
 
-#nav .navbar{
+#nav .navbar {
   background-color: #2f2626;
-  color:white;
+  color: white;
+}
+
+#nav .nav-link {
+  color: #000;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+#nav .nav-link.dropdown-toggle {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+#nav .navbar-nav {
+  column-gap: 10px;
+}
+
+#nav .nav-link.active {
+  color: #000;
+  font-weight: bold;
+}
+
+#nav .nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #000;
+}
+
+#nav .nav-link:hover {
+  color: #000;
+}
+
+#nav .nav-link {
+  letter-spacing: 1px;
+}
+
+#nav .text-glow {
+  text-shadow: 0 0 10px rgba(164, 101, 255, 0.8);
+}
+
+#nav .navbar-toggler {
+  border: 0;
+  padding: 6px;
+}
+
+#nav .navbar-toggler:focus,
+#nav .navbar-toggler:active {
+  box-shadow: none;
+  outline: none;
+}
+
+#nav .navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  transition: background-color 0.2s ease;
+}
+
+#nav .navbar-toggler-icon::before,
+#nav .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #000;
+  transition: transform 0.2s ease, top 0.2s ease;
+}
+
+#nav .navbar-toggler-icon::before {
+  top: -7px;
+}
+
+#nav .navbar-toggler-icon::after {
+  top: 7px;
+}
+
+#nav .navbar-toggler.is-open .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+#nav .navbar-toggler.is-open .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#nav .navbar-toggler.is-open .navbar-toggler-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#gnost .stbd {
+  --bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E");
 }
 
 /* styles.css */
-

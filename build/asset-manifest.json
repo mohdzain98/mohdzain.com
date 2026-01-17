@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ac9ccb2.css",
-    "main.js": "/static/js/main.f4ca2256.js",
+    "main.css": "/static/css/main.573f8eb6.css",
+    "main.js": "/static/js/main.ae9db555.js",
     "static/js/453.5e13eb6b.chunk.js": "/static/js/453.5e13eb6b.chunk.js",
     "static/media/DDBCICST.pdf": "/static/media/DDBCICST.aed745bf19d1db7e07bd.pdf",
     "static/media/DDBCICSRP.pdf": "/static/media/DDBCICSRP.23bb3ae5d999a0700339.pdf",
@@ -11,6 +11,7 @@
     "static/media/ds.jpg": "/static/media/ds.ae2871bae7cd27d95127.jpg",
     "static/media/csp.png": "/static/media/csp.7965a58cf9f45cdf76ae.png",
     "static/media/nlookup.jpg": "/static/media/nlookup.16d69e55c4224e16e84e.jpg",
+    "static/media/arize-phoenix-ui.png": "/static/media/arize-phoenix-ui.c4881a51712c84135987.png",
     "static/media/mypic.jpeg": "/static/media/mypic.e8600a9fbfcfdbbd321e.jpeg",
     "static/media/app.png": "/static/media/app.1f356a41a9c0bd4470a6.png",
     "static/media/gnost.png": "/static/media/gnost.9e0f75c16248057f20cd.png",
@@ -42,6 +43,7 @@
     "static/media/chi.jpg": "/static/media/chi.d7b9adb200e911964513.jpg",
     "static/media/surfmind.jpg": "/static/media/surfmind.2274fa4de962f5312adc.jpg",
     "static/media/iit.png": "/static/media/iit.768433cb144ddd6c66ff.png",
+    "static/media/notfound.webp": "/static/media/notfound.f8041ad5680633109a88.webp",
     "static/media/h1.jpg": "/static/media/h1.5dc1fbca438163f29655.jpg",
     "static/media/h3.jpg": "/static/media/h3.dd6e785bfd07b2f8370a.jpg",
     "static/media/rm.jpg": "/static/media/rm.bc1b000726f2ede28e3f.jpg",
@@ -50,12 +52,12 @@
     "static/media/spiral.jpg": "/static/media/spiral.9e3e6d473358f7ef03b5.jpg",
     "index.html": "/index.html",
     "static/media/noteswift.webp": "/static/media/noteswift.9530e57fe5142a9bb0e9.webp",
-    "main.5ac9ccb2.css.map": "/static/css/main.5ac9ccb2.css.map",
-    "main.f4ca2256.js.map": "/static/js/main.f4ca2256.js.map",
+    "main.573f8eb6.css.map": "/static/css/main.573f8eb6.css.map",
+    "main.ae9db555.js.map": "/static/js/main.ae9db555.js.map",
     "453.5e13eb6b.chunk.js.map": "/static/js/453.5e13eb6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ac9ccb2.css",
-    "static/js/main.f4ca2256.js"
+    "static/css/main.573f8eb6.css",
+    "static/js/main.ae9db555.js"
   ]
 }

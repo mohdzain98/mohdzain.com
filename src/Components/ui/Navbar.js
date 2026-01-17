@@ -1,52 +1,69 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { Link as ScrollLink } from "react-scroll";
 import "../../App.css";
 
 const Navbar = () => {
-  const ref = useRef();
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const location = useLocation();
   const rollNavBack = () => {
-    isTabletOrMobile && ref.current.click();
+    if (!isTabletOrMobile || !isNavOpen) return;
+
+    setIsNavOpen(false);
+    const collapseEl = document.getElementById("navbarSupportedContent");
+    if (collapseEl && collapseEl.classList.contains("show")) {
+      const bootstrapCollapse = window.bootstrap?.Collapse;
+      bootstrapCollapse?.getOrCreateInstance(collapseEl).hide();
+    }
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-      <div className="container-fluid">
-        <Link className="navbar-brand mb-0 h1" to="/">
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom"
+      id="nav"
+      style={{ paddingBottom: isTabletOrMobile ? "10px" : "0" }}
+    >
+      <div
+        className="container"
+        style={{
+          padding: "5px 0",
+          maxWidth: isTabletOrMobile ? "90%" : "1200px",
+          marginBottom: "0",
+        }}
+      >
+        <Link className="navbar-brand mb-0 h1 fw-bold text-glow" to="/">
           MZ
         </Link>
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${isNavOpen ? "is-open" : ""}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded={isNavOpen}
           aria-label="Toggle navigation"
-          ref={ref}
+          onClick={() => setIsNavOpen((open) => !open)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul className="navbar-nav  me-auto mb-2 mb-lg-0 ms-2">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             {location.pathname === "/" ? (
-              <li class="nav-item dropdown">
-                <a
-                  class={`nav-link dropdown-toggle ${
+              <li className="nav-item dropdown">
+                <button
+                  className={`nav-link dropdown-toggle ${
                     location.pathname === "/" ? "active" : ""
                   }`}
-                  href="/"
                   id="navbarDropdown"
-                  role="button"
+                  type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Home
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                </button>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <ScrollLink
                       className="dropdown-item"
@@ -176,10 +193,7 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 className={`nav-link ${
-                  location.pathname === "/blogs" ||
-                  location.pathname === "/blogs/color-images-cryptosystem"
-                    ? "active"
-                    : ""
+                  location.pathname.startsWith("/blogs") ? "active" : ""
                 }`}
                 to="/blogs"
                 onClick={rollNavBack}

@@ -12,6 +12,11 @@ routes = [
     changefreq: "monthly",
     priority: 0.8,
   },
+  {
+    url: "/blogs/tracing-agentic-llm-workflows-arize-phoenix-langgraph",
+    changefreq: "monthly",
+    priority: 0.8,
+  },
   { url: "/gitrepos", changefreq: "monthly", priority: 0.8 },
 ];
 // Generate the sitemap
