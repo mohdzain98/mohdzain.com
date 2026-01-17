@@ -1,15 +1,16 @@
-import React from "react";
-import TypingEffect from "../../../components/layout/TypingEffect";
-import "../Styling/Intro.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import TypingEffect from "../../../components/layout/TypingEffect";
+import "../Styling/Intro.css";
 
 const Head = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
     <div className="portfolio-page">
-      <div className="content-container text-center">
+      <div
+        className={`content-container ${!isTabletOrMobile && "text-center"}`}
+      >
         <h1 className="animated-text display-1 fw-bold mb-4">
           Hi, I'm <span className="name-highlight">Mohd Zain</span>
         </h1>
@@ -43,7 +44,7 @@ const Head = () => {
             to="mailto:zainmohd1998@gmail.com"
             className={`btn btn-primary ${
               isTabletOrMobile ? "btn-sm" : "btn-lg"
-            } mx-2`}
+            }`}
           >
             Contact Me
           </Link>

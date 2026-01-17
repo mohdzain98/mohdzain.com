@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MathJaxContext, MathJax } from "better-react-mathjax";
 import "../../home/Styling/Blogs.css";
@@ -9,15 +9,14 @@ import References from "./References";
 import { Link as ScrollLink } from "react-scroll";
 import Conclusion from "./Conclusion";
 import { useMediaQuery } from "react-responsive";
+import "../styling/blogs.css";
+import { Helmet } from "react-helmet-async";
 
 const CimagesCrypt = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState("enc");
   const [encr, setEncr] = useState(true);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-  useEffect(() => {
-    document.title = "cic | blogs | Mohd Zain";
-  }, []);
   const enc = () => {
     setEncr(true);
     setActive("enc");
@@ -30,171 +29,185 @@ const CimagesCrypt = () => {
     navigate("/");
   };
   return (
-    <div
-      id="cic"
-      className={`${isTabletOrMobile ? "p-1" : "p-4"}`}
-      style={isTabletOrMobile ? {} : { margin: "0 10%" }}
-    >
-      <div className="container p-4">
-        <div className="my-2">
-          <nav aria-label="breadcrumb">
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item">
-                <Link to="/">Home</Link>
-              </li>
-              <li className="breadcrumb-item">
-                <Link to="/blogs">Blogs</Link>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                DNA based Color Images Encryption
-              </li>
-              <div class="breadcrumb-item dropdown" id="menu">
-                <Link
-                  className="dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  style={{ textDecoration: "none", color: "grey" }}
-                >
-                  Content
-                </Link>
-                <ul class="dropdown-menu pe-3" style={{ width: "max-content" }}>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="introduction"
-                      smooth={true}
-                      duration={50}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Introduction
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="pwork"
-                      smooth={true}
-                      duration={50}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Proposed Work
-                    </ScrollLink>
-                    <ul>
-                      <li>
-                        <ScrollLink
-                          className="dropdown-item"
-                          to="efchart"
-                          smooth={true}
-                          duration={50}
-                          style={{ cursor: "pointer", fontSize: "13px" }}
-                        >
-                          Encryption Algo Flow Chart
-                        </ScrollLink>
-                      </li>
-                      <li>
-                        <ScrollLink
-                          className="dropdown-item"
-                          to="pc"
-                          smooth={true}
-                          duration={50}
-                          style={{ cursor: "pointer", fontSize: "13px" }}
-                        >
-                          Proposed Cryptosystem
-                        </ScrollLink>
-                      </li>
-                      <li>
-                        <ScrollLink
-                          className="dropdown-item"
-                          to="naved"
-                          smooth={true}
-                          duration={50}
-                          style={{ cursor: "pointer", fontSize: "13px" }}
-                        >
-                          Encryption and Decryption
-                        </ScrollLink>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="results"
-                      smooth={true}
-                      duration={50}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Results and Analysis
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="conclusion"
-                      smooth={true}
-                      duration={50}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Conclusion
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="references"
-                      smooth={true}
-                      duration={50}
-                      style={{ cursor: "pointer" }}
-                    >
-                      References
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="footnotes"
-                      smooth={true}
-                      duration={50}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Foot Notes
-                    </ScrollLink>
-                  </li>
-                </ul>
-              </div>
-            </ol>
-          </nav>
-        </div>
-        <div className="mt-4">
-          <h3>
-            A DNA based Color Image Cryptosystem using Chaotic Maps, Spiral
-            Mixing and Non - Linear Binary Operator
-          </h3>
-          <Link
-            to={"https://www.nature.com/articles/s41598-025-04021-4"}
-            target="_blank"
-            rel="noopener"
-            style={{ textDecoration: "none" }}
-          >
-            <p className="text-primary fw-bolder">
-              <i className="fa-solid fa-book fa-sm"></i> research paper
+    <>
+      <Helmet>
+        <title>DNA Color Image Cryptosystem | Mohd Zain</title>
+        <meta
+          name="description"
+          content="Detailed write-up of a DNA-based color image cryptosystem using chaotic maps, spiral mixing, and nonlinear binary operators."
+        />
+        <meta name="robots" content="index,follow" />
+      </Helmet>
+      <div id="cic">
+        <div
+          className={`container pt-4 pb-4 ${isTabletOrMobile ? "px-4" : "px-0"}`}
+          style={{
+            maxWidth: isTabletOrMobile ? "100%" : "1000px",
+            marginTop: isTabletOrMobile ? "0px" : "30px",
+          }}
+        >
+          <div className="my-2">
+            <nav aria-label="breadcrumb" className="stbd">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="breadcrumb-item">
+                  <Link to="/blogs">Blogs</Link>
+                </li>
+                <li className="breadcrumb-item active" aria-current="page">
+                  DNA based Color Images Encryption
+                </li>
+                <div class="breadcrumb-item dropdown" id="menu">
+                  <Link
+                    className="dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    style={{ textDecoration: "none", color: "grey" }}
+                  >
+                    Content
+                  </Link>
+                  <ul
+                    class="dropdown-menu pe-3"
+                    style={{ width: "max-content" }}
+                  >
+                    <li>
+                      <ScrollLink
+                        className="dropdown-item"
+                        to="introduction"
+                        smooth={true}
+                        duration={50}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Introduction
+                      </ScrollLink>
+                    </li>
+                    <li>
+                      <ScrollLink
+                        className="dropdown-item"
+                        to="pwork"
+                        smooth={true}
+                        duration={50}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Proposed Work
+                      </ScrollLink>
+                      <ul>
+                        <li>
+                          <ScrollLink
+                            className="dropdown-item"
+                            to="efchart"
+                            smooth={true}
+                            duration={50}
+                            style={{ cursor: "pointer", fontSize: "13px" }}
+                          >
+                            Encryption Algo Flow Chart
+                          </ScrollLink>
+                        </li>
+                        <li>
+                          <ScrollLink
+                            className="dropdown-item"
+                            to="pc"
+                            smooth={true}
+                            duration={50}
+                            style={{ cursor: "pointer", fontSize: "13px" }}
+                          >
+                            Proposed Cryptosystem
+                          </ScrollLink>
+                        </li>
+                        <li>
+                          <ScrollLink
+                            className="dropdown-item"
+                            to="naved"
+                            smooth={true}
+                            duration={50}
+                            style={{ cursor: "pointer", fontSize: "13px" }}
+                          >
+                            Encryption and Decryption
+                          </ScrollLink>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ScrollLink
+                        className="dropdown-item"
+                        to="results"
+                        smooth={true}
+                        duration={50}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Results and Analysis
+                      </ScrollLink>
+                    </li>
+                    <li>
+                      <ScrollLink
+                        className="dropdown-item"
+                        to="conclusion"
+                        smooth={true}
+                        duration={50}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Conclusion
+                      </ScrollLink>
+                    </li>
+                    <li>
+                      <ScrollLink
+                        className="dropdown-item"
+                        to="references"
+                        smooth={true}
+                        duration={50}
+                        style={{ cursor: "pointer" }}
+                      >
+                        References
+                      </ScrollLink>
+                    </li>
+                    <li>
+                      <ScrollLink
+                        className="dropdown-item"
+                        to="footnotes"
+                        smooth={true}
+                        duration={50}
+                        style={{ cursor: "pointer" }}
+                      >
+                        Foot Notes
+                      </ScrollLink>
+                    </li>
+                  </ul>
+                </div>
+              </ol>
+            </nav>
+          </div>
+          <div className="mt-4">
+            <h3>
+              A DNA based Color Image Cryptosystem using Chaotic Maps, Spiral
+              Mixing and Non - Linear Binary Operator
+            </h3>
+            <Link
+              to={"https://www.nature.com/articles/s41598-025-04021-4"}
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+            >
+              <p className="text-primary fw-bolder">
+                <i className="fa-solid fa-book fa-sm"></i> research paper
+              </p>
+            </Link>
+            <p className="text-muted" style={{ fontSize: "14px" }}>
+              <span style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                keywords
+              </span>
+              <ul className="list-inline">
+                <li className="list-inline-item">Color Images Encryption,</li>
+                <li className="list-inline-item">Color Images Decryption,</li>
+                <li className="list-inline-item">DNA based Encoding,</li>
+                <li className="list-inline-item">DNA based Decoding,</li>
+                <li className="list-inline-item">Experimental Analysis</li>
+              </ul>
             </p>
-          </Link>
-          <p className="text-muted" style={{ fontSize: "14px" }}>
-            <span style={{ fontWeight: "bold", fontStyle: "italic" }}>
-              keywords
-            </span>
-            <ul className="list-inline">
-              <li className="list-inline-item">Color Images Encryption,</li>
-              <li className="list-inline-item">Color Images Decryption,</li>
-              <li className="list-inline-item">DNA based Encoding,</li>
-              <li className="list-inline-item">DNA based Decoding,</li>
-              <li className="list-inline-item">Experimental Analysis</li>
-            </ul>
-          </p>
-          <hr style={{ color: "black", height: "2px" }} />
-          <h3 className="mt-4">Abstract</h3>
-          <hr style={{ width: "50%" }} />
-          <p className="justified">
-            The goal of image cryptosystems is to protect image transmission
+            <hr style={{ color: "black", height: "2px" }} />
+            <h3 className="mt-4">Abstract</h3>
+            <hr style={{ width: "50%" }} />
+            <p className="justified">
+              The goal of image cryptosystems is to protect image transmission
             when there are network adversaries present. To ensure secrecy,
             images are subject to encryption to produce unintelligible cipher
             images; the techniques used for this process differ significantly
@@ -762,6 +775,7 @@ const CimagesCrypt = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

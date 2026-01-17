@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Intro from "./components/Intro";
 import Careerpath from "./components/Careerpath";
 // import Skills from "./components/Skills";
@@ -12,10 +11,6 @@ import Achivements from "./components/Achivements";
 import Exp from "./components/Exp";
 
 const Home = (props) => {
-  useEffect(() => {
-    document.title = "Mohd Zain | Data Scientist";
-  }, []);
-
   return (
     <>
       <Head setProgress={props.setProgress} />
