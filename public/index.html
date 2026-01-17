@@ -22,7 +22,7 @@
     <meta name="title" content="Mohd Zain | Data Scientist" />
     <meta
       name="description"
-      content="Official portfolio website of Mohd Zain, Data Scientist specializing in Machine Learning, AI, and Web Development. Alumni of IIT (ISM) Dhanbad."
+      content="Official portfolio website of Mohd Zain, Data Scientist specializing in Machine Learning, GenAI, Agentic AI and RGMx. Alumni of IIT (ISM) Dhanbad."
     />
     <meta name="author" content="Mohd Zain" />
     <meta
@@ -31,8 +31,8 @@
     />
 
     <!-- Open Graph -->
-    <meta name="og:site_name" content="Mohd Zain" />
-    <meta name="og:title" content="Mohd Zain" />
+    <meta property="og:title" content="Mohd Zain" />
+    <meta property="og:site_name" content="Mohd Zain" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon-16x16.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -46,16 +46,21 @@
         "@graph": [
           {
             "@type": "WebSite",
-            "name": "Mohd Zain",
+            "@id": "https://mohdzain.com/#website",
             "url": "https://mohdzain.com",
+            "name": "Mohd Zain",
+            "alternateName": "Mohd Zain Portfolio",
             "publisher": {
               "@type": "Person",
+              "@id": "https://mohdzain.com/#person",
               "name": "Mohd Zain"
-            }
+            },
+            "inLanguage": "en"
           },
           {
             "@type": "Person",
             "name": "Mohd Zain",
+            "@id": "https://mohdzain.com/#person",
             "url": "https://mohdzain.com",
             "image": "https://mohdzain.com/preview_image.png",
             "jobTitle": "Data Scientist",
