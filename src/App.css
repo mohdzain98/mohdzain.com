@@ -2,9 +2,36 @@
   margin-right: 8px;
 }
 
-#nav .navbar {
-  background-color: #2f2626;
-  color: white;
+#nav.site-navbar {
+  /* background-color: rgba(240, 244, 255, 0.94); */
+  background-color: #f0f4ff;
+  background-image:
+    radial-gradient(
+      ellipse 70% 60% at 0% 0%,
+      rgba(99, 139, 255, 0.1) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 50% 50% at 100% 100%,
+      rgba(139, 92, 246, 0.06) 0%,
+      transparent 60%
+    );
+  border-bottom: 1px solid rgba(59, 91, 219, 0.12);
+  color: #111827;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    backdrop-filter 0.25s ease,
+    -webkit-backdrop-filter 0.25s ease;
+}
+
+#nav.site-navbar.site-navbar-scrolled {
+  background-color: rgba(240, 244, 255, 0.72);
+  border-bottom-color: rgba(59, 91, 219, 0.16);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 #nav .nav-link {
@@ -78,7 +105,9 @@
   width: 24px;
   height: 2px;
   background-color: #000;
-  transition: transform 0.2s ease, top 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    top 0.2s ease;
 }
 
 #nav .navbar-toggler-icon::before {

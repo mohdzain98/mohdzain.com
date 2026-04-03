@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Styling/Intro.css";
 import "animate.css";
-import Ribbon from "../../../components/layout/Ribbon";
+import SectionHeader from "../../../components/layout/SectionHeader";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
@@ -19,11 +19,38 @@ const ResearchItem = ({
 
   return (
     <div
-      className=" mt-5 mb-5 pb-4 border-bottom"
-      style={{ backgroundColor: "#f6fae0ff" }}
+      className="mt-4 mb-5"
+      style={{
+        backgroundColor: "#ffffff",
+        border: "1px solid rgba(148, 163, 184, 0.18)",
+        borderTop: "3px solid #2563eb",
+        borderRadius: "18px",
+        padding: isTabletOrMobile ? "22px 18px" : "28px 30px",
+      }}
     >
+      <p
+        className="mb-2"
+        style={{
+          fontSize: "11px",
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
+          fontWeight: 700,
+          color: "#2563eb",
+        }}
+      >
+        Featured Publication
+      </p>
+
       {/* Title */}
-      <h2 className="h2 fw-bold text-dark mb-3">{title}</h2>
+      <h3
+        className="fw-bold text-dark mb-3"
+        style={{
+          fontSize: isTabletOrMobile ? "1.3rem" : "1.55rem",
+          lineHeight: 1.35,
+        }}
+      >
+        {title}
+      </h3>
 
       {/* Authors */}
       <p className="text-dark mb-2">{authors}</p>
@@ -79,11 +106,11 @@ const ResearchItem = ({
           >
             {expanded ? (
               <>
-                <i class="fa-solid fa-chevron-up"></i> Show less
+                <i className="fa-solid fa-chevron-up"></i> Show less
               </>
             ) : (
               <>
-                <i class="fa-solid fa-chevron-down"></i> Read full abstract
+                <i className="fa-solid fa-chevron-down"></i> Read full abstract
               </>
             )}
           </button>
@@ -100,13 +127,13 @@ const ResearchItem = ({
             className="text-primary text-decoration-none fw-semibold"
           >
             Access Paper{" "}
-            <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+            <i className="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
           </Link>
           <Link
             to={"/blogs/color-images-cryptosystem"}
             className="text-primary text-decoration-none fw-semibold"
           >
-            Read More <i class="fa-solid fa-arrow-right fa-sm"></i>
+            Read More <i className="fa-solid fa-arrow-right fa-sm"></i>
           </Link>
         </div>
       )}
@@ -129,16 +156,13 @@ const Research = () => {
     },
   ];
   return (
-    <section
-      className="research pt-5"
-      id="research"
-      style={{ backgroundColor: "#f6fae0ff" }}
-    >
-      <center>
-        <Ribbon value={"Research"} color={"green"} />
-      </center>
-      <div className="min-h-screen bg-white p-8">
+    <section className="research pt-5" id="research">
+      <div className="p-8">
         <div className="max-w-4xl mx-auto">
+          <SectionHeader
+            title="Research"
+            subtitle="Published work focused on secure image cryptography, algorithmic design, and rigorous experimental analysis."
+          />
           <div>
             {researchPapers.map((paper, idx) => (
               <ResearchItem key={idx} {...paper} />

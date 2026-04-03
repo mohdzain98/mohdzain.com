@@ -11,8 +11,9 @@ import Home from "./pages/home/Home";
 import Allprojects from "./pages/Allprojects";
 import ScrollToTop from "./components/ui/ScrollToTop";
 import Blogs from "./pages/Blogs";
-import Gitrepos from "./pages/Gitrepos";
 import Gnost from "./pages/Gnost";
+import Experience from "./pages/Experience";
+import Industry from "./pages/Industry";
 import Wrong from "./pages/Wrong";
 import AllBlogs from "./pages/blogs/AllBlogs";
 import AllExample from "./pages/blogs/AllExample";
@@ -35,7 +36,8 @@ function App() {
             path="/blogs/:blog/example"
             element={<AllExample />}
           ></Route>
-          <Route exact path="/gitrepos" element={<Gitrepos />}></Route>
+          <Route exact path="/experience" element={<Experience />}></Route>
+          <Route exact path="/industry" element={<Industry />}></Route>
           <Route exact path="/404" element={<Wrong />}></Route>
           <Route path="*" element={<Navigate to="/404" />}></Route>
         </Routes>

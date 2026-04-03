@@ -1,3 +1,12 @@
+:root {
+  --site-bg-light:  #f5f6fa;   /* base light  */
+  --site-bg-dark:   #e8eaf2;   /* slightly darker — alternating sections */
+  --card-bg:        #ffffff;
+  --color-accent:   #0d6efd;
+  --color-text:     #1a1a2e;
+  --color-text-muted: #6c757d;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +14,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--site-bg-light);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* ── Alternating section backgrounds ────────────────────────
+   Odd  (1st, 3rd, 5th…) → light
+   Even (2nd, 4th, 6th…) → slightly darker
+   Order on page: About → Industry → CareerPath → Skills → Achievements → Projects → Research
+──────────────────────────────────────────────────────────── */
+
+/* light sections */
+#about,
+#cp,
+#achievements,
+#research {
+  background-color: var(--site-bg-light) !important;
+}
+
+
+/* darker sections */
+#experience,
+#skill,
+#projects {
+  background-color: var(--site-bg-dark) !important;
+}
+
+/* strip any leftover inline-color overrides on .home and .cp */
+.home,
+.cp {
+  background-color: inherit !important;
 }

@@ -1,82 +1,69 @@
-import React from "react";
+import { useRef } from "react";
 import { projects } from "../../../config/allproject";
 import "../Styling/Projects.css";
 import { Link } from "react-router-dom";
-import "animate.css";
 import { useMediaQuery } from "react-responsive";
-import Ribbon from "../../../components/layout/Ribbon";
+import SectionHeader from "../../../components/layout/SectionHeader";
 
 const Projects = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const sectionRef = useRef(null);
+
   const handleClick = (href) => {
     window.open(`${href}`, "_blank");
   };
+
   return (
     <div
       id="projects"
-      className="p-4"
-      style={{ backgroundColor: " whitesmoke" }}
+      className="py-5 px-3 home-accent-section"
+      ref={sectionRef}
     >
-      <div className="container" style={{ marginTop: "1%" }}>
-        <center>
-          <div style={{ marginBottom: "50px" }}>
-            <Ribbon value={"Projects"} />
-          </div>
-        </center>
-        <div className="row">
-          {projects.map((item) => {
-            return (
-              <div className="col-md-3 col-xs-12">
-                <div
-                  className={`box shadow-sm p-4 mb-4 ${
-                    isTabletOrMobile ? "" : "h-100"
-                  }`}
-                  onClick={() => handleClick(item.Live)}
-                >
-                  <h5 className="text-primary">{item.Name}</h5>
-                  <ul className="list-inline">
-                    {item.Techs.map((e) => {
-                      return (
-                        <li
-                          className="list-inline-item"
-                          style={{ fontSize: "14px" }}
-                        >
-                          {e}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <p className="text-muted" style={{ fontSize: "14px" }}>
-                    {item.Desc}
-                  </p>
-                  <p className="d-inline">Tools: </p>
-                  <ul className="d-inline list-inline">
-                    {item.Tools.map((f) => {
-                      return (
-                        <li
-                          className="list-inline-item tline my-1"
-                          style={{ fontSize: "12px" }}
-                        >
-                          {f}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
+      <div className="container px-md-5 mt-5">
+        <SectionHeader
+          title="Projects"
+          subtitle="Selected builds across Gen AI, machine learning, computer vision, and full-stack product work."
+        />
+        <div className="row g-4 align-items-stretch">
+          {projects.map((item) => (
+            <div className="col-12 col-sm-6 col-xl-3 d-flex" key={item.Name}>
+              <div
+                className={`project-card box shadow-sm p-4 ${
+                  isTabletOrMobile ? "" : "h-100"
+                }`}
+                onClick={() => handleClick(item.Live)}
+              >
+                <h5 className="text-primary">{item.Name}</h5>
+                <p className="text-muted" style={{ fontSize: "14px" }}>
+                  {item.Desc}
+                </p>
+                <p className="d-inline">Tech Stack: </p>
+                <ul className="list-inline">
+                  {item.Techs.map((f) => (
+                    <li
+                      key={f}
+                      className="list-inline-item tline my-1"
+                      style={{ fontSize: "12px" }}
+                    >
+                      {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
-        <p className="text-center mt-5">
+        <p className="mt-4 text-start">
           <Link
             to="/projects"
+            className="text-muted"
             style={{
               textDecoration: "none",
               color: "black",
               fontWeight: "bold",
             }}
           >
-            More Projects
+            More Projects <i className="fa-solid fa-arrow-right ms-1" />
           </Link>
         </p>
       </div>

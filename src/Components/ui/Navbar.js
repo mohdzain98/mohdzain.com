@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { Link as ScrollLink } from "react-scroll";
@@ -6,8 +6,21 @@ import "../../App.css";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 12);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const rollNavBack = () => {
     if (!isTabletOrMobile || !isNavOpen) return;
 
@@ -21,9 +34,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom"
+      className={`navbar navbar-expand-lg navbar-light sticky-top site-navbar ${
+        isScrolled ? "site-navbar-scrolled" : ""
+      }`}
       id="nav"
-      style={{ paddingBottom: isTabletOrMobile ? "10px" : "0" }}
+      style={{
+        paddingBottom: isTabletOrMobile ? "10px" : "0",
+      }}
     >
       <div
         className="container"
@@ -79,13 +96,13 @@ const Navbar = () => {
                   <li>
                     <ScrollLink
                       className="dropdown-item"
-                      to="research"
+                      to="experience"
                       smooth={true}
                       duration={50}
                       onClick={rollNavBack}
                       style={{ cursor: "pointer" }}
                     >
-                      Research
+                      Industry
                     </ScrollLink>
                   </li>
                   <li>
@@ -139,25 +156,13 @@ const Navbar = () => {
                   <li>
                     <ScrollLink
                       className="dropdown-item"
-                      to="experience"
+                      to="research"
                       smooth={true}
                       duration={50}
                       onClick={rollNavBack}
                       style={{ cursor: "pointer" }}
                     >
-                      Industry
-                    </ScrollLink>
-                  </li>
-                  <li>
-                    <ScrollLink
-                      className="dropdown-item"
-                      to="soc"
-                      smooth={true}
-                      duration={50}
-                      onClick={rollNavBack}
-                      style={{ cursor: "pointer" }}
-                    >
-                      Socials
+                      Research
                     </ScrollLink>
                   </li>
                 </ul>
@@ -176,6 +181,17 @@ const Navbar = () => {
                 </Link>
               </li>
             )}
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${
+                  location.pathname === "/experience" ? "active" : ""
+                }`}
+                to="/experience"
+                onClick={rollNavBack}
+              >
+                Experience
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 className={`nav-link ${
@@ -206,23 +222,12 @@ const Navbar = () => {
                 className={`nav-link ${
                   location.pathname === "/cv" ? "active" : ""
                 }`}
-                to="https://drive.google.com/file/d/1vZUVvbGi8euOLnYXMRL75VORWNsQT0Py/view?usp=sharing"
+                to="https://drive.google.com/file/d/1_fD52n9t2l91nAGw3rDiKv17V2mo9lKK/view?usp=sharing"
                 target="_blank"
                 rel="noopener"
                 onClick={rollNavBack}
               >
-                Vitae
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link ${
-                  location.pathname === "/gitrepos" ? "active" : ""
-                }`}
-                to="/gitrepos"
-                onClick={rollNavBack}
-              >
-                Git Repos
+                Resume
               </Link>
             </li>
           </ul>

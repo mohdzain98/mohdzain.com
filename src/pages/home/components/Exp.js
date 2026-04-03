@@ -1,24 +1,21 @@
-import React from "react";
 import { exp } from "../../../config/allexp";
-import Ribbon from "../../../components/layout/Ribbon";
+import { Link } from "react-router-dom";
+import SectionHeader from "../../../components/layout/SectionHeader";
 import "../Styling/Intro.css";
 
 const Exp = () => {
-  const items = exp.slice(0, 4);
+  const items = exp.slice(0, 3);
 
   return (
-    <div
-      id="experience"
-      className="py-5 px-3"
-      style={{ backgroundColor: "#f0e1f5ff" }}
-    >
-      <center>
-        <Ribbon value={"Industry"} color={"blue"} />
-      </center>
-      <div className="container px-md-5 mt-5">
+    <div id="experience" className="py-5 px-3 home-accent-section">
+      <div className="container px-md-5 mt-5 py-3">
+        <SectionHeader
+          title="Industry"
+          subtitle="Building applied AI and data science systems across production workflows, experimentation, and measurable business outcomes."
+        />
         <div className="row g-4">
           {items.map((item, idx) => (
-            <div className="col-12 col-md-6" key={`${item.name}-${idx}`}>
+            <div className="col-12 col-md-4" key={`${item.name}-${idx}`}>
               <div
                 className="card border shadow-sm h-100"
                 style={{ borderRadius: "15px" }}
@@ -48,6 +45,19 @@ const Exp = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-4 text-start">
+          <Link
+            to="/industry"
+            className="text-muted mt-4"
+            style={{
+              textDecoration: "none",
+              color: "#111827",
+              fontWeight: 700,
+            }}
+          >
+            View All Work <i className="fa-solid fa-arrow-right ms-1" />
+          </Link>
         </div>
       </div>
     </div>

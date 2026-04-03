@@ -1,17 +1,8 @@
 // eslint-disable-next-line
 const projects = [
   {
-    Name: "Curlmin",
-    Desc: "Curlmin is an advanced URL shortening and management platform designed to make sharing links faster, smarter, and more efficient. Whether you need shortened URLs, QR codes, barcodes, or Curltags, Curlmin provides a seamless solution for individuals.",
-    Techs: ["MERN Stack,", "Nginx,", "MySQL"],
-    Tools: ["Git"],
-    Live: "https://curlmin.com",
-    href: "Live App",
-    details: [],
-  },
-  {
     Name: "Docschat",
-    Desc: "Docschat is an innovative project designed to revolutionize how users interact with documents. By leveraging the power of Large Language Models (LLMs), Docschat enables intuitive, conversational interactions with Documents. Additionally it contains content retrieval tools.",
+    Desc: "Docschat enables conversational interaction with documents using LLMs, along with integrated content retrieval capabilities.",
     Techs: ["LangChain,", "MERN Stack,", "Python Flask,", "Nginx,", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://docschat.in",
@@ -19,12 +10,12 @@ const projects = [
     details: [],
   },
   {
-    Name: "LexiClick",
-    Desc: " Instantly access definitions, examples, synonyms, and antonyms on double-click, plus AI-driven search for deeper insights",
-    Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
-    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
-    Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
-    href: "Add To Chrome",
+    Name: "GNOST - Codebase Knowledge",
+    Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
+    Techs: ["python,", "pypi"],
+    Tools: ["VS code", "Git"],
+    Live: "https://pypi.org/project/gnost/",
+    href: "View on PyPI",
     details: [],
   },
   {
@@ -36,11 +27,21 @@ const projects = [
     href: "Add To Chrome",
     details: [],
   },
+  {
+    Name: "LexiClick",
+    Desc: " Instantly access definitions, examples, synonyms, and antonyms on double-click, plus AI-driven search for deeper insights",
+    Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
+    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
+    Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
+    href: "Add To Chrome",
+    details: [],
+  },
 ];
 
 const allprojects = [
   {
     Name: "GNOST - Codebase Knowledge",
+    category: "python-package",
     Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
     Techs: ["python,", "pypi"],
     Tools: ["VS code", "Git"],
@@ -57,7 +58,8 @@ const allprojects = [
   },
   {
     Name: "Curlmin",
-    Desc: "Curlmin is an advanced URL shortening and management platform designed to make sharing links faster, smarter, and more efficient. Whether you need shortened URLs, QR codes, barcodes, or Curltags, Curlmin provides a seamless solution for individuals.",
+    category: "web-apps",
+    Desc: "Built CurlMin, a URL shortening and management platform with support for QR codes, barcodes, and smart link sharing.",
     Techs: ["MERN Stack,", "Nginx,", "MySQL"],
     Tools: ["VS code", "PowerShell", "Git"],
     img: "curlmin.png",
@@ -73,7 +75,8 @@ const allprojects = [
   },
   {
     Name: "Docschat",
-    Desc: "Docschat is an innovative project designed to revolutionize how users interact with documents. By leveraging the power of Large Language Models (LLMs), Docschat enables intuitive, conversational interactions with Documents. Additionally it contains content retrieval tools.",
+    category: "gen-ai",
+    Desc: "Docschat enables conversational interaction with documents using LLMs, along with integrated content retrieval capabilities.",
     Techs: ["LangChain,", "MERN Stack,", "Python Flask,", "Nginx,", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     img: "docschat.jpg",
@@ -89,7 +92,8 @@ const allprojects = [
   },
   {
     Name: "Curlmin Chrome Extension",
-    Desc: " Curlmin Chrome Extension simplifies URL shortening with a single click. Quickly generate short links and save them to your CurlMin account for easy access. Fast, seamless, and efficient!",
+    category: "chrome-extensions",
+    Desc: "Built a Chrome extension for CurlMin to generate and save shortened URLs with a single click.",
     Techs: ["React,", "Nginx"],
     Tools: ["VS Code", "PowerShell", "Git"],
     Live: "https://chromewebstore.google.com/detail/curlmin/nfgjgdpidaejbpnohadipbbikljiebbc",
@@ -106,7 +110,8 @@ const allprojects = [
   },
   {
     Name: "LexiClick",
-    Desc: " Elevate your reading experience with LexiClick, the intelligent Chrome extension that brings instant access to word definitions, examples, synonyms, and antonyms with just a double-click, plus AI-driven search for deeper insights",
+    category: "chrome-extensions",
+    Desc: "Built LexiClick, a Chrome extension for instant word definitions, synonyms, and AI-powered insights on double-click.",
     Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
@@ -123,6 +128,7 @@ const allprojects = [
   },
   {
     Name: "SurfMind",
+    category: "chrome-extensions",
     Desc: "SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit",
     Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
@@ -139,7 +145,8 @@ const allprojects = [
   },
   {
     Name: "Car Sales Prediction",
-    Desc: "Employed a Machine Learning approach to forecast car sales using Multivariate Linear Regression with Stochastic Gradient Descent (SGD) and L2 Regularization. Updated model weights iteratively with SGD to minimize the loss function and applied L2 Regularization to prevent overfitting by penalizing large coefficients",
+    category: "machine-learning",
+    Desc: "Forecasted car sales using multivariate linear regression with SGD optimization and L2 regularization to improve generalization.",
     Techs: ["Python,", "Pandas,", "Sklearn"],
     Tools: ["Jupyter NB", "Git"],
     img: "csp.png",
@@ -162,7 +169,8 @@ const allprojects = [
   },
   {
     Name: "Football Player Market Value Prediction",
-    Desc: "Implemented an Artificial Neural Network on an extensive dataset of football player values from 2021 to train models for accurately predicting player values. Used Mini Batch Gradient Descent for weight updates and Mean Squared Error (MSE) as the loss function",
+    category: "machine-learning",
+    Desc: "Built an ANN model to predict football player values using mini-batch gradient descent and MSE loss.",
     Techs: ["Python,", "Pandas,", "Sklearn,", "Keras"],
     Tools: ["Jupyter NB", "Git"],
     img: "fpmp.jpg",
@@ -185,6 +193,7 @@ const allprojects = [
   },
   {
     Name: "NewsLookUp",
+    category: "machine-learning",
     Desc: "News Reading app which fetches news from News API and render it in different categories. Machine Learning model is also used to analyse the Sentiment of News Headline",
     Techs: ["Python,", "React,", "Flask"],
     Tools: ["VS Code", "Jupyter NB", "Git"],
@@ -201,6 +210,7 @@ const allprojects = [
   },
   {
     Name: "Skin Cancer Detection",
+    category: "machine-learning",
     Desc: "Engineered a project applying a Convolutional Neural Network (CNN) to analyze skin lesion images from ISIC. Successfully classified images with 80% accuracy using the binary cross-entropy loss function",
     Techs: ["CNN,", "Python,", "Pandas,", "Sklearn,", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
@@ -224,7 +234,8 @@ const allprojects = [
   },
   {
     Name: "Air Pollution Prediction",
-    Desc: "Developed an air pollution prediction model utilizing Recurrent Neural Networks (RNN) with Long Short-Term Memory (LSTM) units. Accurately forecasted pollution levels with a mean squared error loss function, achieving reliable predictions based on historical air quality data.",
+    category: "machine-learning",
+    Desc: "Developed an LSTM-based model to forecast air pollution levels using historical data and MSE loss.",
     Techs: ["RNN,", "LSTM,", "Python,", "Pandas,", "Sklearn,", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "app.png",
@@ -247,7 +258,8 @@ const allprojects = [
   },
   {
     Name: "Retail Price Optimization",
-    Desc: "Implemented a retail price optimization system using an Artificial Neural Network (ANN) to predict optimal pricing strategies. Achieved accurate price predictions with a mean squared error (MSE) loss function, driving improved sales performance based on historical pricing and demand data.",
+    category: "machine-learning",
+    Desc: "Built an ANN-based retail price optimization model to predict optimal pricing using historical demand data.",
     Techs: ["ANN,", "Python,", "Pandas,", "Sklearn,", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "rpo.webp",
@@ -270,7 +282,8 @@ const allprojects = [
   },
   {
     Name: "NoteSwift",
-    Desc: "Developed a full stack web app to save the notes of users on the web which can be accessed from anywhere. Implemented secure user authentication through JWT, ensuring data integrity and user privacy.",
+    category: "web-apps",
+    Desc: "Built a full-stack notes app with JWT-based authentication for secure, accessible data storage.",
     Techs: ["MERN Stack"],
     Tools: ["VS Code", "MongoDB Atlas", "Git", "Vercel"],
     img: "noteswift.webp",
@@ -286,7 +299,8 @@ const allprojects = [
   },
   {
     Name: "TechBooks",
-    Desc: "Simple book website that lists the recommended books for all subjects in the engineering disciplines CSE, ECE, EE, MECH, and CIVIL. It will also include links to buy the respective book from Amazon and Flipcart.",
+    category: "web-apps",
+    Desc: "Built a book recommendation website for engineering disciplines with direct purchase links to Amazon and Flipkart.",
     Techs: ["Java,", "JSP,", "HTML,", "CSS,", "MySQL,", "Nginx,", "Tomcat"],
     Tools: ["Netbeans", "Git", "AWS", "phpmyadmin"],
     img: "techbooks.jpg",
@@ -302,7 +316,8 @@ const allprojects = [
   },
   {
     Name: "BracketsBay",
-    Desc: "I have conceptualized and designed an e-commerce website specializing in curtain brackets. This online platform showcases an extensive range of premium curtain bracket solutions, catering to diverse customer needs and design preferencesThe website combines sleek design with user-friendly navigation, ensuring a seamless shopping experience for visitors",
+    category: "web-apps",
+    Desc: "Designed an e-commerce website for curtain brackets with a clean UI and seamless user experience.",
     Techs: ["PHP,", "HTML,", "CSS,", "MySQL,", "Nginx"],
     Tools: ["Sublime Text", "Git", "phpmyadmin"],
     img: "bb.jpg",
