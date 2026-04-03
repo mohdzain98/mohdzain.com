@@ -2,8 +2,10 @@ const { SitemapStream, streamToPromise } = require("sitemap");
 const fs = require("fs");
 const path = require("path");
 
-routes = [
+const routes = [
   { url: "/", changefreq: "daily", priority: 1.0 },
+  { url: "/experience", changefreq: "monthly", priority: 0.8 },
+  { url: "/industry", changefreq: "monthly", priority: 0.8 },
   { url: "/projects", changefreq: "monthly", priority: 0.8 },
   { url: "/projects/gnost", changefreq: "monthly", priority: 0.8 },
   { url: "/blogs", changefreq: "monthly", priority: 0.8 },
@@ -17,7 +19,6 @@ routes = [
     changefreq: "monthly",
     priority: 0.8,
   },
-  { url: "/gitrepos", changefreq: "monthly", priority: 0.8 },
 ];
 // Generate the sitemap
 const sitemap = new SitemapStream({ hostname: "https://mohdzain.com" });
