@@ -1,0 +1,35 @@
+.section-header {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 0 40px;
+  padding: 0 4px;
+}
+
+.section-header-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.2vw, 2.8rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #121826;
+}
+
+.section-header-subtitle {
+  margin: 10px 0 0;
+  font-size: clamp(0.95rem, 1.35vw, 1.15rem);
+  line-height: 1.55;
+  color: #5b616e;
+  max-width: 760px;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 28px;
+    padding: 0 2px;
+  }
+
+  .section-header-subtitle {
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+}
