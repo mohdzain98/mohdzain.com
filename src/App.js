@@ -20,7 +20,7 @@ import AllExample from "./pages/blogs/AllExample";
 function App() {
   return (
     <>
-      <Router basename="/v2.7">
+      <Router>
         <ScrollToTop />
         <Topbar />
         <Navbar />
