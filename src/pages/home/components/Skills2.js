@@ -170,7 +170,11 @@ const Skills2 = () => {
 
   const tabs = [
     { id: "language", label: "Language", icon: "fa-solid fa-code" },
-    { id: "datascience", label: "Data Science", icon: "fa-solid fa-chart-line" },
+    {
+      id: "datascience",
+      label: "Data Science",
+      icon: "fa-solid fa-chart-line",
+    },
     { id: "ai", label: "AI", icon: "fa-solid fa-hexagon-nodes" },
     { id: "webdev", label: "Web Dev", icon: "fa-solid fa-globe" },
     { id: "database", label: "Database", icon: "fa-solid fa-database" },
@@ -198,10 +202,10 @@ const Skills2 = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-5 px-3 home-accent-section"
+      className="py-5 px-3 home-accent-section section-desktop-pad"
       id="skill"
     >
-      <div className="container px-md-5 mt-5">
+      <div className="container px-md-2 mt-4 mt-md-4">
         <SectionHeader
           title="Skills"
           subtitle="Core tools and technical strengths across programming, AI systems, analytics, web development, and infrastructure."
@@ -236,12 +240,12 @@ const Skills2 = () => {
                       s.level === "Advanced"
                         ? 90
                         : s.level === "Intermediate"
-                        ? 65
-                        : s.level === "Basic"
-                        ? 40
-                        : s.level === "Learning"
-                        ? 20
-                        : 50;
+                          ? 65
+                          : s.level === "Basic"
+                            ? 40
+                            : s.level === "Learning"
+                              ? 20
+                              : 50;
 
                     return (
                       <div key={s.name} className="col-12 col-sm-6">
@@ -267,13 +271,19 @@ const Skills2 = () => {
                             >
                               <p
                                 className="fst-italic"
-                                style={{ fontSize: "12px", marginBottom: "0px" }}
+                                style={{
+                                  fontSize: "12px",
+                                  marginBottom: "0px",
+                                }}
                               >
                                 {s.level}
                               </p>
                             </div>
                             <div className="mt-2">
-                              <div className="progress" style={{ height: "6px" }}>
+                              <div
+                                className="progress"
+                                style={{ height: "6px" }}
+                              >
                                 <div
                                   className="skill-progress-bar progress-bar bg-primary"
                                   role="progressbar"
@@ -317,7 +327,7 @@ function animateBarsInSection(container) {
     gsap.fromTo(
       bar,
       { width: "0%" },
-      { width: target, duration: 1, ease: "power2.out" }
+      { width: target, duration: 1, ease: "power2.out" },
     );
   });
 }

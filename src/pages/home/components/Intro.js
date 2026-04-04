@@ -52,7 +52,8 @@ const Intro = () => {
     <section
       id="about"
       ref={sectionRef}
-      style={{ padding: isTabletOrMobile ? "40px 5%" : "60px 9%" }}
+      style={{ padding: isTabletOrMobile ? "50px 8%" : "70px 10%" }}
+      className="border"
     >
       <div className="row g-5 align-items-start">
         {/* ── Left: photo + about ── */}
@@ -140,7 +141,7 @@ const Intro = () => {
           <p
             className="hero-exp-title fw-bold mb-4"
             style={{
-              fontSize: "11px",
+              fontSize: "13px",
               letterSpacing: "3px",
               textTransform: "uppercase",
               color: "#0d6efd",

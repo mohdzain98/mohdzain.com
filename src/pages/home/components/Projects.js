@@ -16,17 +16,17 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="py-5 px-3 home-accent-section"
+      className="py-5 px-3 home-accent-section section-desktop-pad"
       ref={sectionRef}
     >
-      <div className="container px-md-5 mt-5">
+      <div className="container px-md-2 mt-4">
         <SectionHeader
           title="Projects"
           subtitle="Selected builds across Gen AI, machine learning, computer vision, and full-stack product work."
         />
         <div className="row g-4 align-items-stretch">
           {projects.map((item) => (
-            <div className="col-12 col-sm-6 col-xl-3 d-flex" key={item.Name}>
+            <div className="col-12 col-sm-6 col-xl-4 d-flex" key={item.Name}>
               <div
                 className={`project-card box shadow-sm p-4 ${
                   isTabletOrMobile ? "" : "h-100"
@@ -56,7 +56,7 @@ const Projects = () => {
         <p className="mt-4 text-start">
           <Link
             to="/projects"
-            className="text-muted"
+            className="text-muted ms-1"
             style={{
               textDecoration: "none",
               color: "black",

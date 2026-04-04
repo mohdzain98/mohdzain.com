@@ -7,7 +7,7 @@
 
 .section-header-title {
   margin: 0;
-  font-size: clamp(1.75rem, 3.2vw, 2.8rem);
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -16,7 +16,7 @@
 
 .section-header-subtitle {
   margin: 10px 0 0;
-  font-size: clamp(0.95rem, 1.35vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
   line-height: 1.55;
   color: #5b616e;
   max-width: 760px;

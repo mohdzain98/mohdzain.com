@@ -3,7 +3,7 @@ const projects = [
   {
     Name: "Docschat",
     Desc: "Docschat enables conversational interaction with documents using LLMs, along with integrated content retrieval capabilities.",
-    Techs: ["LangChain,", "MERN Stack,", "Python Flask,", "Nginx,", "Redis"],
+    Techs: ["LangChain", "MERN Stack", "Python Flask", "Nginx", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://docschat.in",
     href: "Live App",
@@ -21,18 +21,9 @@ const projects = [
   {
     Name: "SurfMind",
     Desc: "SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit",
-    Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
+    Techs: ["LangChain", "React", "Python Flask", "Nginx"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj",
-    href: "Add To Chrome",
-    details: [],
-  },
-  {
-    Name: "LexiClick",
-    Desc: " Instantly access definitions, examples, synonyms, and antonyms on double-click, plus AI-driven search for deeper insights",
-    Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
-    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
-    Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
     href: "Add To Chrome",
     details: [],
   },
@@ -43,7 +34,7 @@ const allprojects = [
     Name: "GNOST - Codebase Knowledge",
     category: "python-package",
     Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
-    Techs: ["python,", "pypi"],
+    Techs: ["python", "pypi"],
     Tools: ["VS code", "Git"],
     img: "gnost.png",
     button: [
@@ -77,13 +68,48 @@ const allprojects = [
     Name: "Docschat",
     category: "gen-ai",
     Desc: "Docschat enables conversational interaction with documents using LLMs, along with integrated content retrieval capabilities.",
-    Techs: ["LangChain,", "MERN Stack,", "Python Flask,", "Nginx,", "Redis"],
+    Techs: ["LangChain", "MERN Stack", "Python Flask", "Nginx", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     img: "docschat.jpg",
     button: [
       {
         name: "Live App",
         link: "https://docschat.in",
+        icon: "fas fa-stream",
+        bg: "danger",
+        ref: "_blank",
+      },
+    ],
+  },
+  {
+    Name: "SurfMind",
+    category: "chrome-extensions",
+    Desc: "SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit",
+    Techs: ["LangChain", "React", "FastAPI", "Nginx", "Redis"],
+    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
+    img: "surfmind.jpg",
+    button: [
+      {
+        name: "Add To Chrome",
+        link: "https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj",
+        icon: "fas fa-stream",
+        bg: "danger",
+        ref: "_blank",
+      },
+    ],
+  },
+  {
+    Name: "LexiClick",
+    category: "chrome-extensions",
+    Desc: "Built LexiClick, a Chrome extension for instant word definitions, synonyms, and AI-powered insights on double-click.",
+    Techs: ["LangChain", "React", "Python Flask", "Nginx"],
+    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
+    Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
+    img: "instant.png",
+    button: [
+      {
+        name: "Add To Chrome",
+        link: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
         icon: "fas fa-stream",
         bg: "danger",
         ref: "_blank",
@@ -109,45 +135,10 @@ const allprojects = [
     ],
   },
   {
-    Name: "LexiClick",
-    category: "chrome-extensions",
-    Desc: "Built LexiClick, a Chrome extension for instant word definitions, synonyms, and AI-powered insights on double-click.",
-    Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
-    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
-    Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
-    img: "instant.png",
-    button: [
-      {
-        name: "Add To Chrome",
-        link: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
-        icon: "fas fa-stream",
-        bg: "danger",
-        ref: "_blank",
-      },
-    ],
-  },
-  {
-    Name: "SurfMind",
-    category: "chrome-extensions",
-    Desc: "SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit",
-    Techs: ["LangChain,", "React,", "Python Flask,", "Nginx"],
-    Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
-    img: "surfmind.jpg",
-    button: [
-      {
-        name: "Add To Chrome",
-        link: "https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj",
-        icon: "fas fa-stream",
-        bg: "danger",
-        ref: "_blank",
-      },
-    ],
-  },
-  {
     Name: "Car Sales Prediction",
     category: "machine-learning",
     Desc: "Forecasted car sales using multivariate linear regression with SGD optimization and L2 regularization to improve generalization.",
-    Techs: ["Python,", "Pandas,", "Sklearn"],
+    Techs: ["Python", "Pandas", "Sklearn"],
     Tools: ["Jupyter NB", "Git"],
     img: "csp.png",
     button: [
@@ -171,7 +162,7 @@ const allprojects = [
     Name: "Football Player Market Value Prediction",
     category: "machine-learning",
     Desc: "Built an ANN model to predict football player values using mini-batch gradient descent and MSE loss.",
-    Techs: ["Python,", "Pandas,", "Sklearn,", "Keras"],
+    Techs: ["Python", "Pandas", "Sklearn", "Keras"],
     Tools: ["Jupyter NB", "Git"],
     img: "fpmp.jpg",
     button: [
@@ -195,7 +186,7 @@ const allprojects = [
     Name: "NewsLookUp",
     category: "machine-learning",
     Desc: "News Reading app which fetches news from News API and render it in different categories. Machine Learning model is also used to analyse the Sentiment of News Headline",
-    Techs: ["Python,", "React,", "Flask"],
+    Techs: ["Python", "React", "Flask"],
     Tools: ["VS Code", "Jupyter NB", "Git"],
     img: "nlookup.jpg",
     button: [
@@ -212,7 +203,7 @@ const allprojects = [
     Name: "Skin Cancer Detection",
     category: "machine-learning",
     Desc: "Engineered a project applying a Convolutional Neural Network (CNN) to analyze skin lesion images from ISIC. Successfully classified images with 80% accuracy using the binary cross-entropy loss function",
-    Techs: ["CNN,", "Python,", "Pandas,", "Sklearn,", "TensorFlow"],
+    Techs: ["CNN", "Python", "Pandas", "Sklearn", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "scd.webp",
     button: [
@@ -236,7 +227,7 @@ const allprojects = [
     Name: "Air Pollution Prediction",
     category: "machine-learning",
     Desc: "Developed an LSTM-based model to forecast air pollution levels using historical data and MSE loss.",
-    Techs: ["RNN,", "LSTM,", "Python,", "Pandas,", "Sklearn,", "TensorFlow"],
+    Techs: ["RNN", "LSTM", "Python", "Pandas", "Sklearn", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "app.png",
     button: [
@@ -260,7 +251,7 @@ const allprojects = [
     Name: "Retail Price Optimization",
     category: "machine-learning",
     Desc: "Built an ANN-based retail price optimization model to predict optimal pricing using historical demand data.",
-    Techs: ["ANN,", "Python,", "Pandas,", "Sklearn,", "TensorFlow"],
+    Techs: ["ANN", "Python", "Pandas", "Sklearn", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "rpo.webp",
     button: [
@@ -301,7 +292,7 @@ const allprojects = [
     Name: "TechBooks",
     category: "web-apps",
     Desc: "Built a book recommendation website for engineering disciplines with direct purchase links to Amazon and Flipkart.",
-    Techs: ["Java,", "JSP,", "HTML,", "CSS,", "MySQL,", "Nginx,", "Tomcat"],
+    Techs: ["Java", "JSP", "HTML", "CSS", "MySQL", "Nginx", "Tomcat"],
     Tools: ["Netbeans", "Git", "AWS", "phpmyadmin"],
     img: "techbooks.jpg",
     button: [

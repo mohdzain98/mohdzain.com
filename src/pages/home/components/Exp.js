@@ -7,8 +7,11 @@ const Exp = () => {
   const items = exp.slice(0, 3);
 
   return (
-    <div id="experience" className="py-5 px-3 home-accent-section">
-      <div className="container px-md-5 mt-5 py-3">
+    <div
+      id="experience"
+      className="py-5 px-3 home-accent-section section-desktop-pad"
+    >
+      <div className="container px-md-2 mt-4">
         <SectionHeader
           title="Industry"
           subtitle="Building applied AI and data science systems across production workflows, experimentation, and measurable business outcomes."
@@ -17,7 +20,7 @@ const Exp = () => {
           {items.map((item, idx) => (
             <div className="col-12 col-md-4" key={`${item.name}-${idx}`}>
               <div
-                className="card border shadow-sm h-100"
+                className="card shadow-sm h-100"
                 style={{ borderRadius: "15px" }}
               >
                 <div className="card-body d-flex flex-column p-4">
@@ -49,7 +52,7 @@ const Exp = () => {
         <div className="mt-4 text-start">
           <Link
             to="/industry"
-            className="text-muted mt-4"
+            className="text-muted mt-4 ms-1"
             style={{
               textDecoration: "none",
               color: "#111827",

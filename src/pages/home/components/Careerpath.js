@@ -78,7 +78,7 @@ const Careerpath = () => {
             duration: 0.6,
             ease: "back.out(1.4)",
           },
-          "-=0.4"
+          "-=0.4",
         )
         // Dots pulse
         .from(
@@ -89,7 +89,7 @@ const Careerpath = () => {
             duration: 0.35,
             ease: "back.out(2)",
           },
-          "<"
+          "<",
         );
     }, sectionRef);
     return () => ctx.revert();
@@ -105,7 +105,10 @@ const Careerpath = () => {
 
         {/* ── Desktop: horizontal timeline ── */}
         {!isTabletOrMobile ? (
-          <div className="position-relative px-4" style={{ paddingBottom: "20px" }}>
+          <div
+            className="position-relative px-4"
+            style={{ paddingBottom: "20px" }}
+          >
             {/* Connecting line */}
             <div
               className="cp-timeline-line"
@@ -122,7 +125,10 @@ const Careerpath = () => {
               }}
             />
 
-            <div className="row row-cols-4 g-0 position-relative" style={{ zIndex: 1 }}>
+            <div
+              className="row row-cols-4 g-0 position-relative"
+              style={{ zIndex: 1 }}
+            >
               {nodes.map((n, i) => (
                 <div className="col cp-node" key={i}>
                   <div className="d-flex flex-column align-items-center text-center px-2">
@@ -153,7 +159,8 @@ const Careerpath = () => {
                           borderRadius: 14,
                           backgroundColor: "#fff",
                           borderTop: `3px solid ${n.accent} !important`,
-                          transition: "transform 0.25s ease, box-shadow 0.25s ease",
+                          transition:
+                            "transform 0.25s ease, box-shadow 0.25s ease",
                           cursor: "pointer",
                           minWidth: 130,
                         }}
@@ -287,7 +294,13 @@ const Careerpath = () => {
                       >
                         {n.sub}
                       </p>
-                      <p style={{ fontSize: "11px", color: "#888", marginBottom: 0 }}>
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "#888",
+                          marginBottom: 0,
+                        }}
+                      >
                         {n.period}
                       </p>
                     </div>

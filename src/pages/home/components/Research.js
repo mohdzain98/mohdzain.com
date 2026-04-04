@@ -156,7 +156,7 @@ const Research = () => {
     },
   ];
   return (
-    <section className="research pt-5" id="research">
+    <section className="research pt-5 mt-4" id="research">
       <div className="p-8">
         <div className="max-w-4xl mx-auto">
           <SectionHeader

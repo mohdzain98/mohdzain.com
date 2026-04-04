@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="text-white bg-dark pt-4 pb-3">
-      <div className="container">
+      <div className="container footer-container">
         <div className="footer-shell">
           <div className="footer-meta">
             <p className="mb-1" style={{ fontSize: "14px" }}>

@@ -387,8 +387,20 @@ section {
   }
 }
 
+/* ─── Desktop x-padding to match career path's section rule ─ */
+@media (min-width: 1025px) {
+  .section-desktop-pad {
+    padding-left: 9% !important;
+    padding-right: 9% !important;
+  }
+}
+
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
+  section.research {
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+  }
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 32px;

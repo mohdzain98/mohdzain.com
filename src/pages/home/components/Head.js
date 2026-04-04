@@ -105,28 +105,30 @@ const Head = () => {
         ease: "none",
       });
 
-      // Typewriter cycling
+      // Typewriter cycling — start with full text already visible, skip first type-in
       tl.call(() => {
         let idx = 0;
-        const type = () => {
+        const cycle = (skipTypeIn) => {
           const role = ROLES[idx % ROLES.length];
           idx++;
           const tl2 = gsap.timeline();
-          tl2
-            .to(roleRef.current, {
+          if (!skipTypeIn) {
+            tl2.to(roleRef.current, {
               duration: role.length * 0.055,
               text: { value: role, delimiter: "" },
               ease: "none",
-            })
-            .to({}, { duration: 2 })
+            });
+          }
+          tl2
+            .to({}, { duration: 2.5 })
             .to(roleRef.current, {
               duration: role.length * 0.028,
               text: { value: "", delimiter: "" },
               ease: "none",
-              onComplete: type,
+              onComplete: () => cycle(false),
             });
         };
-        type();
+        cycle(true); // first pass: text is already shown, just pause then erase
       });
 
       // Float each badge radially outward — preserve the centering offset
@@ -161,7 +163,7 @@ const Head = () => {
             </h1>
 
             <div className="head-role-line">
-              <span className="role-typed" ref={roleRef} />
+              <span className="role-typed" ref={roleRef}>{ROLES[0]}</span>
               <span className="head-cursor" ref={cursorRef} />
             </div>
 
