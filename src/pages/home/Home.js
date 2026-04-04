@@ -1,8 +1,6 @@
 import Intro from "./components/Intro";
 import Careerpath from "./components/Careerpath";
-// import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Social from "./components/Social";
 import Footer from "./components/Footer";
 import Head from "./components/Head";
 import Research from "./components/Research";
@@ -15,14 +13,12 @@ const Home = (props) => {
     <>
       <Head setProgress={props.setProgress} />
       <Intro setProgress={props.setProgress} />
-      <Research />
+      <Exp setProgress={props.setProgress} />
       <Careerpath setProgress={props.setProgress} />
-      {/* <Skills setProgress={props.setProgress} /> */}
       <Skills2 setProgress={props.setProgress} />
       <Achivements setProgress={props.setProgress} />
       <Projects setProgress={props.setProgress} />
-      <Exp setProgress={props.setProgress} />
-      <Social setProgress={props.setProgress} />
+      <Research />
       <Footer setProgress={props.setProgress} />
     </>
   );

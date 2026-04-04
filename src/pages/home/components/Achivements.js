@@ -1,18 +1,19 @@
 import React from "react";
 import "../Styling/Intro.css";
-import Ribbon from "../../../components/layout/Ribbon";
+import SectionHeader from "../../../components/layout/SectionHeader";
 
 const Achivements = () => {
   return (
     <div
-      className="py-5 px-3"
+      className="py-5 px-3 section-desktop-pad"
       id="achievements"
       style={{ backgroundColor: "#dfe5faff" }}
     >
-      <center>
-        <Ribbon value={"Achievements"} color={"grey"} />
-      </center>
-      <div className="container px-md-5 mt-5">
+      <div className="container px-md-2 mt-4">
+        <SectionHeader
+          title="Achievements"
+          subtitle="Highlights from competitive wins, academic milestones, and recognition earned along the way."
+        />
         <div className="row g-4">
           <div className="col-12 col-md-12">
             <div

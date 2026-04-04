@@ -1,6 +1,10 @@
-import Ribbon from "../../../components/layout/Ribbon";
-import { useState } from "react";
+import SectionHeader from "../../../components/layout/SectionHeader";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { useMediaQuery } from "react-responsive";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const IMAGES = {
   language: "lang.jpg",
@@ -110,27 +114,59 @@ const SKILLS = {
 };
 
 const skillBG = {
-  Advanced: {
-    color: "success",
-    text: "white",
-  },
-  Intermediate: {
-    color: "info",
-    text: "dark",
-  },
-  Basic: {
-    color: "warning",
-    text: "dark",
-  },
-  Learning: {
-    color: "secondary",
-    text: "warning",
-  },
+  Advanced: { color: "success", text: "white" },
+  Intermediate: { color: "info", text: "dark" },
+  Basic: { color: "warning", text: "dark" },
+  Learning: { color: "secondary", text: "warning" },
 };
 
 const Skills2 = () => {
-  //   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const [active, setActive] = useState("language");
+  const sectionRef = useRef(null);
+  // Track whether the section has entered the viewport at least once
+  const enteredRef = useRef(false);
+
+  // On initial mount: wire up a one-time ScrollTrigger that fires card + bar
+  // animations the first time the section scrolls into view.
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top 80%",
+        once: true,
+        onEnter: () => {
+          enteredRef.current = true;
+          animateBarsInSection(sectionRef.current);
+          gsap.from(sectionRef.current.querySelectorAll(".skill-card"), {
+            y: 22,
+            opacity: 0,
+            stagger: 0.07,
+            duration: 0.55,
+            ease: "power2.out",
+          });
+        },
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // On tab switch (after section already entered): re-animate bars only.
+  // Cards stay visible — just do a quick translateY bounce for freshness.
+  useEffect(() => {
+    if (!enteredRef.current) return;
+    // Small delay so React has committed the new cards to the DOM
+    const id = requestAnimationFrame(() => {
+      animateBarsInSection(sectionRef.current);
+      gsap.from(sectionRef.current.querySelectorAll(".skill-card"), {
+        y: 10,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 0.35,
+        ease: "power2.out",
+      });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [active]);
 
   const tabs = [
     { id: "language", label: "Language", icon: "fa-solid fa-code" },
@@ -144,19 +180,17 @@ const Skills2 = () => {
     { id: "database", label: "Database", icon: "fa-solid fa-database" },
     { id: "others", label: "Others", icon: "fa-solid fa-ellipsis" },
   ];
+
   const containerStyle = {
     borderRadius: 14,
     overflow: "hidden",
-    boxShadow: "0 6px 28px rgba(15,23,42,0.12)",
     minHeight: 420,
     position: "relative",
     background: "#fff",
   };
 
-  // right image panel: uses a layered background where
-  // gradient fades from left (white) -> transparent so image blends in
   const rightImageStyle = {
-    backgroundImage: ` url(${require(`../../../Assets/skills/${IMAGES[active]}`)})`,
+    backgroundImage: `url(${require(`../../../Assets/skills/${IMAGES[active]}`)})`,
     backgroundSize: "cover",
     backgroundPosition: "left center",
     height: "100%",
@@ -165,29 +199,22 @@ const Skills2 = () => {
     transition: "background-image 0.5s ease, filter 0.5s ease",
   };
 
-  const contentWrapperStyle = {
-    zIndex: 2,
-  };
   return (
     <section
-      className="py-5 px-2"
+      ref={sectionRef}
+      className="py-5 px-3 home-accent-section section-desktop-pad"
       id="skill"
-      style={{ padding: 0, backgroundColor: " rgb(244, 238, 216)" }}
     >
-      <center>
-        <div style={{ marginBottom: "50px" }}>
-          <Ribbon value={"Skills"} color="Brown" />
-        </div>
-      </center>
-      <div className="container my-5">
+      <div className="container px-md-2 mt-4 mt-md-4">
+        <SectionHeader
+          title="Skills"
+          subtitle="Core tools and technical strengths across programming, AI systems, analytics, web development, and infrastructure."
+        />
         <div className="row">
           <div className="col-12">
-            <div className="d-flex" style={containerStyle}>
+            <div className="d-flex shadow-sm" style={containerStyle}>
               {/* LEFT: content area */}
-              <div
-                className="p-4 p-md-5 flex-grow-1"
-                style={contentWrapperStyle}
-              >
+              <div className="p-4 p-md-5 flex-grow-1" style={{ zIndex: 2 }}>
                 {/* Tabs */}
                 <div className="mb-4 d-flex flex-wrap gap-2">
                   {tabs.map((t) => (
@@ -206,33 +233,29 @@ const Skills2 = () => {
                   ))}
                 </div>
 
-                {/* Skills grid — positioned on left but we offset so it visually aligns with reference */}
+                {/* Skills grid */}
                 <div className="row g-3">
                   {SKILLS[active].map((s) => {
-                    // compute numeric value once
                     const value =
                       s.level === "Advanced"
                         ? 90
                         : s.level === "Intermediate"
-                        ? 65
-                        : s.level === "Basic"
-                        ? 40
-                        : s.level === "Learning"
-                        ? 20
-                        : 50;
+                          ? 65
+                          : s.level === "Basic"
+                            ? 40
+                            : s.level === "Learning"
+                              ? 20
+                              : 50;
 
                     return (
                       <div key={s.name} className="col-12 col-sm-6">
                         <div
-                          className="d-flex align-items-center p-3 rounded-3 h-100 border border-opacity-50"
+                          className="skill-card d-flex align-items-center p-3 rounded-3 h-100 border border-opacity-50 shadow-sm"
                           style={{
                             backgroundColor: "#fff",
-                            boxShadow: "0 4px 16px rgba(15,23,42,0.06)",
                           }}
                         >
                           <i className={`${s.icon} fs-4 me-3 text-primary`} />
-
-                          {/* Make this a column and allow it to grow */}
                           <div className="flex-grow-1">
                             <div className="d-flex justify-content-between align-items-center">
                               <div className="fw-semibold">{s.name}</div>
@@ -244,9 +267,7 @@ const Skills2 = () => {
                               </div>
                             )}
                             <div
-                              className={`border shadow-sm rounded px-2 px-3 d-inline-block bg-${
-                                skillBG[s.level]["color"]
-                              } text-${skillBG[s.level]["text"]} bg-gradient`}
+                              className={`border shadow-sm rounded px-2 px-3 d-inline-block bg-${skillBG[s.level]["color"]} text-${skillBG[s.level]["text"]} bg-gradient`}
                             >
                               <p
                                 className="fst-italic"
@@ -258,17 +279,16 @@ const Skills2 = () => {
                                 {s.level}
                               </p>
                             </div>
-
-                            {/* progress with full width */}
                             <div className="mt-2">
                               <div
                                 className="progress"
                                 style={{ height: "6px" }}
                               >
                                 <div
-                                  className="progress-bar bg-primary"
+                                  className="skill-progress-bar progress-bar bg-primary"
                                   role="progressbar"
-                                  style={{ width: `${value}%` }}
+                                  data-value={value}
+                                  style={{ width: "0%" }}
                                   aria-valuenow={value}
                                   aria-valuemin="0"
                                   aria-valuemax="100"
@@ -283,7 +303,7 @@ const Skills2 = () => {
                 </div>
               </div>
 
-              {/* RIGHT: faded image panel (hidden on small screens) */}
+              {/* RIGHT: faded image panel */}
               <div
                 className="d-none d-md-block"
                 style={{ width: "100%", minWidth: 320, maxWidth: 520 }}
@@ -297,5 +317,19 @@ const Skills2 = () => {
     </section>
   );
 };
+
+// Animate progress bars scoped to a container element (avoids global selector conflicts)
+function animateBarsInSection(container) {
+  if (!container) return;
+  const bars = container.querySelectorAll(".skill-progress-bar");
+  bars.forEach((bar) => {
+    const target = bar.dataset.value + "%";
+    gsap.fromTo(
+      bar,
+      { width: "0%" },
+      { width: target, duration: 1, ease: "power2.out" },
+    );
+  });
+}
 
 export default Skills2;

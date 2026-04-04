@@ -24,7 +24,21 @@ const Blogs = () => {
       </Helmet>
       <div
         id="blogs"
-        style={isTabletOrMobile ? { padding: "2%" } : { padding: "2% 15%" }}
+        style={
+          isTabletOrMobile
+            ? {
+                padding: "2%",
+                backgroundColor: "#f8fafc",
+                minHeight: "100vh",
+                paddingBottom: "80px",
+              }
+            : {
+                padding: "2% 15%",
+                backgroundColor: "#f8fafc",
+                minHeight: "100vh",
+                paddingBottom: "80px",
+              }
+        }
       >
         <div className="container p-4" style={{ marginTop: "1%" }}>
           <center>

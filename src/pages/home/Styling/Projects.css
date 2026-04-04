@@ -25,7 +25,7 @@
 #projects .box:hover {
   border: solid 1px;
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(0.98);
 }
 
 #projects .tline {
@@ -38,26 +38,114 @@
   --bs-breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E");
 }
 
+#allproject .breadcrumb {
+  margin-bottom: 28px;
+}
+
+#allproject .allproject-shell {
+  max-width: 1200px;
+}
+
+#allproject .allproject-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#allproject .allproject-section {
+  padding: 42px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+#allproject .allproject-section-head {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+#allproject .allproject-section-eyebrow {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #2563eb;
+}
+
+#allproject .allproject-section-title {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.3rem);
+  line-height: 1.1;
+  font-weight: 800;
+  color: #111827;
+}
+
+#allproject .allproject-section-subtitle {
+  margin: 12px 0 0;
+  max-width: 760px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5b616e;
+}
+
 #allproject .tline {
   border-radius: 6px;
   padding: 4px 4px;
   background-color: cornsilk;
 }
 
-#allproject .foot {
-  align-self: last baseline;
-}
-#allproject {
-  background-color: #faebd7;
+#allproject .allproject-card {
+  border-radius: 15px;
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); */
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-#allproject .card {
-  border-radius: 15px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-  border: groove 1px;
-  transition: transform 0.3s ease;
+#allproject .allproject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px rgba(15, 23, 42, 0.12);
+  border-color: rgba(96, 165, 250, 0.45);
 }
-#allproject .card img {
+
+#allproject .allproject-card img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+  background-color: #f8fafc;
+}
+
+#allproject .allproject-card-title {
+  color: #111827;
+}
+
+#allproject .allproject-actions .btn {
+  min-width: 112px;
+}
+
+@media (max-width: 768px) {
+  #allproject .allproject-shell {
+    padding-top: 50px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  #allproject .allproject-section {
+    padding: 28px 0;
+  }
+
+  #allproject .allproject-section-head {
+    margin-bottom: 22px;
+  }
+
+  #allproject .allproject-section-eyebrow {
+    margin-bottom: 8px;
+  }
+
+  #allproject .allproject-section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
 }
