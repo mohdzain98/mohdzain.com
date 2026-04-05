@@ -16,7 +16,7 @@ const Footer = () => {
               &copy; 2026 Mohd Zain
             </p>
             <p className="mb-0" style={{ fontSize: "12px" }}>
-              Updated on : 04 April, 2026 V: 3.0
+              Updated on : 06 April, 2026 V: 3.0.1
             </p>
           </div>
 
