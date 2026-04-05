@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styling/Intro.css";
 import SectionHeader from "../../../components/layout/SectionHeader";
+import { Link } from "react-router-dom";
 
 const Achivements = () => {
   return (
@@ -9,26 +10,23 @@ const Achivements = () => {
       id="achievements"
       style={{ backgroundColor: "#dfe5faff" }}
     >
-      <div className="container px-md-2 mt-4">
+      <div className="container px-md-2 mt-4 mb-4">
         <SectionHeader
           title="Achievements"
           subtitle="Highlights from competitive wins, academic milestones, and recognition earned along the way."
         />
         <div className="row g-4">
-          <div className="col-12 col-md-12">
+          <div className="col-12 col-md-6">
             <div
-              className="card border shadow-sm"
+              className="card shadow-sm p-3"
               style={{ borderRadius: "15px" }}
             >
-              <div className="card-body p-4">
+              <div className="card-body">
                 <div className="d-flex flex-column flex-md-row align-items-md-start gap-3">
-                  <div className="text-primary fs-2">
-                    <i className="fa-solid fa-trophy"></i>
-                  </div>
                   <div>
                     <div className="d-flex justify-content-between flex-row align-items-start">
                       <div>
-                        <h3 className="h4 fw-bold mb-1">
+                        <h3 className="h5 fw-bold mb-1">
                           Financial AI Hackathon Championship 2025 - 1st Place
                         </h3>
                         <p className="text-muted mb-3">
@@ -36,71 +34,58 @@ const Achivements = () => {
                         </p>
                       </div>
                       <div>
-                        <a
-                          className="btn btn-outline-secondary btn-sm"
-                          href="https://github.com/mohdzain98/loanlens-ai"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="fa-brands fa-github me-2"></i>Github
-                        </a>
+                        <div className="bg-primary bg-gradient bg-opacity-10 fs-4 py-2 px-3 rounded text-primary d-none d-md-block">
+                          <i className="fa-solid fa-trophy"></i>
+                        </div>
                       </div>
                     </div>
-                    <p className="mb-3">
-                      Built an agentic AI system to make loan underwriting
-                      faster, accurate, and fraud-resilient.
+                    <p className="mb-2">
+                      Won 1st place at Financial AI Hackathon 2025{" "}
+                      <strong>LandingAI </strong>
+                      by building an agentic AI system for loan underwriting.
                     </p>
-                    <ul className="mb-3">
-                      <li>
-                        Automated financial document extraction using agentic
-                        document extraction.
-                      </li>
-                      <li>
-                        Fraud detection via agentic object detection tampering
-                        checks.
-                      </li>
-                      <li>
-                        Decision intelligence engine for borrower health and
-                        creditworthiness.
-                      </li>
-                      <li>
-                        End-to-end transparency with traceability and confidence
-                        scoring.
-                      </li>
-                      <li>
-                        RAG-powered chatbot for interactive case queries and
-                        explanations.
-                      </li>
-                    </ul>
                     <p className="mb-0 text-muted">
-                      Special thanks to team lead Tanika Gupta and teammates
-                      Ritesh Kumar, Abhisek Banerjee, Anand Kumar, Rahul
-                      Kushwaha, Nilanjan Sahu, and Abhishek Thombre.
+                      Automated document extraction, fraud detection, and
+                      decision intelligence with explainable AI workflows.
                     </p>
                   </div>
+                </div>
+                <div>
+                  <Link
+                    to="/achievements/landingai-financial-ai-hackathon"
+                    className="text-decoration-none fw-semibold mt-3 d-inline-flex align-items-center gap-1 text-dark mt-4"
+                    style={{ fontSize: "14px" }}
+                  >
+                    View Details{" "}
+                    <i className="fa-solid fa-arrow-right fa-sm ms-1"></i>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="col-12 col-md-12">
+          <div className="col-12 col-md-6">
             <div
-              className="card border shadow-sm h-100"
+              className="card shadow-sm h-100 p-3"
               style={{ borderRadius: "15px" }}
             >
-              <div className="card-body p-4">
-                <div className="d-flex align-items-center gap-3 mb-2">
-                  <div className="text-success fs-3">
-                    <i className="fa-solid fa-medal"></i>
-                  </div>
+              <div className="card-body">
+                <div className="d-flex justify-content-between  align-items-center gap-3 mb-2">
                   <div>
                     <h3 className="h5 fw-bold mb-1">GATE 2022</h3>
                     <p className="text-muted mb-0">All India Rank 1579</p>
+                  </div>
+                  <div className="bg-success bg-gradient bg-opacity-10 fs-4 py-2 px-3 rounded text-success fs-3 d-none d-md-block">
+                    <i className="fa-solid fa-medal"></i>
                   </div>
                 </div>
                 <p className="mb-0">
                   Achieved AIR 1579 in the Graduate Aptitude Test in Engineering
                   (GATE) 2022.
+                </p>
+                <p className="mb-0 text-muted">
+                  Paper Computer Science and Information Technology (CS)
+                  conducted by IIT Kharagpur.
                 </p>
               </div>
             </div>

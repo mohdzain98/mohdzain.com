@@ -20,13 +20,13 @@ const Exp = () => {
           {items.map((item, idx) => (
             <div className="col-12 col-md-4" key={`${item.name}-${idx}`}>
               <div
-                className="card shadow-sm h-100"
+                className="card shadow-sm h-100 p-3"
                 style={{ borderRadius: "15px" }}
               >
-                <div className="card-body d-flex flex-column p-4">
+                <div className="card-body d-flex flex-column">
                   <div className="d-flex align-items-center gap-3 mb-3">
-                    <div className="text-primary fs-4">
-                      <i className={`fa-solid ${item.icon}`}></i>
+                    <div className="bg-primary bg-gradient bg-opacity-10 fs-4 py-2 px-3 rounded-3 text-primary d-none d-md-block">
+                      <i className={`fa-solid ${item.icon} fa-sm`}></i>
                     </div>
                     <h3 className="h5 fw-bold mb-0">{item.name}</h3>
                   </div>

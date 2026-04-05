@@ -223,7 +223,7 @@ const Skills2 = () => {
                       className={`btn btn-sm ${
                         active === t.id
                           ? "btn-primary"
-                          : "btn-outline-secondary text-muted"
+                          : "btn-outline-secondary"
                       }`}
                       onClick={() => setActive(t.id)}
                     >

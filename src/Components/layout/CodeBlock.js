@@ -20,8 +20,14 @@ const CodeBlock = ({ id, language, code }) => {
       className="bg-light ps-4 pe-3 pb-3 rounded border"
       style={{ maxHeight: "600px" }}
     >
-      <div className="d-flex flex-row justify-content-between align-items-center sticky-top bg-light py-2">
-        <div className="text-muted">{language}</div>
+      <div
+        className="d-flex flex-row justify-content-between align-items-center sticky-top bg-light py-2"
+        style={{ zIndex: "auto" }}
+      >
+        <div className="text-dark">
+          <i className="fa-solid fa-code fa-sm me-2"></i>
+          {language}
+        </div>
         <button
           type="button"
           className="btn btn-default btn-sm text-muted"
@@ -46,8 +52,8 @@ const CodeBlock = ({ id, language, code }) => {
           margin: 0,
           background: "transparent",
           fontSize: "16px",
-          lineHeight: "1.6",
-          padding: "0",
+          lineHeight: "1.4",
+          padding: "10px",
         }}
         wrapLongLines
       >
