@@ -3,7 +3,8 @@ const projects = [
   {
     Name: "Docschat",
     Desc: "Docschat enables conversational interaction with documents using LLMs, along with integrated content retrieval capabilities.",
-    Techs: ["LangChain", "MERN Stack", "Python Flask", "Nginx", "Redis"],
+    type: "gen ai mern stack",
+    Techs: ["LangChain", "MERN Stack", "Flask", "Nginx", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://docschat.in",
     href: "Live App",
@@ -12,7 +13,8 @@ const projects = [
   {
     Name: "GNOST - Codebase Knowledge",
     Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
-    Techs: ["python,", "pypi"],
+    type: "pip package",
+    Techs: ["Python", "pypi"],
     Tools: ["VS code", "Git"],
     Live: "https://pypi.org/project/gnost/",
     href: "View on PyPI",
@@ -21,7 +23,8 @@ const projects = [
   {
     Name: "SurfMind",
     Desc: "SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit",
-    Techs: ["LangChain", "React", "Python Flask", "Nginx"],
+    type: "gen ai chrome extension",
+    Techs: ["LangChain", "React", "FastAPI", "Nginx"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://chromewebstore.google.com/detail/surfmind/ladckalplikfcplbihpgfnlkonnpehkj",
     href: "Add To Chrome",
@@ -33,6 +36,7 @@ const allprojects = [
   {
     Name: "GNOST - Codebase Knowledge",
     category: "python-package",
+    type: "pip package",
     Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
     Techs: ["python", "pypi"],
     Tools: ["VS code", "Git"],
@@ -41,7 +45,7 @@ const allprojects = [
       {
         name: "Details",
         link: "/projects/gnost",
-        icon: "fa-solid fa-circle-info",
+        icon: "fa-solid fa-arrow-up-right-from-square",
         bg: "primary",
         ref: "_self",
       },
@@ -50,8 +54,9 @@ const allprojects = [
   {
     Name: "Curlmin",
     category: "web-apps",
+    type: "url shortener",
     Desc: "Built CurlMin, a URL shortening and management platform with support for QR codes, barcodes, and smart link sharing.",
-    Techs: ["MERN Stack,", "Nginx,", "MySQL"],
+    Techs: ["MERN Stack", "Nginx", "MySQL"],
     Tools: ["VS code", "PowerShell", "Git"],
     img: "curlmin.png",
     button: [
@@ -67,8 +72,9 @@ const allprojects = [
   {
     Name: "Docschat",
     category: "gen-ai",
+    type: "gen ai mern stack",
     Desc: "Docschat enables conversational interaction with documents using LLMs, along with integrated content retrieval capabilities.",
-    Techs: ["LangChain", "MERN Stack", "Python Flask", "Nginx", "Redis"],
+    Techs: ["LangChain", "MERN Stack", "Flask", "Nginx", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     img: "docschat.jpg",
     button: [
@@ -84,6 +90,7 @@ const allprojects = [
   {
     Name: "SurfMind",
     category: "chrome-extensions",
+    type: "gen ai",
     Desc: "SurfMind is a cutting-edge Chrome extension designed to enhance your browsing experience by intelligently tracking and managing the websites you visit",
     Techs: ["LangChain", "React", "FastAPI", "Nginx", "Redis"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
@@ -101,8 +108,9 @@ const allprojects = [
   {
     Name: "LexiClick",
     category: "chrome-extensions",
+    type: "gen ai",
     Desc: "Built LexiClick, a Chrome extension for instant word definitions, synonyms, and AI-powered insights on double-click.",
-    Techs: ["LangChain", "React", "Python Flask", "Nginx"],
+    Techs: ["LangChain", "React", "Flask", "Nginx"],
     Tools: ["VS Code", "Jupyter NB", "PowerShell", "Git"],
     Live: "https://chromewebstore.google.com/detail/lexiclick/ffeidnombcpdibpkekekgfkaclhjbjpj",
     img: "instant.png",
@@ -119,8 +127,9 @@ const allprojects = [
   {
     Name: "Curlmin Chrome Extension",
     category: "chrome-extensions",
+    type: "url shortener",
     Desc: "Built a Chrome extension for CurlMin to generate and save shortened URLs with a single click.",
-    Techs: ["React,", "Nginx"],
+    Techs: ["React", "Nginx"],
     Tools: ["VS Code", "PowerShell", "Git"],
     Live: "https://chromewebstore.google.com/detail/curlmin/nfgjgdpidaejbpnohadipbbikljiebbc",
     img: "curlmin_ce.jpg",
@@ -137,15 +146,16 @@ const allprojects = [
   {
     Name: "Car Sales Prediction",
     category: "machine-learning",
+    type: "prediction",
     Desc: "Forecasted car sales using multivariate linear regression with SGD optimization and L2 regularization to improve generalization.",
-    Techs: ["Python", "Pandas", "Sklearn"],
+    Techs: ["Pandas", "Sklearn"],
     Tools: ["Jupyter NB", "Git"],
     img: "csp.png",
     button: [
       {
         name: "Details",
         link: "https://old.mohdzain.com/projects/cars_sales_prediction.html",
-        icon: "fa-solid fa-circle-info",
+        icon: "fa-solid fa-arrow-up-right-from-square",
         bg: "primary",
         ref: "_blank",
       },
@@ -161,15 +171,16 @@ const allprojects = [
   {
     Name: "Football Player Market Value Prediction",
     category: "machine-learning",
+    type: "prediction",
     Desc: "Built an ANN model to predict football player values using mini-batch gradient descent and MSE loss.",
-    Techs: ["Python", "Pandas", "Sklearn", "Keras"],
+    Techs: ["Pandas", "Sklearn", "Keras"],
     Tools: ["Jupyter NB", "Git"],
     img: "fpmp.jpg",
     button: [
       {
         name: "Details",
         link: "https://old.mohdzain.com/projects/fpmvp.html",
-        icon: "fa-solid fa-circle-info",
+        icon: "fa-solid fa-arrow-up-right-from-square",
         bg: "primary",
         ref: "_blank",
       },
@@ -185,8 +196,9 @@ const allprojects = [
   {
     Name: "NewsLookUp",
     category: "machine-learning",
+    type: "classification",
     Desc: "News Reading app which fetches news from News API and render it in different categories. Machine Learning model is also used to analyse the Sentiment of News Headline",
-    Techs: ["Python", "React", "Flask"],
+    Techs: ["React", "Flask"],
     Tools: ["VS Code", "Jupyter NB", "Git"],
     img: "nlookup.jpg",
     button: [
@@ -201,16 +213,17 @@ const allprojects = [
   },
   {
     Name: "Skin Cancer Detection",
-    category: "machine-learning",
-    Desc: "Engineered a project applying a Convolutional Neural Network (CNN) to analyze skin lesion images from ISIC. Successfully classified images with 80% accuracy using the binary cross-entropy loss function",
-    Techs: ["CNN", "Python", "Pandas", "Sklearn", "TensorFlow"],
+    category: "deep-learning",
+    type: "classification",
+    Desc: "Built a CNN model for skin lesion classification on ISIC data, achieving 80% accuracy. Used Binary Cross-Entropy loss and Adam optimization for training.",
+    Techs: ["CNN", "Pandas", "Sklearn", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "scd.webp",
     button: [
       {
         name: "Details",
         link: "https://old.mohdzain.com/projects/skin_cancer_detection.html",
-        icon: "fa-solid fa-circle-info",
+        icon: "fa-solid fa-arrow-up-right-from-square",
         bg: "primary",
         ref: "_blank",
       },
@@ -225,16 +238,17 @@ const allprojects = [
   },
   {
     Name: "Air Pollution Prediction",
-    category: "machine-learning",
+    category: "deep-learning",
+    type: "prediction",
     Desc: "Developed an LSTM-based model to forecast air pollution levels using historical data and MSE loss.",
-    Techs: ["RNN", "LSTM", "Python", "Pandas", "Sklearn", "TensorFlow"],
+    Techs: ["RNN", "LSTM", "Pandas", "Sklearn", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "app.png",
     button: [
       {
         name: "Details",
         link: "https://old.mohdzain.com/projects/air_pollution_prediction.html",
-        icon: "fa-solid fa-circle-info",
+        icon: "fa-solid fa-arrow-up-right-from-square",
         bg: "primary",
         ref: "_blank",
       },
@@ -249,16 +263,17 @@ const allprojects = [
   },
   {
     Name: "Retail Price Optimization",
-    category: "machine-learning",
+    category: "deep-learning",
+    type: "prediction",
     Desc: "Built an ANN-based retail price optimization model to predict optimal pricing using historical demand data.",
-    Techs: ["ANN", "Python", "Pandas", "Sklearn", "TensorFlow"],
+    Techs: ["ANN", "Pandas", "Sklearn", "TensorFlow"],
     Tools: ["Jupyter NB", "Git"],
     img: "rpo.webp",
     button: [
       {
         name: "Details",
         link: "https://old.mohdzain.com/projects/retail_price_optimization.html",
-        icon: "fa-solid fa-circle-info",
+        icon: "fa-solid fa-arrow-up-right-from-square",
         bg: "primary",
         ref: "_blank",
       },
@@ -274,6 +289,7 @@ const allprojects = [
   {
     Name: "NoteSwift",
     category: "web-apps",
+    type: "mern stack",
     Desc: "Built a full-stack notes app with JWT-based authentication for secure, accessible data storage.",
     Techs: ["MERN Stack"],
     Tools: ["VS Code", "MongoDB Atlas", "Git", "Vercel"],
@@ -291,8 +307,9 @@ const allprojects = [
   {
     Name: "TechBooks",
     category: "web-apps",
+    type: "JSP webapp",
     Desc: "Built a book recommendation website for engineering disciplines with direct purchase links to Amazon and Flipkart.",
-    Techs: ["Java", "JSP", "HTML", "CSS", "MySQL", "Nginx", "Tomcat"],
+    Techs: ["Java", "JSP", "HTML", "CSS", "MySQL", "Tomcat"],
     Tools: ["Netbeans", "Git", "AWS", "phpmyadmin"],
     img: "techbooks.jpg",
     button: [
@@ -308,8 +325,9 @@ const allprojects = [
   {
     Name: "BracketsBay",
     category: "web-apps",
+    type: "php webapp",
     Desc: "Designed an e-commerce website for curtain brackets with a clean UI and seamless user experience.",
-    Techs: ["PHP,", "HTML,", "CSS,", "MySQL,", "Nginx"],
+    Techs: ["PHP", "HTML", "CSS", "MySQL"],
     Tools: ["Sublime Text", "Git", "phpmyadmin"],
     img: "bb.jpg",
     button: [

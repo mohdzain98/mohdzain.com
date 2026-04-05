@@ -17,6 +17,8 @@ import Industry from "./pages/Industry";
 import Wrong from "./pages/Wrong";
 import AllBlogs from "./pages/blogs/AllBlogs";
 import AllExample from "./pages/blogs/AllExample";
+import LoanLensAI from "./pages/LoanLensAI";
+import Footer from "./pages/home/components/Footer";
 
 function App() {
   return (
@@ -38,9 +40,15 @@ function App() {
           ></Route>
           <Route exact path="/experience" element={<Experience />}></Route>
           <Route exact path="/industry" element={<Industry />}></Route>
+          <Route
+            exact
+            path="/achievements/landingai-financial-ai-hackathon"
+            element={<LoanLensAI />}
+          ></Route>
           <Route exact path="/404" element={<Wrong />}></Route>
           <Route path="*" element={<Navigate to="/404" />}></Route>
         </Routes>
+        <Footer />
       </Router>
     </>
   );

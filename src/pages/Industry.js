@@ -9,6 +9,7 @@ const INDUSTRY_SECTIONS = [
     id: "agentic-ai",
     eyebrow: "01",
     title: "Agentic AI Systems",
+    icon: "fa-solid fa-bolt",
     subtitle:
       "Production-oriented agent workflows, orchestration patterns, and multi-agent systems built for reliable reasoning and decision support.",
   },
@@ -16,6 +17,7 @@ const INDUSTRY_SECTIONS = [
     id: "research-platform",
     eyebrow: "02",
     title: "Research & Observability",
+    icon: "fa-solid fa-magnifying-glass",
     subtitle:
       "Exploration across LLM adaptation, neuro-symbolic ideas, document intelligence, and evaluation pipelines for reliable AI systems.",
   },
@@ -23,6 +25,7 @@ const INDUSTRY_SECTIONS = [
     id: "platform-engineering",
     eyebrow: "03",
     title: "Platform Engineering",
+    icon: "fa-solid fa-layer-group",
     subtitle:
       "Internal platforms, developer tooling, and data apps designed to improve quality, automation, and day-to-day engineering workflows.",
   },
@@ -30,6 +33,7 @@ const INDUSTRY_SECTIONS = [
     id: "econometrics-mlops",
     eyebrow: "04",
     title: "Econometrics & MLOps",
+    icon: "fa-solid fa-chart-line",
     subtitle:
       "Optimization engines, regression systems, and production monitoring workflows focused on measurable business impact and operational robustness.",
   },
@@ -66,11 +70,11 @@ const IndustryCard = ({ item }) => {
   );
 };
 
-const IndustrySection = ({ eyebrow, title, subtitle, items }) => {
+const IndustrySection = ({ id, eyebrow, title, subtitle, items }) => {
   if (!items.length) return null;
 
   return (
-    <section className="industry-section">
+    <section className="industry-section" id={id}>
       <div className="industry-section-head">
         <p className="industry-section-eyebrow">{eyebrow}</p>
         <h2 className="industry-section-title">{title}</h2>
@@ -113,8 +117,22 @@ const Industry = () => {
           <SectionHeader
             title="Industry"
             subtitle="A detailed view of the systems, platforms, and applied AI work I have built across enterprise workflows, research exploration, and production tooling."
-            className="mb-5"
+            className="mb-4"
           />
+
+          <div className="d-flex flex-wrap gap-2 mb-5">
+            {INDUSTRY_SECTIONS.map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className="d-flex align-items-center gap-2 px-3 py-2 bg-white border rounded-3 shadow-sm text-decoration-none text-dark"
+                style={{ fontSize: "14px", fontWeight: 500 }}
+              >
+                <i className={`${s.icon} text-primary`} />
+                {s.title}
+              </a>
+            ))}
+          </div>
 
           <div className="industry-sections">
             {groupedExperience.map((section) => (

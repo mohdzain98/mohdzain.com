@@ -33,17 +33,25 @@ const Projects = () => {
                 }`}
                 onClick={() => handleClick(item.Live)}
               >
-                <h5 className="text-primary">{item.Name}</h5>
+                <span
+                  className="text-uppercase text-muted mb-1 fw-semibold"
+                  style={{ fontSize: "11px", letterSpacing: "1px" }}
+                >
+                  {item.type}
+                </span>
+                <h5 className="text-dark fw-semibold">{item.Name}</h5>
                 <p className="text-muted" style={{ fontSize: "14px" }}>
                   {item.Desc}
                 </p>
-                <p className="d-inline">Tech Stack: </p>
+                <p className="d-inline" style={{ fontSize: "14px" }}>
+                  Tech Stack:{" "}
+                </p>
                 <ul className="list-inline">
                   {item.Techs.map((f) => (
                     <li
                       key={f}
-                      className="list-inline-item tline my-1"
-                      style={{ fontSize: "12px" }}
+                      className="list-inline-item tline my-1 px-2 bg-secondary bg-opacity-10 text-dark fw-semibold"
+                      style={{ fontSize: "11px" }}
                     >
                       {f}
                     </li>
