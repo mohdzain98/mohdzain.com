@@ -47,7 +47,9 @@
 }
 
 #cic .ftd .fts {
-  transition: background-color 0.3s, transform 0.5s;
+  transition:
+    background-color 0.3s,
+    transform 0.5s;
 }
 
 #cic .ftd:hover {
