@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8e8d78be.css",
-    "main.js": "/static/js/main.5d83abde.js",
+    "main.js": "/static/js/main.41ea6aa4.js",
     "static/js/453.5e13eb6b.chunk.js": "/static/js/453.5e13eb6b.chunk.js",
     "static/media/DDBCICST.pdf": "/static/media/DDBCICST.aed745bf19d1db7e07bd.pdf",
     "static/media/DDBCICSRP.pdf": "/static/media/DDBCICSRP.23bb3ae5d999a0700339.pdf",
@@ -14,6 +14,7 @@
     "static/media/arize-phoenix-ui.png": "/static/media/arize-phoenix-ui.c4881a51712c84135987.png",
     "static/media/mypic.jpeg": "/static/media/mypic.e8600a9fbfcfdbbd321e.jpeg",
     "static/media/approved_example.png": "/static/media/approved_example.302bc547683dc58cee04.png",
+    "static/media/dashboard.png": "/static/media/dashboard.4ea1e2ba87688af1da7a.png",
     "static/media/fraud_warning.png": "/static/media/fraud_warning.d0218b7ad75ae4dcee2c.png",
     "static/media/ai.jpg": "/static/media/ai.f49e4fb0c47bdb80d8b6.jpg",
     "static/media/coer.jpg": "/static/media/coer.46aa5a0fe8189ef564c0.jpg",
@@ -43,12 +44,13 @@
     "static/media/rm.jpg": "/static/media/rm.bc1b000726f2ede28e3f.jpg",
     "static/media/spiral.jpg": "/static/media/spiral.9e3e6d473358f7ef03b5.jpg",
     "index.html": "/index.html",
+    "static/media/SKILL.md": "/static/media/SKILL.df78e36a9c43a547166e.md",
     "main.8e8d78be.css.map": "/static/css/main.8e8d78be.css.map",
-    "main.5d83abde.js.map": "/static/js/main.5d83abde.js.map",
+    "main.41ea6aa4.js.map": "/static/js/main.41ea6aa4.js.map",
     "453.5e13eb6b.chunk.js.map": "/static/js/453.5e13eb6b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e8d78be.css",
-    "static/js/main.5d83abde.js"
+    "static/js/main.41ea6aa4.js"
   ]
 }
