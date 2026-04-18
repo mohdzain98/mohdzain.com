@@ -27,7 +27,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sitemap": "node sitemap.js",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,json}\" \"public/**/*.{json,html}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.8.3"
   },
   "eslintConfig": {
     "extends": [

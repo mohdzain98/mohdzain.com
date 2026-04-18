@@ -1,8 +1,25 @@
 import CimagesCrypt from "./cryptosystem/CimagesCrypt";
 import LLMTracing from "./tracing/LLMTracing";
 import TracingExample from "./tracing/TracingExample";
+import AxisSpendingBlog from "./axis-spending/AxisSpendingBlog";
 
 export const blogRegistry = {
+  "automated-spending-tracker-openclaw": {
+    component: AxisSpendingBlog,
+    example: null,
+    title:
+      "I had no idea where my money was going every month. So I automated the answer.",
+    description:
+      "How I built a personal spending tracker that reads Bank emails, categorizes transactions with regex rules, generates HTML dashboards, and sends weekly WhatsApp summaries — fully self-hosted.",
+    excerpt: [
+      "Bank sends an email for every transaction. The data is all there — just scattered across 100+ emails with no structure, no categories, no summary.",
+      "I built a self-hosted tracker using Python, Himalaya, SQLite, and OpenClaw that categorizes spending, generates dashboards, and texts me a weekly breakdown on WhatsApp.",
+    ],
+    readTime: "10 min read",
+    date: "Apr 2026",
+    category: ["Agentic AI"],
+    tags: ["Python", "SQLite", "OpenClaw", "Gmail IMAP", "WhatsApp"],
+  },
   "tracing-agentic-llm-workflows-arize-phoenix-langgraph": {
     component: LLMTracing,
     example: TracingExample,
@@ -15,7 +32,7 @@ export const blogRegistry = {
     ],
     readTime: "12 min read",
     date: "Jan 2026",
-    category: ["Large Language Models", "Web Development"],
+    category: ["Large Language Models"],
     tags: ["LLM Tracing", "Observability", "LangGraph"],
   },
   "color-images-cryptosystem": {

@@ -199,7 +199,7 @@ const Navbar = () => {
               <Link
                 className={`nav-link ${
                   location.pathname === "/projects" ||
-                  location.pathname === "/projects/gnost"
+                  location.pathname.startsWith("/projects/")
                     ? "active"
                     : ""
                 }`}

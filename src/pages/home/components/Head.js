@@ -119,14 +119,12 @@ const Head = () => {
               ease: "none",
             });
           }
-          tl2
-            .to({}, { duration: 2.5 })
-            .to(roleRef.current, {
-              duration: role.length * 0.028,
-              text: { value: "", delimiter: "" },
-              ease: "none",
-              onComplete: () => cycle(false),
-            });
+          tl2.to({}, { duration: 2.5 }).to(roleRef.current, {
+            duration: role.length * 0.028,
+            text: { value: "", delimiter: "" },
+            ease: "none",
+            onComplete: () => cycle(false),
+          });
         };
         cycle(true); // first pass: text is already shown, just pause then erase
       });
@@ -163,7 +161,9 @@ const Head = () => {
             </h1>
 
             <div className="head-role-line">
-              <span className="role-typed" ref={roleRef}>{ROLES[0]}</span>
+              <span className="role-typed" ref={roleRef}>
+                {ROLES[0]}
+              </span>
               <span className="head-cursor" ref={cursorRef} />
             </div>
 

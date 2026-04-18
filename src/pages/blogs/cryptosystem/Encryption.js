@@ -189,7 +189,8 @@ const Encryption = ({ setActive, setEncr }) => {
           DNA operation will be applied on all the three components and then we
           can merge them for getting final cipher image as shown in encryption
           flow chart. The work on sender ends at encryption. Now image is ready
-          to be send. The process of decryption takes place at reciever's end.{" "}
+          to be send. The process of decryption takes place at reciever's
+          end.{" "}
         </p>
       </MathJaxContext>
       <ScrollLink

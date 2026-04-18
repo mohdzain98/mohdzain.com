@@ -1,24 +1,25 @@
 :root {
-  --site-bg-light:  #f5f6fa;   /* base light  */
-  --site-bg-dark:   #e8eaf2;   /* slightly darker — alternating sections */
-  --card-bg:        #ffffff;
-  --color-accent:   #0d6efd;
-  --color-text:     #1a1a2e;
+  --site-bg-light: #f5f6fa; /* base light  */
+  --site-bg-dark: #e8eaf2; /* slightly darker — alternating sections */
+  --card-bg: #ffffff;
+  --color-accent: #0d6efd;
+  --color-text: #1a1a2e;
   --color-text-muted: #6c757d;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--site-bg-light);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /* ── Alternating section backgrounds ────────────────────────
@@ -34,7 +35,6 @@ code {
 #research {
   background-color: var(--site-bg-light) !important;
 }
-
 
 /* darker sections */
 #experience,

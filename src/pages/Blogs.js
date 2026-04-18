@@ -8,7 +8,7 @@ const Blogs = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const categories = [
     ...new Set(
-      Object.values(blogRegistry).flatMap((entry) => entry.category || [])
+      Object.values(blogRegistry).flatMap((entry) => entry.category || []),
     ),
   ];
   const blogEntries = Object.entries(blogRegistry);

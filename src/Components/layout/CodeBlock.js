@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const CodeBlock = ({ id, language, code }) => {
+const CodeBlock = ({ id, language, code, fontSize = "15px" }) => {
   const [copiedBlock, setCopiedBlock] = useState(null);
   const handleCopy = (text, blockId) => {
     if (!navigator?.clipboard?.writeText) {
@@ -51,7 +51,7 @@ const CodeBlock = ({ id, language, code }) => {
         customStyle={{
           margin: 0,
           background: "transparent",
-          fontSize: "16px",
+          fontSize: fontSize,
           lineHeight: "1.4",
           padding: "10px",
         }}
