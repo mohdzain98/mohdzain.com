@@ -175,23 +175,6 @@ const AxisSpending = () => {
 
             {/* Links */}
             <div className="d-flex flex-wrap gap-3 mb-5">
-              <div
-                className="card border-0 shadow-sm px-4 py-3 d-flex flex-row align-items-center gap-2"
-                style={{ borderRadius: 12 }}
-              >
-                <i className="fa-solid fa-gauge text-dark fs-5 fe-2" />
-                <div>
-                  <div
-                    className="fw-semibold text-dark"
-                    style={{ fontSize: "14px" }}
-                  >
-                    Dashboard
-                  </div>
-                  <div className="text-muted" style={{ fontSize: "12px" }}>
-                    HTML files generated from SQLite data
-                  </div>
-                </div>
-              </div>
               <a
                 href="https://github.com/mohdzain98/openclaw-tools/tree/main/axis-spending"
                 target="_blank"
@@ -212,6 +195,41 @@ const AxisSpending = () => {
                   </div>
                 </div>
               </a>
+              <Link
+                to="/blogs/automated-spending-tracker-openclaw"
+                className="card border-0 shadow-sm px-4 py-3 d-flex flex-row align-items-center gap-2 text-decoration-none"
+                style={{ borderRadius: 12 }}
+              >
+                <i className="fa-regular fa-file-lines text-dark fs-5" />
+                <div>
+                  <div
+                    className="fw-semibold text-dark"
+                    style={{ fontSize: "14px" }}
+                  >
+                    Blog Post
+                  </div>
+                  <div className="text-muted" style={{ fontSize: "12px" }}>
+                    Automated Spending Tracker with OpenClaw
+                  </div>
+                </div>
+              </Link>
+              <div
+                className="card border-0 shadow-sm px-4 py-3 d-flex flex-row align-items-center gap-2"
+                style={{ borderRadius: 12 }}
+              >
+                <i className="fa-solid fa-gauge text-dark fs-5 fe-2" />
+                <div>
+                  <div
+                    className="fw-semibold text-dark"
+                    style={{ fontSize: "14px" }}
+                  >
+                    Dashboard
+                  </div>
+                  <div className="text-muted" style={{ fontSize: "12px" }}>
+                    HTML files generated from SQLite data
+                  </div>
+                </div>
+              </div>
               <div
                 className="card border-0 shadow-sm px-4 py-3 d-flex flex-row align-items-center gap-2"
                 style={{ borderRadius: 12 }}
