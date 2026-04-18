@@ -34,7 +34,7 @@ const Projects = () => {
                 onClick={() => handleClick(item.Live)}
               >
                 <span
-                  className="text-uppercase text-muted mb-1 fw-semibold"
+                  className="text-uppercase text-primary mb-1 fw-bold"
                   style={{ fontSize: "11px", letterSpacing: "1px" }}
                 >
                   {item.type}
@@ -50,7 +50,7 @@ const Projects = () => {
                   {item.Techs.map((f) => (
                     <li
                       key={f}
-                      className="list-inline-item tline my-1 px-2 bg-secondary bg-opacity-10 text-dark fw-semibold"
+                      className="list-inline-item tline my-1 px-2 bg-primary bg-opacity-10 text-primary fw-bold"
                       style={{ fontSize: "11px" }}
                     >
                       {f}

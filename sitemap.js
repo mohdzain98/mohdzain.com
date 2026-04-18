@@ -7,15 +7,35 @@ const routes = [
   { url: "/experience", changefreq: "monthly", priority: 0.8 },
   { url: "/industry", changefreq: "monthly", priority: 0.8 },
   { url: "/projects", changefreq: "monthly", priority: 0.8 },
-  { url: "/projects/gnost", changefreq: "monthly", priority: 0.8 },
-  { url: "/blogs", changefreq: "monthly", priority: 0.8 },
+  { url: "/projects/gnost", changefreq: "monthly", priority: 0.7 },
   {
-    url: "/blogs/color-images-cryptosystem",
+    url: "/projects/axis-spending-openclaw",
+    changefreq: "monthly",
+    priority: 0.7,
+  },
+  {
+    url: "/projects/axis-spending-openclaw/setup",
+    changefreq: "monthly",
+    priority: 0.6,
+  },
+  {
+    url: "/achievements/landingai-financial-ai-hackathon",
+    changefreq: "monthly",
+    priority: 0.7,
+  },
+  { url: "/blogs", changefreq: "weekly", priority: 0.9 },
+  {
+    url: "/blogs/automated-spending-tracker-openclaw",
     changefreq: "monthly",
     priority: 0.8,
   },
   {
     url: "/blogs/tracing-agentic-llm-workflows-arize-phoenix-langgraph",
+    changefreq: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: "/blogs/color-images-cryptosystem",
     changefreq: "monthly",
     priority: 0.8,
   },

@@ -18,6 +18,8 @@ import Wrong from "./pages/Wrong";
 import AllBlogs from "./pages/blogs/AllBlogs";
 import AllExample from "./pages/blogs/AllExample";
 import LoanLensAI from "./pages/LoanLensAI";
+import AxisSpending from "./pages/AxisSpending";
+import AxisSpendingSetup from "./pages/AxisSpendingSetup";
 import Footer from "./pages/home/components/Footer";
 
 function App() {
@@ -44,6 +46,16 @@ function App() {
             exact
             path="/achievements/landingai-financial-ai-hackathon"
             element={<LoanLensAI />}
+          ></Route>
+          <Route
+            exact
+            path="/projects/axis-spending-openclaw"
+            element={<AxisSpending />}
+          ></Route>
+          <Route
+            exact
+            path="/projects/axis-spending-openclaw/setup"
+            element={<AxisSpendingSetup />}
           ></Route>
           <Route exact path="/404" element={<Wrong />}></Route>
           <Route path="*" element={<Navigate to="/404" />}></Route>
