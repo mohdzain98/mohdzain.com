@@ -1,0 +1,1 @@
+var e=`/assets/dashboard-ChRKIGDi.webp`;export{e as t};
