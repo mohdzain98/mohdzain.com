@@ -1,0 +1,194 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/nunito";
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.003 270);
+  --foreground: oklch(0.2 0.03 275);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.03 275);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.03 275);
+  --primary: oklch(0.55 0.22 262);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.96 0.008 270);
+  --secondary-foreground: oklch(0.25 0.03 275);
+  --muted: oklch(0.96 0.008 270);
+  --muted-foreground: oklch(0.5 0.02 270);
+  --accent: oklch(0.95 0.015 262);
+  --accent-foreground: oklch(0.25 0.03 275);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.008 270);
+  --input: oklch(0.92 0.008 270);
+  --ring: oklch(0.55 0.22 262 / 50%);
+  --brand: #3b5bdb;
+  --topic: maroon;
+  --hero-bg: #f0f4ff;
+  --section-accent: #f5f8fe;
+  --section-light: #f5f6fa;
+  --section-dark: #e8eaf2;
+}
+
+.dark {
+  --background: oklch(0.16 0.02 275);
+  --foreground: oklch(0.96 0.005 270);
+  --card: oklch(0.2 0.02 275);
+  --card-foreground: oklch(0.96 0.005 270);
+  --popover: oklch(0.2 0.02 275);
+  --popover-foreground: oklch(0.96 0.005 270);
+  --primary: oklch(0.68 0.19 262);
+  --primary-foreground: oklch(0.15 0.02 275);
+  --secondary: oklch(0.26 0.02 275);
+  --secondary-foreground: oklch(0.96 0.005 270);
+  --muted: oklch(0.26 0.02 275);
+  --muted-foreground: oklch(0.7 0.015 270);
+  --accent: oklch(0.3 0.03 270);
+  --accent-foreground: oklch(0.96 0.005 270);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.68 0.19 262 / 50%);
+  --brand: #8da2ff;
+  --topic: #f0a3a3;
+  --hero-bg: #141731;
+  --section-accent: #1b1e36;
+  --section-light: #16182b;
+  --section-dark: #1d2036;
+}
+
+@theme inline {
+  --font-sans: "Nunito Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="menuitem"],
+  [role="radio"],
+  summary,
+  select,
+  a[href] {
+    cursor: pointer;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--section-light);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    overflow-wrap: anywhere;
+    font-family:
+      source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+
+  /* Defaults for plain prose elements (blog and project pages use bare tags). */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  ul,
+  ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    list-style: revert;
+  }
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  img {
+    max-width: 100%;
+  }
+  /* Default inset for bare <section>s; utility classes override it. */
+  section {
+    padding: 2rem 9%;
+  }
+}
+
+/* ── Alternating home section backgrounds ──────────────────
+   About → Industry → Career → Skills → Achievements → Projects → Research */
+#about,
+#cp,
+#achievements,
+#research {
+  background-color: var(--section-light) !important;
+}
+#experience,
+#skill,
+#projects {
+  background-color: var(--section-dark) !important;
+}
+.home,
+.cp {
+  background-color: inherit !important;
+}
+.home-accent-section {
+  background-color: var(--section-accent);
+}
+
+.dark {
+  color-scheme: dark;
+}
