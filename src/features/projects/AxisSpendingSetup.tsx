@@ -342,6 +342,7 @@ const AxisSpendingSetup = () => {
           <section>
             {/* Breadcrumb */}
             <Breadcrumbs
+              className="mb-7"
               items={[
                 { label: "Home", to: "/" },
                 { label: "Projects", to: "/projects" },
@@ -354,6 +355,7 @@ const AxisSpendingSetup = () => {
             />
 
             <SectionHeader
+              as="h1"
               title="Setup Guide"
               subtitle="Everything you need to run this on your own server — from Gmail IMAP and Himalaya to OpenClaw skill registration, nginx dashboards, and cron scheduling."
               className="mb-6"

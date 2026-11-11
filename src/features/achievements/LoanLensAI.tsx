@@ -139,6 +139,7 @@ const LoanLensAI = () => {
           <section>
             {/* Breadcrumb */}
             <Breadcrumbs
+              className="mb-7"
               items={[
                 { label: "Home", to: "/" },
                 { label: "Achievements" },
@@ -148,6 +149,7 @@ const LoanLensAI = () => {
 
             {/* Hero */}
             <SectionHeader
+              as="h1"
               title="LoanLens AI"
               subtitle="Your Virtual Underwriter — From Documents to Decisions, Instantly. Built with Landing AI ADE and AWS Bedrock for the LandingAI Financial AI Hackathon."
               className="mb-6"

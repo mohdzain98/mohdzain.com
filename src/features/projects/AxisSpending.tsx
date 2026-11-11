@@ -134,6 +134,7 @@ const AxisSpending = () => {
           {/* Breadcrumb */}
           <section>
             <Breadcrumbs
+              className="mb-7"
               items={[
                 { label: "Home", to: "/" },
                 { label: "Projects", to: "/projects" },
@@ -142,6 +143,7 @@ const AxisSpending = () => {
             />
 
             <SectionHeader
+              as="h1"
               title="OpenClaw Spending Agent"
               subtitle="A personal AI agent that automatically tracks Axis Bank spending — fetches emails, categorizes transactions, generates dashboards, and sends weekly WhatsApp summaries. Trigger it anytime via natural language on WhatsApp."
               className="mb-6"

@@ -4,10 +4,47 @@ import { cn } from "@/lib/utils";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useMediaQuery } from "react-responsive";
+import SectionHeader from "@/components/layout/SectionHeader";
+
+const FEATURES = [
+  {
+    icon: "play",
+    title: "Entry Point Detection",
+    desc: "Detects where execution starts in the codebase.",
+  },
+  {
+    icon: "diagram-project",
+    title: "Execution Flow",
+    desc: "Infers the high-level execution flow from those entry points.",
+  },
+  {
+    icon: "ranking-star",
+    title: "Hotspot Files",
+    desc: "Identifies the most important files in the code.",
+  },
+  {
+    icon: "triangle-exclamation",
+    title: "Caution Codes",
+    desc: "Flags the code that needs extra care before you change it.",
+  },
+  {
+    icon: "file-lines",
+    title: "Onboarding Documentation",
+    desc: "Generates onboarding documentation for the repository.",
+  },
+  {
+    icon: "sitemap",
+    title: "Mermaid Flow Diagrams",
+    desc: "Produces Mermaid diagrams of the execution flow.",
+  },
+  {
+    icon: "code",
+    title: "Multi-Language",
+    desc: "Works across multiple programming languages.",
+  },
+];
 
 const Gnost = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const [copied, setCopied] = useState(false);
   const command = "pip install gnost";
 
@@ -29,62 +66,69 @@ const Gnost = () => {
         <title>GNOST - Codebase Knowledge | Mohd Zain</title>
         <meta
           name="description"
-          content="GNOST is a python package that helps understand unfamiliar
-                  codebases by automatically identifying entry points, execution
-                  flow, and core logic."
+          content="GNOST is a Python package that helps you understand unfamiliar codebases by finding entry points, execution flow, and core logic."
         />
         <meta name="robots" content="index,follow" />
       </Helmet>
-      <div id="gnost">
-        <div
-          className={`container mx-auto px-4 pt-4 pb-6 ${
-            isTabletOrMobile ? "px-4" : "px-0"
-          }`}
-          style={{
-            maxWidth: isTabletOrMobile ? "100%" : "1200px",
-            marginTop: isTabletOrMobile ? "20px" : "30px",
-          }}
-        >
+      <div id="gnost" className="bg-background min-h-screen pt-8 pb-20">
+        <div className="mx-auto w-full max-w-[900px] px-6 py-8 md:px-0">
           <Breadcrumbs
+            className="mb-7"
             items={[
               { label: "Home", to: "/" },
               { label: "Projects", to: "/projects" },
               { label: "Gnost" },
             ]}
           />
+          <SectionHeader
+            as="h1"
+            title="GNOST - Codebase Knowledge"
+            subtitle="A Python package that helps you understand unfamiliar codebases by finding entry points, execution flow, and core logic."
+            className="mb-6"
+          />
           <div>
-            <h2 style={{ color: "var(--topic)" }}>
-              GNOST - Codebase Knowledge
-            </h2>
-            <hr style={{ color: "var(--foreground)", height: "2px" }} />
-          </div>
-          <div className="grid grid-cols-12 gap-x-6">
-            <div className="col-span-12 lg:col-span-8">
-              <div className="py-6 pr-6">
-                <p style={{ textAlign: "justify" }}>
+            <div>
+              <div className="pb-6">
+                <p style={{ textAlign: "left" }}>
                   GNOST is a python package that helps understand unfamiliar
                   codebases by automatically identifying entry points, execution
                   flow, and core logic. It provides a quick starting point for
                   navigating large repositories and building a mental model of
                   how a project works.
                 </p>
-                <p style={{ textAlign: "justify" }}>
+                <p style={{ textAlign: "left" }}>
                   The name GNOST is inspired by{" "}
                   <span className="italic font-extrabold">gnosis</span> (Greek:
                   γνῶσις) the Greek word for knowledge. It becomes GNOST to
                   emphasize{" "}
                   <span className="italic font-extrabold">code knowledge</span>
                 </p>
-                <h5 className="mt-6">What GNOST Does</h5>
-                <ul className="mb-4">
-                  <li>Detects where execution starts</li>
-                  <li>Infers high-level execution flow</li>
-                  <li>Identifies hotspot files (most important code)</li>
-                  <li>Identify caution codes</li>
-                  <li>Generates onboarding documentation</li>
-                  <li>Produces Mermaid flow diagrams</li>
-                  <li>Works across multiple languages</li>
-                </ul>
+                <h5 className="mt-6 mb-3">What GNOST Does</h5>
+                <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+                  {FEATURES.map((f, i) => (
+                    <div
+                      key={f.title}
+                      className="rounded-lg bg-card text-card-foreground border h-full p-4"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="bg-primary/10 text-primary flex size-[38px] shrink-0 items-center justify-center rounded-full">
+                          <Icon name={f.icon} className="size-[14px]" />
+                        </div>
+                        <div>
+                          <div className="mb-1 text-[14px] font-semibold">
+                            <span className="text-primary mr-1">
+                              {String(i + 1).padStart(2, "0")}
+                            </span>{" "}
+                            {f.title}
+                          </div>
+                          <div className="text-muted-foreground text-[13px]">
+                            {f.desc}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
                 <h5 className="mt-6">Supported Languages</h5>
                 <div className="flex flex-wrap gap-2">
                   <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-600/10 text-green-600 dark:text-green-400">
@@ -106,7 +150,7 @@ const Gnost = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-12 lg:col-span-4">
+            <div className="mt-2 grid grid-cols-1 items-start gap-4 md:grid-cols-2">
               <div className="rounded-lg bg-card text-card-foreground border ">
                 <div className="p-4">
                   <h5 className="">
@@ -157,7 +201,7 @@ const Gnost = () => {
                   </div>
                 </div>
               </div>
-              <div className="rounded-lg border bg-card text-card-foreground  mt-4">
+              <div className="rounded-lg border bg-card text-card-foreground">
                 <div className="p-4">
                   <h5 className="">
                     <Icon
