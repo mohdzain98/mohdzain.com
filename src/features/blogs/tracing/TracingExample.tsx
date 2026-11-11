@@ -1,11 +1,9 @@
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { Helmet } from "react-helmet-async";
-import { useMediaQuery } from "react-responsive";
 import CodeBlock from "@/components/layout/CodeBlock";
 import "@/features/blogs/styles/blogs.css";
 
 const TracingExample = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   return (
     <>
       <Helmet>
@@ -18,11 +16,8 @@ const TracingExample = () => {
       </Helmet>
 
       <main
-        className={`container mx-auto px-4 py-12 ${isTabletOrMobile ? "px-4" : "px-0"}`}
-        style={{
-          maxWidth: isTabletOrMobile ? "100%" : "900px",
-          marginTop: isTabletOrMobile ? "0px" : "10px",
-        }}
+        className="mx-auto w-full px-6 pt-16 pb-12 md:px-12 xl:px-0"
+        style={{ maxWidth: "900px" }}
       >
         <div className="mb-6">
           <Breadcrumbs

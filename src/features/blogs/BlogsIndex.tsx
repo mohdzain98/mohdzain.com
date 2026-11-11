@@ -5,12 +5,16 @@ import { useMediaQuery } from "react-responsive";
 import { blogRegistry } from "@/features/blogs/blogRegistry";
 import { Helmet } from "react-helmet-async";
 
+// Topics shown as pills even before a post is tagged with them.
+const EXTRA_CATEGORIES = ["RAG"];
+
 const Blogs = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const categories = [
-    ...new Set(
-      Object.values(blogRegistry).flatMap((entry) => entry.category || []),
-    ),
+    ...new Set([
+      ...Object.values(blogRegistry).flatMap((entry) => entry.category || []),
+      ...EXTRA_CATEGORIES,
+    ]),
   ];
   const blogEntries = Object.entries(blogRegistry);
   return (
@@ -43,32 +47,25 @@ const Blogs = () => {
       >
         <div className="container mx-auto px-4 p-6" style={{ marginTop: "1%" }}>
           <center>
-            <p
+            <h1
               style={{
                 fontSize: "70px",
+                marginBottom: "1rem",
                 fontWeight: "lighter",
-                color: "var(--topic)",
+                color: "var(--primary)",
               }}
             >
               Zain's blog
-            </p>
+            </h1>
           </center>
           <hr />
           <div className="my-6" id="top">
-            <ul
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                rowGap: "0px",
-                columnGap: "40px",
-                flexWrap: "wrap",
-                padding: "0",
-              }}
-            >
+            <ul className="m-0 flex list-none flex-wrap items-center justify-center gap-2.5 p-0">
               {categories.map((category) => (
                 <li key={category}>
-                  <p className="topic mr-2">{category}</p>
+                  <span className="bg-primary/10 text-primary inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold">
+                    {category}
+                  </span>
                 </li>
               ))}
             </ul>

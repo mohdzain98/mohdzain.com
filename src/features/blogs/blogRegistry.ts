@@ -38,7 +38,7 @@ export const blogRegistry: Record<string, BlogEntry> = {
     ],
     readTime: "10 min read",
     date: "Apr 2026",
-    category: ["Agentic AI"],
+    category: ["Agentic AI", "Dev2Dep"],
     tags: ["Python", "SQLite", "OpenClaw", "Gmail IMAP", "WhatsApp"],
   },
   "tracing-agentic-llm-workflows-arize-phoenix-langgraph": {
@@ -69,7 +69,7 @@ export const blogRegistry: Record<string, BlogEntry> = {
     ],
     readTime: "40 min read",
     date: "Oct 2025",
-    category: ["Machine Learning", "Cryptography"],
+    category: ["Machine Learning"],
     tags: ["Image Encryption", "DNA"],
     externalLink: "https://www.nature.com/articles/s41598-025-04021-4",
   },

@@ -5,13 +5,11 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import asset_arize_phoenix_ui from "@/assets/blogs/llm-tracing/arize-phoenix-ui.webp";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import CodeBlock from "@/components/layout/CodeBlock";
 import "@/features/blogs/styles/blogs.css";
 
 const LLMTracing = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -82,11 +80,8 @@ const LLMTracing = () => {
       </Helmet>
 
       <main
-        className={`container mx-auto px-4 pt-12 pb-6 ${isTabletOrMobile ? "px-4" : "px-0"}`}
-        style={{
-          maxWidth: isTabletOrMobile ? "100%" : "900px",
-          marginTop: isTabletOrMobile ? "0px" : "30px",
-        }}
+        className="mx-auto w-full px-6 pt-16 pb-12 md:px-12 xl:px-0"
+        style={{ maxWidth: "900px" }}
       >
         <div className="mt-2 mb-6">
           <Breadcrumbs
@@ -98,10 +93,10 @@ const LLMTracing = () => {
           />
         </div>
         <header className="mb-6">
-          <h3 className="font-bold">
+          <h1 className="text-[1.75rem] font-bold">
             Tracing Agentic LLM Workflows Locally Using Arize Phoenix and
             LangGraph
-          </h3>
+          </h1>
           <p className="text-muted-foreground mb-0">
             <Icon name="calendar" className="size-[1em] mr-2" />
             Jan 10, 2026 · 12 min read
@@ -331,7 +326,7 @@ graph.add_node(
           <div className="mb-4">
             <p className="font-bold mb-1">Written by Mohd Zain</p>
             <p className="text-muted-foreground mb-0">
-              Data Science | LLM Systems | Agentic AI | RGMx
+              Data Science | LLM Systems | Agentic AI | FDE
             </p>
           </div>
 

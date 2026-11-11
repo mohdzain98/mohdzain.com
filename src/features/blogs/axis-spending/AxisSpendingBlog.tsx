@@ -4,14 +4,12 @@ import asset_dashboard from "@/assets/blogs/axis-spending/dashboard.webp";
 import asset_SKILL from "@/assets/blogs/axis-spending/SKILL.md?url";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import CodeBlock from "@/components/layout/CodeBlock";
 import "@/features/blogs/styles/blogs.css";
 import ShadedHR from "@/components/ui/ShadedHR";
 
 const AxisSpendingBlog = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -75,11 +73,8 @@ const AxisSpendingBlog = () => {
       </Helmet>
 
       <main
-        className={`container mx-auto px-4 pt-12 pb-6 ${isTabletOrMobile ? "px-4" : "px-0"}`}
-        style={{
-          maxWidth: isTabletOrMobile ? "100%" : "900px",
-          marginTop: isTabletOrMobile ? "0px" : "30px",
-        }}
+        className="mx-auto w-full px-6 pt-16 pb-12 md:px-12 xl:px-0"
+        style={{ maxWidth: "900px" }}
       >
         {/* Breadcrumb */}
         <div className="mt-2 mb-6">
@@ -94,10 +89,10 @@ const AxisSpendingBlog = () => {
 
         {/* Header */}
         <header className="mb-6">
-          <h3 className="font-bold leading-tight">
+          <h1 className="text-[1.75rem] font-bold leading-tight">
             I had no idea where my money was going every month. So I automated
             the answer.
-          </h3>
+          </h1>
           <p className="text-muted-foreground mb-0 mt-2">
             <Icon name="calendar" className="size-[1em] mr-2" />
             Apr 17, 2026 · 10 min read

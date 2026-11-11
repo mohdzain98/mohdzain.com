@@ -20,7 +20,6 @@ import ContentsMenu, {
 } from "@/components/layout/ContentsMenu";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import Conclusion from "@/features/blogs/cryptosystem/Conclusion";
-import { useMediaQuery } from "react-responsive";
 import "@/features/blogs/styles/blogs.css";
 import { Helmet } from "react-helmet-async";
 
@@ -45,7 +44,6 @@ const CimagesCrypt = () => {
   const navigate = useNavigate();
   const [active, setActive] = useState("enc");
   const [encr, setEncr] = useState(true);
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const enc = () => {
     setEncr(true);
     setActive("enc");
@@ -69,11 +67,8 @@ const CimagesCrypt = () => {
       </Helmet>
       <div id="cic">
         <div
-          className={`container mx-auto px-4 pt-6 pb-6 ${isTabletOrMobile ? "px-4" : "px-0"}`}
-          style={{
-            maxWidth: isTabletOrMobile ? "100%" : "1000px",
-            marginTop: isTabletOrMobile ? "0px" : "30px",
-          }}
+          className="mx-auto w-full px-6 pt-16 pb-12 md:px-12 xl:px-0"
+          style={{ maxWidth: "1000px" }}
         >
           <div className="my-2">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -88,10 +83,10 @@ const CimagesCrypt = () => {
             </div>
           </div>
           <div className="mt-6">
-            <h3>
+            <h1 className="text-[1.75rem]">
               A DNA based Color Image Cryptosystem using Chaotic Maps, Spiral
               Mixing and Non - Linear Binary Operator
-            </h3>
+            </h1>
             <Link
               to={"https://www.nature.com/articles/s41598-025-04021-4"}
               target="_blank"
@@ -607,7 +602,7 @@ const CimagesCrypt = () => {
             <div id="footnotes">
               <h3>Foot Notes</h3>
               <hr style={{ width: "50%" }} />
-              <p style={{ textAlign: "justify" }}>
+              <p style={{ textAlign: "left" }}>
                 This paper is a part of the PhD work of
                 <Link
                   to="https://www.linkedin.com/in/chiranjeev-bhaya-6b8603189"
