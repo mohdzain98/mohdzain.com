@@ -1,0 +1,5 @@
+# GitHub language stats: the committed build/ output is minified JavaScript and was
+# counted as ~90% of the repo. Mark it as generated so it is excluded.
+build/** linguist-generated=true linguist-vendored=true
+public/sitemap.xml linguist-generated=true
+package-lock.json linguist-generated=true
