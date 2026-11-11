@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4CLS50NHCE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4CLS50NHCE");
+    </script>
+    <script>
+      // Apply the saved/system theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          var dark =
+            t === "dark" ||
+            ((!t || t === "system") &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          if (dark) {
+            document.documentElement.classList.add("dark");
+            document.documentElement.style.colorScheme = "dark";
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6fa" />
+
+    <title>Mohd Zain | Data Scientist</title>
+    <meta name="title" content="Mohd Zain | Data Scientist" />
+    <meta name="author" content="Mohd Zain" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta
+      name="keywords"
+      content="Mohd Zain, Portfolio, Data Scientist, GenAI, Agentic AI, Forward Deployed Engineer, FDE, Full Stack, Web Developer, IIT Dhanbad"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mohd Zain | Data Scientist" />
+    <meta property="og:site_name" content="Mohd Zain" />
+    <meta
+      property="og:description"
+      content="Official portfolio website of Mohd Zain, Data Scientist in GenAI and Agentic AI, FDE across frontend, backend and deployment. Alumni of IIT (ISM) Dhanbad."
+    />
+    <meta
+      property="og:image"
+      content="https://mohdzain.com/preview_image.png"
+    />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mohd Zain | Data Scientist" />
+    <meta
+      name="twitter:description"
+      content="Official portfolio website of Mohd Zain, Data Scientist in GenAI and Agentic AI, FDE across frontend, backend and deployment. Alumni of IIT (ISM) Dhanbad."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mohdzain.com/preview_image.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="/logo192.png"
+    />
+    <!-- Canonical + og:url are set per route by <RouteSeo /> -->
+    <link rel="manifest" href="/manifest.json" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://mohdzain.com/#website",
+            "url": "https://mohdzain.com/",
+            "name": "Mohd Zain",
+            "alternateName": ["Mohd Zain Portfolio", "mohdzain.com"],
+            "description": "Official portfolio website of Mohd Zain, Data Scientist in GenAI and Agentic AI, FDE across frontend, backend and deployment. Alumni of IIT (ISM) Dhanbad.",
+            "publisher": { "@id": "https://mohdzain.com/#person" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://mohdzain.com/#person",
+            "name": "Mohd Zain",
+            "url": "https://mohdzain.com/",
+            "image": "https://mohdzain.com/preview_image.png",
+            "jobTitle": "Data Scientist",
+            "description": "Data Scientist in GenAI and Agentic AI, FDE across frontend, backend and deployment. Alumni of IIT (ISM) Dhanbad.",
+            "worksFor": { "@type": "Organization", "name": "Sigmoid" },
+            "knowsAbout": [
+              "Generative AI",
+              "Agentic AI",
+              "Forward Deployed Engineering",
+              "Full-Stack Development",
+              "Deployment",
+              "LLM Observability"
+            ],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "IIT (ISM) Dhanbad"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/zainatlink/",
+              "https://github.com/mohdzain98/"
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
