@@ -17,10 +17,6 @@ export default function AllExample() {
       <Helmet>
         <title>{entry.title} Example</title>
         <meta name="description" content={entry.description} />
-        <link
-          rel="canonical"
-          href={`https://mohdzain.com/blogs/${blog}/example`}
-        />
       </Helmet>
       <Suspense fallback={<PageFallback />}>
         <BlogExample />

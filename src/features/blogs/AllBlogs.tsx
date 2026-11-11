@@ -17,7 +17,6 @@ export default function AllBlogs() {
       <Helmet>
         <title>{entry.title}</title>
         <meta name="description" content={entry.description} />
-        <link rel="canonical" href={`https://mohdzain.com/blogs/${blog}`} />
       </Helmet>
       <Suspense fallback={<PageFallback />}>
         <BlogComponent />

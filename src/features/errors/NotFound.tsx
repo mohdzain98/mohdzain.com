@@ -19,6 +19,7 @@ export default function Wrong() {
   return (
     <div className="container mx-auto p-6 px-4">
       <Helmet>
+        <title>Page not found | Mohd Zain</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="flex items-center justify-center">
