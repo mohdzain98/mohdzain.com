@@ -21,8 +21,8 @@ let before = 0;
 let after = 0;
 
 for (const file of walk(ASSETS)) {
-  if (!/\.(png|jpe?g)$/i.test(file)) continue;
-  const out = file.replace(/\.(png|jpe?g)$/i, ".webp");
+  if (!/\.(png|jpe?g|avif)$/i.test(file)) continue;
+  const out = file.replace(/\.(png|jpe?g|avif)$/i, ".webp");
   const input = fs.readFileSync(file);
   const buf = await sharp(input)
     .rotate()

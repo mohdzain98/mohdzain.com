@@ -9,6 +9,7 @@
 /coverage
 
 # production
+docs/industry_updated.md
 
 # misc
 .DS_Store
