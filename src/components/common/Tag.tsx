@@ -11,7 +11,7 @@ export default function Tag({
   return (
     <span
       className={cn(
-        "bg-primary/10 text-primary inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
+        "bg-primary/10 text-primary inline-flex items-center rounded px-3.5 py-1.5 text-[11px] leading-4 font-semibold",
         className,
       )}
     >

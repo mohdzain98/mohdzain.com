@@ -35,3 +35,44 @@ export const XIcon = (p: IconProps) => <BrandIcon path={siX.path} {...p} />;
 export const LinkedinIcon = (p: IconProps) => (
   <BrandIcon path={LINKEDIN_PATH} {...p} />
 );
+
+/**
+ * Simplified AWS mark: "aws" lettering with the orange smile arrow.
+ * (simple-icons no longer ships an AWS logo, so this is drawn here.)
+ */
+export const AwsIcon = (props: IconProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    width="1em"
+    height="1em"
+    aria-hidden="true"
+    {...props}
+  >
+    <text
+      x="12"
+      y="12.5"
+      textAnchor="middle"
+      fontSize="11.5"
+      fontWeight="800"
+      fontFamily="Arial, Helvetica, sans-serif"
+      fill="currentColor"
+    >
+      aws
+    </text>
+    <path
+      d="M3.5 16.2c4.6 3.2 12.3 3.3 17.2-.2"
+      fill="none"
+      stroke="#FF9900"
+      strokeWidth="1.9"
+      strokeLinecap="round"
+    />
+    <path
+      d="M18.6 14.4l2.4 1.1-.9 2.4"
+      fill="none"
+      stroke="#FF9900"
+      strokeWidth="1.9"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

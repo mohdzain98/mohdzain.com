@@ -1,5 +1,6 @@
 import type { ComponentType, SVGProps } from "react";
 import { cn } from "@/lib/utils";
+import javaLogo from "@/assets/logos/java.webp";
 import {
   Activity,
   Award,
@@ -9,6 +10,7 @@ import {
   Book,
   BookOpen,
   Brain,
+  Briefcase,
   Cable,
   Calendar,
   Check,
@@ -55,6 +57,7 @@ import {
   Play,
   ScanSearch,
   Scale,
+  Rocket,
   Search,
   Server,
   Settings,
@@ -80,6 +83,7 @@ import {
 } from "lucide-react";
 import {
   siBootstrap,
+  siCelery,
   siDocker,
   siGit,
   siGooglechrome,
@@ -87,12 +91,15 @@ import {
   siJavascript,
   siLinux,
   siNodedotjs,
-  siOpenjdk,
   siPython,
   siReact,
+  siShadcnui,
+  siRedis,
+  siTypescript,
   siYoutube,
 } from "simple-icons";
 import {
+  AwsIcon,
   BrandIcon,
   GithubIcon,
   InstagramIcon,
@@ -102,6 +109,19 @@ import {
 } from "@/components/icons/Brands";
 
 type SvgProps = SVGProps<SVGSVGElement>;
+
+/** Raster logo rendered through the same slot as the SVG icons. */
+const ImageIcon =
+  (src: string): ComponentType<SvgProps> =>
+  ({ className, style }) => (
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      className={className}
+      style={{ objectFit: "contain", ...(style as React.CSSProperties) }}
+    />
+  );
 
 const brand =
   (path: string): ComponentType<SvgProps> =>
@@ -113,6 +133,8 @@ export const ICONS = {
   "arrow-right": ArrowRight,
   "arrow-up-right-from-square": ExternalLink,
   bolt: Zap,
+  briefcase: Briefcase,
+  rocket: Rocket,
   book: Book,
   "book-open": BookOpen,
   brain: Brain,
@@ -195,13 +217,20 @@ export const ICONS = {
   github: GithubIcon,
   html5: brand(siHtml5.path),
   instagram: InstagramIcon,
-  java: brand(siOpenjdk.path),
+  java: ImageIcon(javaLogo),
   js: brand(siJavascript.path),
   "square-js": brand(siJavascript.path),
   linkedin: LinkedinIcon,
   linux: brand(siLinux.path),
   "node-js": brand(siNodedotjs.path),
   python: brand(siPython.path),
+  // shadcn/ui logo; "handle-bottom-right" is the slug used in the Skills data.
+  shadcn: brand(siShadcnui.path),
+  "handle-bottom-right": brand(siShadcnui.path),
+  typescript: brand(siTypescript.path),
+  aws: AwsIcon,
+  celery: brand(siCelery.path),
+  redis: brand(siRedis.path),
   react: brand(siReact.path),
   whatsapp: WhatsappIcon,
   "x-twitter": XIcon,
