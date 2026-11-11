@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
-import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, House, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -29,7 +29,7 @@ function goToSection(id: string, delay = 0) {
 }
 
 const desktopLink =
-  "relative inline-flex items-center px-1 text-sm tracking-wide text-foreground/80 transition-colors hover:text-foreground " +
+  "relative inline-flex items-center gap-1.5 px-1 text-base tracking-wide text-foreground/80 transition-colors hover:text-foreground " +
   "after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-foreground after:transition-transform";
 const desktopActive = "font-semibold text-foreground after:scale-x-100";
 
@@ -184,12 +184,13 @@ export default function Navbar() {
                       to="/"
                       onClick={() => setDrawerOpen(false)}
                       className={cn(
-                        "block rounded-md px-3 py-3 text-[15px] no-underline",
+                        "flex items-center gap-2.5 rounded-md px-3 py-3 text-[17px] no-underline",
                         onHome
                           ? "font-semibold text-foreground"
                           : "text-muted-foreground",
                       )}
                     >
+                      <House className="size-[18px]" />
                       Home
                     </Link>
                     {onHome && (
@@ -221,12 +222,13 @@ export default function Navbar() {
                           onClick={() => setDrawerOpen(false)}
                           aria-current={active ? "page" : undefined}
                           className={cn(
-                            "block rounded-md px-3 py-3 text-[15px] no-underline",
+                            "flex items-center gap-2.5 rounded-md px-3 py-3 text-[17px] no-underline",
                             active
                               ? "font-semibold text-foreground"
                               : "text-muted-foreground",
                           )}
                         >
+                          <l.icon className="size-[18px]" />
                           {l.label}
                         </Link>
                       </li>

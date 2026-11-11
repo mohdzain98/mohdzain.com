@@ -17,7 +17,10 @@ export default function CategorySection({
   children,
 }: CategorySectionProps) {
   return (
-    <section id={id} className="border-t border-border/70 px-0! py-7 md:py-10">
+    <section
+      id={id}
+      className="border-border/70 relative border-t px-0! py-7 md:py-10"
+    >
       <div className="mb-5 max-w-[760px] md:mb-7">
         <p className="text-primary mb-2 text-xs font-bold tracking-[0.18em]">
           {eyebrow}

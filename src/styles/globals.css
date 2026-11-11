@@ -28,9 +28,8 @@
   --brand: #3b5bdb;
   --topic: maroon;
   --hero-bg: #f0f4ff;
-  --section-accent: #f5f8fe;
-  --section-light: #f5f6fa;
-  --section-dark: #e8eaf2;
+  --page-bg: #f5f6fa;
+  --page-bg-alt: #eff1f7; /* very slightly darker band */
 }
 
 .dark {
@@ -55,9 +54,8 @@
   --brand: #8da2ff;
   --topic: #f0a3a3;
   --hero-bg: #141731;
-  --section-accent: #1b1e36;
-  --section-light: #16182b;
-  --section-dark: #1d2036;
+  --page-bg: #16182b;
+  --page-bg-alt: #121426;
 }
 
 @theme inline {
@@ -91,9 +89,8 @@
   * {
     border-color: var(--border);
   }
-  html {
-    scroll-behavior: smooth;
-  }
+  /* No CSS smooth scrolling: GSAP ScrollTrigger writes it back as an inline
+     style and then pinned sections stutter. Smooth scrolls are done in JS. */
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [role="menuitem"],
@@ -106,7 +103,7 @@
   body {
     margin: 0;
     font-family: var(--font-sans);
-    background-color: var(--section-light);
+    background-color: var(--page-bg);
     color: var(--foreground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -168,25 +165,36 @@
   }
 }
 
-/* ── Alternating home section backgrounds ──────────────────
-   About → Industry → Career → Skills → Achievements → Projects → Research */
-#about,
-#cp,
-#achievements,
-#research {
-  background-color: var(--section-light) !important;
+@layer components {
+  /* Card on an alternate band: same hue as the band, slightly darker */
+  .card-sunken {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--page-bg-alt), black 5%);
+  }
+  /* Card style 4: soft accent-tinted fill, no visible border */
+  .card-tint {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--primary) 7%, var(--card));
+  }
 }
-#experience,
+
+/* Home sections alternate between the page background and a very slightly
+   darker band: About, Career Path, Achievements, Research use the page bg;
+   Skills and Projects use --page-bg-alt. Industry styles its own colorful
+   background. The hero has its own bg. */
 #skill,
 #projects {
-  background-color: var(--section-dark) !important;
+  background-color: var(--page-bg-alt);
 }
 .home,
 .cp {
   background-color: inherit !important;
-}
-.home-accent-section {
-  background-color: var(--section-accent);
 }
 
 .dark {

@@ -29,7 +29,7 @@ export default function CodeBlock({
   id,
   language,
   code,
-  fontSize = "15px",
+  fontSize = "13px",
 }: CodeBlockProps) {
   const { resolvedTheme } = useTheme();
   const [copiedBlock, setCopiedBlock] = useState<string | null>(null);
@@ -78,6 +78,11 @@ export default function CodeBlock({
           fontSize,
           lineHeight: "1.4",
           padding: "10px",
+        }}
+        // The theme paints a background on the <code> element, which showed up
+        // as white strips behind each line. Keep it transparent.
+        codeTagProps={{
+          style: { background: "transparent", fontSize, lineHeight: "1.5" },
         }}
         wrapLongLines
       >

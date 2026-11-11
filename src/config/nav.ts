@@ -1,4 +1,5 @@
 import {
+  BookOpen,
   Briefcase,
   FlaskConical,
   FolderGit2,
@@ -14,6 +15,7 @@ export interface NavLinkItem {
   to: string;
   /** Path prefixes (or exact paths) that mark this link active. */
   match: string[];
+  icon: LucideIcon;
   external?: boolean;
 }
 
@@ -33,9 +35,15 @@ export const NAV_LINKS: NavLinkItem[] = [
     label: "Experience",
     to: "/experience",
     match: ["/experience", "/industry"],
+    icon: Briefcase,
   },
-  { label: "Projects", to: "/projects", match: ["/projects"] },
-  { label: "Blog", to: "/blogs", match: ["/blogs"] },
+  {
+    label: "Projects",
+    to: "/projects",
+    match: ["/projects"],
+    icon: FolderGit2,
+  },
+  { label: "Blog", to: "/blogs", match: ["/blogs"], icon: BookOpen },
 ];
 
 export const RESUME_URL =

@@ -14,6 +14,13 @@ export default function AnchorNav({ items }: { items: AnchorItem[] }) {
         <a
           key={s.id}
           href={`#${s.id}`}
+          onClick={(e) => {
+            const el = document.getElementById(s.id);
+            if (!el) return;
+            e.preventDefault();
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+            history.replaceState(null, "", `#${s.id}`);
+          }}
           className="bg-card text-foreground hover:bg-accent flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium no-underline  transition-colors"
         >
           <Icon name={s.icon} className="text-primary size-4" />
