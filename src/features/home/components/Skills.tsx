@@ -1,5 +1,6 @@
 import { Icon } from "@/components/icons/Icon";
 import { Button } from "@/components/ui/button";
+import RadarChart from "@/components/common/RadarChart";
 import { cn } from "@/lib/utils";
 
 import SectionHeader from "@/components/layout/SectionHeader";
@@ -23,23 +24,39 @@ interface Skill {
   name: string;
   icon: string;
   level: Level;
+  /** Explicit 0-100 proficiency; defaults to the value implied by `level`. */
+  value?: number;
   info?: string[];
 }
 
-const IMAGES: Record<SkillTab, string> = {
-  language: "lang.webp",
-  datascience: "ds.webp",
-  ai: "ai.webp",
-  webdev: "webdev.webp",
-  others: "others.webp",
-  database: "db.webp",
-};
-
 const SKILLS: Record<SkillTab, Skill[]> = {
   language: [
-    { name: "Python", icon: "python", level: "Advanced" },
-    { name: "Java", icon: "java", level: "Advanced" },
-    { name: "JavaScript", icon: "js", level: "Advanced" },
+    {
+      name: "Python",
+      icon: "python",
+      level: "Advanced",
+      info: ["Open-Close", "DRY", "Encapsulation"],
+    },
+    { name: "Java", icon: "java", level: "Advanced", info: ["DSA"] },
+    {
+      name: "JavaScript",
+      icon: "js",
+      level: "Advanced",
+      info: ["React", "Node.js"],
+    },
+    {
+      name: "TypeScript",
+      icon: "typescript",
+      level: "Intermediate",
+      value: 80,
+      info: ["React", "Node.js"],
+    },
+    {
+      name: "SQL",
+      icon: "database",
+      level: "Intermediate",
+      info: ["MySQL", "PostgreSQL"],
+    },
   ],
   datascience: [
     {
@@ -72,52 +89,142 @@ const SKILLS: Record<SkillTab, Skill[]> = {
       icon: "brain",
       level: "Basic",
     },
+    {
+      name: "Time Series Analysis",
+      info: ["Forecasting", "Trend Analysis"],
+      icon: "chart-area",
+      level: "Intermediate",
+      value: 65,
+    },
   ],
   ai: [
     {
-      name: "LLMs / LangChain",
+      name: "LLMs",
+      info: ["OpenAI", "Gemini"],
       icon: "brain",
       level: "Intermediate",
+      value: 80,
     },
-    { name: "LangGraph", icon: "sitemap", level: "Intermediate" },
+    {
+      name: "Frameworks",
+      info: ["LangChain", "LangGraph"],
+      icon: "sitemap",
+      level: "Intermediate",
+      value: 80,
+    },
     {
       name: "RAG",
+      info: ["Agentic", "Vanilla"],
       icon: "coins",
       level: "Intermediate",
+      value: 75,
     },
-    { name: "A2A-MCP", icon: "robot", level: "Basic" },
     {
-      name: "LLM Tracing",
+      name: "MCP",
+      info: ["LangChain Tools", "FastMCP"],
+      icon: "robot",
+      level: "Intermediate",
+      value: 70,
+    },
+    {
+      name: "Observability",
+      info: ["Langfuse", "LangSmith"],
       icon: "magnifying-glass",
       level: "Intermediate",
+      value: 80,
     },
-    { name: "Diffusion Models", icon: "image", level: "Learning" },
+    {
+      name: "Databricks Genie",
+      info: ["Genie Agents", "Agent Bricks", "Genie One"],
+      icon: "wand-magic-sparkles",
+      level: "Intermediate",
+      value: 70,
+    },
+    {
+      name: "Azure AI Foundry",
+      info: ["Document Intelligence", "Hosted Agents"],
+      icon: "cloud",
+      level: "Intermediate",
+      value: 60,
+    },
   ],
   webdev: [
-    { name: "React", icon: "react", level: "Advanced" },
-    { name: "HTML/CSS", icon: "html5", level: "Advanced" },
-    { name: "Node.js", icon: "node-js", level: "Intermediate" },
+    {
+      name: "React",
+      icon: "react",
+      level: "Advanced",
+      info: ["Tanstack", "Zustand", "Vite"],
+      value: 90,
+    },
+    {
+      name: "Node.js",
+      icon: "node-js",
+      level: "Intermediate",
+      info: ["Express.js"],
+      value: 75,
+    },
     {
       name: "Bootstrap",
       icon: "bootstrap",
       level: "Intermediate",
+      info: ["CSS Framework"],
+      value: 90,
     },
-    { name: "Express", icon: "server", level: "Intermediate" },
-    { name: "FastAPI", icon: "bolt", level: "Intermediate" },
-    { name: "Flask", icon: "flask", level: "Intermediate" },
+    {
+      name: "Tailwind CSS",
+      icon: "server",
+      level: "Intermediate",
+      info: ["Utility-First"],
+      value: 80,
+    },
+    {
+      name: "FastAPI",
+      icon: "bolt",
+      level: "Intermediate",
+      info: ["REST", "Streaming"],
+      value: 80,
+    },
+    {
+      name: "Shadcn UI",
+      icon: "handle-bottom-right",
+      level: "Intermediate",
+      info: ["Component Library"],
+      value: 75,
+    },
   ],
   database: [
-    { name: "MySQL", icon: "database", level: "Advanced" },
-    { name: "MongoDB", icon: "leaf", level: "Advanced" },
+    {
+      name: "MySQL",
+      icon: "database",
+      level: "Advanced",
+      info: ["Relational DB"],
+    },
+    { name: "MongoDB", icon: "leaf", level: "Advanced", info: ["NoSQL DB"] },
     {
       name: "PostgreSQL",
       icon: "republican",
       level: "Intermediate",
+      info: ["Relational DB"],
     },
     {
       name: "Vector DB (FAISS)",
       icon: "vector-square",
       level: "Intermediate",
+      info: ["Vector Store"],
+    },
+    {
+      name: "pgvector",
+      icon: "layer-group",
+      level: "Intermediate",
+      info: ["PostgreSQL Extension"],
+      value: 75,
+    },
+    {
+      name: "Qdrant",
+      icon: "hexagon-nodes",
+      level: "Intermediate",
+      info: ["Cloud Vector DB"],
+      value: 70,
     },
   ],
   others: [
@@ -127,9 +234,38 @@ const SKILLS: Record<SkillTab, Skill[]> = {
       icon: "ranking-star",
       level: "Intermediate",
     },
-    { name: "Git", icon: "git-alt", level: "Advanced" },
-    { name: "Docker", icon: "docker", level: "Intermediate" },
-    { name: "Linux", icon: "linux", level: "Intermediate" },
+    {
+      name: "Git",
+      icon: "git-alt",
+      level: "Advanced",
+      info: ["Github", "GitLab", "Azure DevOps"],
+    },
+    {
+      name: "Docker",
+      icon: "docker",
+      level: "Intermediate",
+      info: ["Azure Container Registry", "Docker Compose"],
+    },
+    {
+      name: "AWS",
+      icon: "aws",
+      level: "Advanced",
+      info: ["Cognito", "S3", "Lambda", "EC2", "Amplify"],
+    },
+    {
+      name: "Celery Workers",
+      icon: "celery",
+      level: "Intermediate",
+      value: 75,
+      info: ["Task Queue", "Async Processing"],
+    },
+    {
+      name: "Redis",
+      icon: "redis",
+      level: "Intermediate",
+      value: 80,
+      info: ["Caching", "Pub/Sub"],
+    },
   ],
 };
 
@@ -147,7 +283,8 @@ const LEVEL_STYLE: Record<Level, { badge: string; value: number }> = {
 };
 
 const Skills = () => {
-  const [active, setActive] = useState<SkillTab>("language");
+  const [active, setActive] = useState<SkillTab>("datascience");
+  const [hover, setHover] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   // Track whether the section has entered the viewport at least once
   const enteredRef = useRef(false);
@@ -195,133 +332,114 @@ const Skills = () => {
   }, [active]);
 
   const tabs: { id: SkillTab; label: string; icon: string }[] = [
-    { id: "language", label: "Language", icon: "code" },
-    {
-      id: "datascience",
-      label: "Data Science",
-      icon: "chart-line",
-    },
-    { id: "ai", label: "AI", icon: "robot" },
+    { id: "datascience", label: "Data Science", icon: "chart-line" },
+    { id: "ai", label: "Gen AI", icon: "robot" },
     { id: "webdev", label: "Web Dev", icon: "globe" },
     { id: "database", label: "Database", icon: "database" },
+    { id: "language", label: "Language", icon: "code" },
     { id: "others", label: "Others", icon: "ellipsis" },
   ];
 
-  const containerStyle: React.CSSProperties = {
-    borderRadius: 8,
-    overflow: "hidden",
-    minHeight: 420,
-    position: "relative",
-    background: "var(--card)",
-  };
-
-  const rightImageStyle = {
-    backgroundImage: `url(${new URL(`../../../assets/skills/${IMAGES[active]}`, import.meta.url).href})`,
-    backgroundSize: "cover",
-    backgroundPosition: "left center",
-    height: "100%",
-    width: "100%",
-    filter: "brightness(0.6)",
-    transition: "background-image 0.5s ease, filter 0.5s ease",
-  };
+  const skills = SKILLS[active];
+  const radarData = skills.map((s) => ({
+    label: s.name,
+    value: s.value ?? LEVEL_STYLE[s.level].value,
+  }));
 
   return (
-    <section
-      ref={sectionRef}
-      className="py-12 px-4 home-accent-section lg:px-[9%]"
-      id="skill"
-    >
+    <section ref={sectionRef} className="py-12 px-4 lg:px-[9%]" id="skill">
       <div className="container mx-auto px-4 md:px-2 mt-6 md:mt-6">
         <SectionHeader
           title="Skills"
           subtitle="Core tools and technical strengths across programming, AI systems, analytics, web development, and infrastructure."
         />
-        <div className="grid grid-cols-12 gap-x-6">
-          <div className="col-span-12">
-            <div className="flex " style={containerStyle}>
-              {/* LEFT: content area */}
-              <div className="p-6 md:p-12 grow" style={{ zIndex: 2 }}>
-                {/* Tabs */}
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {tabs.map((t) => (
-                    <Button
-                      key={t.id}
-                      size="sm"
-                      variant={active === t.id ? "default" : "outline"}
-                      onClick={() => setActive(t.id)}
-                    >
-                      <Icon name={t.icon} className="size-4" />
-                      {t.label}
-                    </Button>
-                  ))}
-                </div>
-
-                {/* Skills grid */}
-                <div className="grid grid-cols-12 gap-4">
-                  {SKILLS[active].map((s) => {
-                    const { badge, value } = LEVEL_STYLE[s.level];
-
-                    return (
-                      <div key={s.name} className="col-span-12 sm:col-span-6">
-                        <div
-                          className="skill-card flex items-center p-4 rounded-lg h-full border "
-                          style={{
-                            backgroundColor: "var(--card)",
-                          }}
-                        >
-                          <Icon
-                            name={s.icon}
-                            className="size-[1em] text-2xl mr-4 text-primary"
-                          />
-                          <div className="grow">
-                            <div className="flex justify-between items-center">
-                              <div className="font-semibold">{s.name}</div>
-                              <div className="text-sm text-muted-foreground">
-                                {value}%
-                              </div>
-                            </div>
-                            {s.info && s.info.length > 0 && (
-                              <div className="text-sm text-muted-foreground font-light italic">
-                                {s.info.join(", ")}
-                              </div>
-                            )}
-                            <div
-                              className={cn(
-                                "mt-1 inline-block rounded-md px-3 py-0.5 text-xs italic",
-                                badge,
-                              )}
-                            >
-                              {s.level}
-                            </div>
-                            <div className="mt-2">
-                              <div className="bg-muted h-1.5 overflow-hidden rounded-full">
-                                <div
-                                  className="skill-progress-bar bg-primary h-full rounded-full"
-                                  role="progressbar"
-                                  data-value={value}
-                                  style={{ width: "0%" }}
-                                  aria-valuenow={value}
-                                  aria-valuemin={0}
-                                  aria-valuemax={100}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* RIGHT: faded image panel */}
-              <div
-                className="hidden md:block"
-                style={{ width: "100%", minWidth: 320, maxWidth: 520 }}
+        <div className="bg-card relative overflow-hidden rounded-lg border p-6 md:p-10">
+          {/* Tabs */}
+          <div className="mb-8 flex flex-wrap gap-2">
+            {tabs.map((t) => (
+              <Button
+                key={t.id}
+                size="sm"
+                variant={active === t.id ? "default" : "outline"}
+                onClick={() => {
+                  setActive(t.id);
+                  setHover(null);
+                }}
               >
-                <div style={rightImageStyle} />
-              </div>
-            </div>
+                <Icon name={t.icon} className="size-4" />
+                {t.label}
+              </Button>
+            ))}
+          </div>
+
+          <div className="grid items-center gap-8 lg:grid-cols-[420px_minmax(0,1fr)] lg:gap-12">
+            {/* Radar */}
+            <RadarChart
+              data={radarData}
+              animateKey={active}
+              activeIndex={hover}
+              onHover={setHover}
+              className="mx-auto w-full max-w-[420px]"
+            />
+
+            {/* Skill list: icon | name + info, then level + bar. Two per row. */}
+            <ul className="m-0 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2">
+              {skills.map((s, i) => {
+                const badge = LEVEL_STYLE[s.level].badge;
+                const value = s.value ?? LEVEL_STYLE[s.level].value;
+                return (
+                  <li
+                    key={s.name}
+                    onMouseEnter={() => setHover(i)}
+                    onMouseLeave={() => setHover(null)}
+                    className={cn(
+                      "skill-card from-card via-card to-primary/[0.07] flex flex-col gap-2.5 rounded-xl border bg-linear-to-br p-3 transition-colors",
+                      hover === i && "border-primary/60",
+                    )}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className="bg-primary/10 text-primary flex size-9 shrink-0 items-center justify-center rounded-lg">
+                        <Icon name={s.icon} className="size-5" />
+                      </span>
+                      <div className="min-w-0 grow">
+                        <div className="truncate text-sm leading-tight font-bold">
+                          {s.name}
+                        </div>
+                        {s.info && s.info.length > 0 && (
+                          <div className="text-muted-foreground mt-0.5 line-clamp-2 text-[11px] leading-snug italic">
+                            {s.info.join(", ")}
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-muted-foreground shrink-0 text-xs">
+                        {value}%
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <span
+                        className={cn(
+                          "inline-block rounded-md px-2 py-0.5 text-[10px] italic",
+                          badge,
+                        )}
+                      >
+                        {s.level}
+                      </span>
+                      <div className="bg-primary/10 h-1.5 grow overflow-hidden rounded-full">
+                        <div
+                          className="skill-progress-bar bg-primary h-full rounded-full"
+                          role="progressbar"
+                          data-value={value}
+                          style={{ width: "0%" }}
+                          aria-valuenow={value}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                        />
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>
