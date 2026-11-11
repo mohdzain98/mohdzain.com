@@ -10,54 +10,55 @@ gsap.registerPlugin(TextPlugin);
 
 const ROLES = ["Data Scientist"];
 
-// 6 badges placed at the 6 vertices of a regular hexagon
-// Each has a float direction (dx,dy) for GSAP — radially outward from center
+// 6 skill tiles placed at the 6 vertices of a regular hexagon, orbiting the
+// central "Forward Deployed Engineer" core.
+// Each has a float direction (dx,dy) for GSAP -- radially outward from center
 const HEX_BADGES = [
-  {
-    icon: "brain",
-    label: "Gen AI",
-    color: "#7c3aed",
-    bg: "#f5f3ff",
-    dx: 0,
-    dy: -1,
-  }, // top
   {
     icon: "bolt",
     label: "Agentic AI",
     color: "#dc2626",
     bg: "#fff1f2",
+    dx: 0,
+    dy: -1,
+  }, // top
+  {
+    icon: "database",
+    label: "RAG",
+    color: "#0891b2",
+    bg: "#ecfeff",
     dx: 0.87,
     dy: -0.5,
   }, // top-right
   {
-    icon: "sitemap",
-    label: "LangGraph",
+    icon: "server",
+    label: "Backend",
     color: "#059669",
     bg: "#f0fdf4",
     dx: 0.87,
     dy: 0.5,
   }, // bottom-right
   {
-    icon: "chart-line",
-    label: "RGMx",
-    color: "#b45309",
-    bg: "#fef3c7",
+    icon: "cloud",
+    label: "Azure DevOps",
+    color: "#2563eb",
+    bg: "#eff6ff",
     dx: 0,
     dy: 1,
   }, // bottom
   {
-    icon: "magnifying-glass",
-    label: "LLM Tracing",
-    color: "#6d28d9",
-    bg: "#f5f3ff",
+    icon: "laptop-code",
+    label: "Frontend",
+    color: "#b45309",
+    bg: "#fef3c7",
     dx: -0.87,
     dy: 0.5,
   }, // bottom-left
   {
-    icon: "coins",
-    label: "RAG",
-    color: "#0891b2",
-    bg: "#ecfeff",
+    icon: "brain",
+    label: "Gen AI",
+    color: "#7c3aed",
+    bg: "#f5f3ff",
     dx: -0.87,
     dy: -0.5,
   }, // top-left
@@ -94,6 +95,21 @@ const Head = () => {
           duration: 0.55,
           ease: "back.out(1.7)",
           delay: 0.4,
+        },
+      );
+
+      // Center core pops in, then breathes
+      gsap.fromTo(
+        ".fde-core, .fde-shadow",
+        { scale: 0.4, opacity: 0, xPercent: -50, yPercent: -50 },
+        {
+          scale: 1,
+          opacity: 1,
+          xPercent: -50,
+          yPercent: -50,
+          duration: 0.7,
+          ease: "back.out(1.6)",
+          delay: 0.25,
         },
       );
 
@@ -169,10 +185,13 @@ const Head = () => {
             </div>
 
             <p className="head-desc">
-              Building production-grade LLM systems, agentic workflows, and
-              scalable AI pipelines at <strong>Sigmoid</strong>. Focused on LLM
-              tracing, evaluation pipelines, and multi-agent orchestration using{" "}
-              <strong>LangGraph</strong> and <strong>MLflow</strong>.
+              Data Scientist at <strong>Sigmoid</strong> building
+              production-grade LLM systems, agentic workflows, and scalable AI
+              pipelines, with a focus on LLM tracing, evaluation pipelines, and
+              multi-agent orchestration using <strong>LangGraph</strong> and{" "}
+              <strong>MLflow</strong>. <br></br>Currently working as an{" "}
+              <strong>FDE</strong> on a use case for a CPG client, end to end
+              from development to deployment.
               <span className="head-edu">
                 M.Tech · Data Analytics · IIT (ISM) Dhanbad
               </span>
@@ -180,6 +199,11 @@ const Head = () => {
 
             <div className="head-cta">
               <Link to="/industry" className="btn-hero-outline">
+                <Icon
+                  name="briefcase"
+                  style={{ fontSize: "13px" }}
+                  className="size-[1em]"
+                />
                 View My Work
               </Link>
               <Link
@@ -243,6 +267,27 @@ const Head = () => {
                     strokeDasharray="6 5"
                     opacity="0.2"
                   />
+                  {/* Spokes from the core to each tile */}
+                  {[
+                    [190, 55],
+                    [316, 127],
+                    [316, 273],
+                    [190, 345],
+                    [64, 273],
+                    [64, 127],
+                  ].map(([x, y], i) => (
+                    <line
+                      key={`spoke-${i}`}
+                      x1="190"
+                      y1="200"
+                      x2={x}
+                      y2={y}
+                      stroke="var(--primary)"
+                      strokeWidth="1"
+                      strokeDasharray="3 5"
+                      opacity="0.22"
+                    />
+                  ))}
                   {/* Dot at each vertex */}
                   {[
                     [190, 55],
@@ -262,6 +307,69 @@ const Head = () => {
                     />
                   ))}
                 </svg>
+
+                {/* Center: Forward Deployed Engineer */}
+                {/* Soft drop shadow: a blurred hexagon behind the glass (a CSS
+                    shadow would be clipped by the hexagon's clip-path). */}
+                <svg
+                  className="fde-shadow"
+                  viewBox="0 0 100 116"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <filter
+                      id="fde-shadow-blur"
+                      x="-50%"
+                      y="-50%"
+                      width="200%"
+                      height="200%"
+                    >
+                      <feGaussianBlur stdDeviation="5" />
+                    </filter>
+                  </defs>
+                  <polygon
+                    points="50,2 98,30 98,86 50,114 2,86 2,30"
+                    filter="url(#fde-shadow-blur)"
+                  />
+                </svg>
+                <div
+                  className="fde-core"
+                  role="img"
+                  aria-label="Forward Deployed Engineer"
+                >
+                  <svg
+                    className="fde-rim"
+                    viewBox="0 0 100 116"
+                    aria-hidden="true"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="fde-rim-grad"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0"
+                          style={{ stopColor: "var(--brand)" }}
+                        />
+                        <stop offset="1" style={{ stopColor: "#7c3aed" }} />
+                      </linearGradient>
+                    </defs>
+                    <polygon
+                      points="50,1.5 98.5,29.5 98.5,86.5 50,114.5 1.5,86.5 1.5,29.5"
+                      fill="none"
+                      stroke="url(#fde-rim-grad)"
+                      strokeWidth="2"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div className="fde-core-inner">
+                    <Icon name="rocket" className="fde-core-icon" />
+                    <span className="fde-core-abbr">FDE</span>
+                  </div>
+                </div>
 
                 {/* Badges at hex vertices */}
                 {HEX_BADGES.map((b, i) => {

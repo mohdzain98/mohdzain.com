@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/layout/SectionHeader";
-import Tag from "@/components/common/Tag";
+import TechList from "@/components/common/TechList";
 import { projects } from "@/content/projects";
 
 export default function Projects() {
   return (
-    <div id="projects" className="home-accent-section px-4 py-12 lg:px-[9%]">
+    <div id="projects" className="px-4 py-12 lg:px-[9%]">
       <div className="container mx-auto mt-6 px-4 md:px-2">
         <SectionHeader
           title="Projects"
@@ -20,7 +20,7 @@ export default function Projects() {
               href={item.Live}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-card text-card-foreground flex flex-col rounded-lg border p-6 no-underline  transition-transform hover:scale-[0.99]"
+              className="card-tint text-card-foreground flex flex-col p-6 no-underline  transition-transform hover:scale-[0.99]"
             >
               <span className="text-primary mb-1 text-[11px] font-bold tracking-wider uppercase">
                 {item.type}
@@ -29,14 +29,7 @@ export default function Projects() {
                 {item.Name}
               </h3>
               <p className="text-muted-foreground text-sm">{item.Desc}</p>
-              <p className="mb-1 text-sm">Tech Stack:</p>
-              <ul className="m-0 flex list-none flex-wrap gap-1.5 p-0">
-                {item.Techs.map((f) => (
-                  <li key={f}>
-                    <Tag>{f}</Tag>
-                  </li>
-                ))}
-              </ul>
+              <TechList techs={item.Techs} className="mt-2" />
             </a>
           ))}
         </div>

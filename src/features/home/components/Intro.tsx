@@ -57,7 +57,6 @@ const Intro = () => {
       id="about"
       ref={sectionRef}
       style={{ padding: isTabletOrMobile ? "50px 8%" : "70px 10%" }}
-      className="border"
     >
       <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-12">
         {/* ── Left: photo + about ── */}
@@ -194,9 +193,13 @@ const Intro = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  Working on Agentic AI projects including LLM tracing,
-                  text-to-image, video-to-action and multi-agent AI systems
-                  using LangGraph.
+                  Currently an FDE on an MRO inventory use case for a CPG
+                  client, end to end from development to deployment.
+                  <span className="mt-1 block">
+                    SAP extracts land in ADLS, powering inventory intelligence,
+                    criticality and stocking rules, and the insights and
+                    recommendations built on them.
+                  </span>
                 </p>
               </div>
               <span
