@@ -30,18 +30,27 @@ const experiences: ExperienceItem[] = [
     accentColor: "var(--primary)",
     badgeClass: "bg-primary/10 text-primary",
     bullets: [
-      "Built a ReAct-based LLM system with tool integration, memory handling, and evaluation pipelines, enabling scalable and reliable AI-driven decision workflows",
-      "Designed model monitoring pipelines for drift detection and automated data refresh workflows.",
-      "Integrated MLflow and Feature Store for reproducibility, versioning, and scalable ML lifecycle management.",
+      "Working as a Forward Deployed Engineer on a CPG client's MRO inventory use case, owning it end to end from development to deployment: SAP extracts land in ADLS, inventory KPIs (slow-moving stock, safety-stock coverage, critical parts below safety stock, reconciliation) are computed, and the results become clear insights and recommendations.",
+      "Built a Power BI assistant on the Power BI MCP server and Fabric IQ, connecting both with their four tools and benchmarking them against the original PBIX report; a report-card router sends each question to the right report, and playbook-driven RCA gives every root-cause type its own path and hops, so it answers both Q&A and 'why' questions.",
+      "Led a model refresh on the latest data: built new baselines, rebuilt the purchase structure and VTMs, updated promo patterns across all years, then re-estimated the model coefficients and validated them before release.",
+      "Delivered AI/BI proofs of concept on Databricks, connecting Genie agents and Agent Bricks to enterprise data for sales, forecasting and inventory, with descriptive analytics, playbook-driven RCA, MLflow and XGBoost forecasting, and dashboards, all shipped on Databricks Apps.",
+      "Built an NPD proxy-costing agent that turns a plain-English product description into a full COGS estimate with confidence ratings and the reasoning behind every assumption, cutting proxy costing from about 15 weeks to under 2 minutes; deployed on Azure App Service.",
+      "Designed an Azure AI Foundry hosted agent for OTIF root-cause analysis that takes an order ID and returns a structured Investigation Summary, RCA Findings and Cost Impact report.",
+      "Continued the ReAct-based LLM system, drift-monitoring pipelines and MLflow lifecycle work.",
     ],
     techs: [
-      "Python",
-      "LangGraph",
-      "LangChain",
-      "Arize Phoenix",
-      "Streamlit",
+      "Power BI MCP",
+      "Fabric IQ",
+      "Azure AI Foundry",
+      "Databricks",
+      "Genie",
+      "Agent Bricks",
       "MLflow",
-      "Feature Store",
+      "XGBoost",
+      "Unity Catalog",
+      "ADLS",
+      "LangGraph",
+      "Python",
     ],
     icon: "chart-line",
   },
@@ -321,14 +330,21 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Back link */}
-          <div className="text-center mt-6">
+          {/* Footer actions */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/"
               className={buttonVariants({ variant: "outline", size: "sm" })}
             >
               <Icon name="arrow-left" className="size-[1em] mr-1" /> Back to
               Home
+            </Link>
+            <Link
+              to="/industry"
+              className={buttonVariants({ variant: "default", size: "sm" })}
+            >
+              See Industry Work{" "}
+              <Icon name="arrow-right" className="size-[1em] ml-1" />
             </Link>
           </div>
         </div>

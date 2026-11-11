@@ -10,8 +10,16 @@ import type { Experience } from "@/types";
 
 const INDUSTRY_SECTIONS = [
   {
-    id: "agentic-ai",
+    id: "fde-enterprise",
     eyebrow: "01",
+    title: "FDE & Enterprise AI Delivery",
+    icon: "rocket",
+    subtitle:
+      "End-to-end delivery on client use cases, from SAP data to insights, with agents and apps built and deployed on Azure and Databricks.",
+  },
+  {
+    id: "agentic-ai",
+    eyebrow: "02",
     title: "Agentic AI Systems",
     icon: "bolt",
     subtitle:
@@ -19,7 +27,7 @@ const INDUSTRY_SECTIONS = [
   },
   {
     id: "research-platform",
-    eyebrow: "02",
+    eyebrow: "03",
     title: "Research & Observability",
     icon: "magnifying-glass",
     subtitle:
@@ -27,7 +35,7 @@ const INDUSTRY_SECTIONS = [
   },
   {
     id: "platform-engineering",
-    eyebrow: "03",
+    eyebrow: "04",
     title: "Platform Engineering",
     icon: "layer-group",
     subtitle:
@@ -35,7 +43,7 @@ const INDUSTRY_SECTIONS = [
   },
   {
     id: "econometrics-mlops",
-    eyebrow: "04",
+    eyebrow: "05",
     title: "Econometrics & MLOps",
     icon: "chart-line",
     subtitle:
@@ -45,17 +53,46 @@ const INDUSTRY_SECTIONS = [
 
 function IndustryCard({ item }: { item: Experience }) {
   return (
-    <article className="bg-card text-card-foreground flex h-full flex-col rounded-lg border p-5  transition-all">
+    <article className="bg-card text-card-foreground flex h-full flex-col rounded-xl border p-6 transition-all shadow-xs">
       <div className="mb-3 flex items-start justify-between gap-3">
-        <span className="text-primary text-[11px] font-bold tracking-wider uppercase">
+        <span className="bg-primary/10 text-primary rounded px-3.5 py-1.5 text-[9px] leading-4 font-bold tracking-wider uppercase">
           {item.type}
         </span>
-        <div className="bg-primary/10 text-primary flex size-9 shrink-0 items-center justify-center rounded-lg">
-          <Icon name={item.icon} className="size-4" />
+        <div className="bg-primary/10 text-primary flex size-7 shrink-0 items-center justify-center rounded">
+          <Icon name={item.icon} className="size-3.5" />
         </div>
       </div>
       <h3 className="mb-2 text-lg leading-snug font-semibold">{item.name}</h3>
-      <p className="text-muted-foreground mb-4 text-[15px]">{item.desc}</p>
+      {item.impact && (
+        <span className="bg-primary/10 text-primary mb-3 inline-flex w-fit items-center gap-1.5 rounded px-3 py-1.5 text-xs font-bold">
+          <Icon name="bolt" className="size-3.5" />
+          {item.impact}
+        </span>
+      )}
+      <p className="text-foreground/85 mb-4 text-sm">{item.desc}</p>
+      {item.points && item.points.length > 0 && (
+        <div className="mb-4">
+          {item.pointsTitle && (
+            <p className="text-foreground mb-1.5 text-xs font-bold tracking-wider uppercase">
+              {item.pointsTitle}
+            </p>
+          )}
+          <ul className="m-0 flex list-none flex-col gap-1 p-0">
+            {item.points.map((p) => (
+              <li
+                key={p}
+                className="text-foreground/85 flex items-start gap-2 text-[13px]"
+              >
+                <Icon
+                  name="check"
+                  className="text-primary mt-0.5 size-3.5 shrink-0"
+                />
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="mt-auto flex flex-wrap gap-2">
         {item.techs.map((tech) => (
           <Tag key={`${item.name}-${tech}`}>{tech}</Tag>
@@ -83,6 +120,7 @@ export default function Industry() {
             items={[{ label: "Home", to: "/" }, { label: "Industry" }]}
           />
           <SectionHeader
+            as="h1"
             title="Industry"
             subtitle="A detailed view of the systems, platforms, and applied AI work I have built across enterprise workflows, research exploration, and production tooling."
             className="mb-6"

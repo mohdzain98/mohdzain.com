@@ -1,6 +1,115 @@
 import type { Experience } from "@/types";
 
 const exp: Experience[] = [
+  // ── FDE & enterprise delivery (latest first) ──────────────────────────
+  {
+    section: "fde-enterprise",
+    type: "FDE · CPG client",
+    name: "MRO Inventory Analytics for a CPG Client",
+    desc: "Working as a Forward Deployed Engineer on this use case end to end, from development to deployment. SAP extracts are landed in ADLS, inventory metrics are calculated on top of them, and the results are turned into insights and recommendations for the client.",
+    pointsTitle: "Metrics computed",
+    points: [
+      "Slow-moving inventory",
+      "Safety stock",
+      "Stock above safety stock",
+      "Critical parts below safety stock",
+      "Reconciliation",
+    ],
+    techs: ["SAP Extracts", "ADLS", "Azure", "Insights & Recommendations"],
+    icon: "gauge",
+  },
+  {
+    section: "fde-enterprise",
+    type: "FDE · Power BI",
+    name: "Power BI MCP with Fabric IQ",
+    desc: "Connected the Power BI MCP server and Fabric IQ, each with its four tools, and compared how both behave against the original PBIX report. A router uses report cards to send every question to the right report, so the assistant answers both Q&A and 'why' questions.",
+    pointsTitle: "What was built",
+    points: [
+      "Power BI MCP and Fabric IQ connected, with their four tools each",
+      "Side-by-side comparison of both against the PBIX report",
+      "Router that uses report cards to send each query to the correct report",
+      "Playbook-driven RCA: a dedicated path and hops for every RCA type to reach the root cause",
+    ],
+    techs: [
+      "Power BI MCP",
+      "Fabric IQ",
+      "MCP",
+      "Report Router",
+      "RCA Playbooks",
+    ],
+    icon: "chart-pie",
+  },
+  {
+    section: "fde-enterprise",
+    type: "Model refresh",
+    name: "Model Refresh & Validation",
+    desc: "Refreshed an existing econometric model for the latest data: rebuilt the inputs, re-estimated the coefficients and validated the refreshed model before it was used.",
+    pointsTitle: "What was refreshed",
+    points: [
+      "New baselines for the latest data",
+      "New purchase structure and VTMs",
+      "Promo patterns updated across all years",
+      "Model coefficients re-estimated and validated",
+    ],
+    techs: [
+      "Baselines",
+      "Purchase Structure",
+      "VTMs",
+      "Promo Patterns",
+      "Validation",
+    ],
+    icon: "sliders",
+  },
+  {
+    section: "fde-enterprise",
+    type: "POC · Databricks",
+    name: "AI/BI with Genie Agents & Agent Bricks",
+    desc: "Connected Genie agents and Agent Bricks to enterprise data to build a tool for sales, forecasting and inventory, developed and deployed end to end on Databricks and Databricks Apps.",
+    pointsTitle: "Modules",
+    points: [
+      "Descriptive analytics",
+      "Playbook-driven root-cause analysis (RCA)",
+      "Forecasting with MLflow and XGBoost",
+      "Dashboard",
+    ],
+    techs: [
+      "Databricks",
+      "Genie",
+      "Agent Bricks",
+      "MLflow",
+      "XGBoost",
+      "Databricks Apps",
+    ],
+    icon: "chart-bar",
+  },
+  {
+    section: "fde-enterprise",
+    type: "POC · Azure",
+    name: "NPD Proxy Costing Agent",
+    impact: "~15 weeks → under 2 minutes",
+    desc: "Describe a new product in plain English and the agent finds the closest existing product, pulls real cost data for each cost element, and returns a full COGS estimate per finished unit, with a confidence rating and the reason behind every assumption. Built from SAP extracts via Unity Catalog; v1 uses similar-product proxies.",
+    pointsTitle: "Modules",
+    points: [
+      "Reformulation",
+      "Descriptive analytics",
+      "Scenario analysis",
+      "New product development (NPD)",
+    ],
+    techs: ["SAP Extracts", "Unity Catalog", "Azure App Service", "Agents"],
+    icon: "coins",
+  },
+  {
+    section: "fde-enterprise",
+    type: "POC · Azure",
+    name: "RCA Agent for OTIF",
+    desc: "An Azure AI Foundry hosted agent for supply chain root-cause analysis. A user submits an order ID and the agent investigates why it missed its On Time In Full (OTIF) target, then returns a structured report.",
+    pointsTitle: "3-phase report",
+    points: ["Investigation summary", "RCA findings", "Cost impact"],
+    techs: ["Azure AI Foundry", "Hosted Agent", "Supply Chain", "OTIF"],
+    icon: "magnifying-glass",
+  },
+
+  // ── earlier work ──────────────────────────────────────────────────────
   {
     section: "agentic-ai",
     type: "POC",
@@ -153,4 +262,32 @@ const exp: Experience[] = [
     icon: "robot",
   },
 ];
-export { exp };
+/** The three latest pieces of work, in short form, for the home page. */
+const latestWork: Experience[] = [
+  {
+    section: "fde-enterprise",
+    type: "FDE · CPG client",
+    name: "MRO Inventory Analytics",
+    desc: "Working as an FDE end to end: SAP extracts land in ADLS, inventory metrics are calculated, and insights and recommendations follow.",
+    techs: ["SAP", "ADLS", "Databricks", "Safety Stock", "Reconciliation"],
+    icon: "gauge",
+  },
+  {
+    section: "fde-enterprise",
+    type: "FDE · Power BI",
+    name: "Power BI MCP Assistant",
+    desc: "Connected Power BI MCP and Fabric IQ, with a report-card router and playbook-driven RCA for Q&A and 'why' answers.",
+    techs: ["Power BI MCP", "Fabric IQ", "LangChain", "Text-to-DAX", "RCA"],
+    icon: "chart-pie",
+  },
+  {
+    section: "fde-enterprise",
+    type: "Model refresh",
+    name: "Model Refresh & Validation",
+    desc: "Refreshed the model on new data: new baselines, purchase structure and VTMs, updated promo patterns, and validated coefficients.",
+    techs: ["Baselines", "VTMs", "Promo Patterns", "Validation"],
+    icon: "sliders",
+  },
+];
+
+export { exp, latestWork };

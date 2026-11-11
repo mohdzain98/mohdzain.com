@@ -46,6 +46,12 @@ export interface Experience {
   type: string;
   name: string;
   desc: string;
+  /** Short headline result shown as an accent chip, e.g. "~15 weeks → under 2 minutes". */
+  impact?: string;
+  /** Heading for `points`, e.g. "Modules". */
+  pointsTitle?: string;
+  /** Detail bullets, shown on the Industry page only. */
+  points?: string[];
   techs: string[];
   icon: IconName;
 }

@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import SectionHeader from "@/components/layout/SectionHeader";
 import CategorySection from "@/components/common/CategorySection";
 import AnchorNav from "@/components/common/AnchorNav";
-import Tag from "@/components/common/Tag";
+import TechList from "@/components/common/TechList";
 import { allprojects } from "@/content/projects";
 import { cn } from "@/lib/utils";
 import type { ButtonTone, ProjectAction, ProjectEntry } from "@/types";
@@ -104,14 +104,7 @@ function ProjectCard({ item }: { item: ProjectEntry }) {
       </span>
       <h3 className="mb-2 text-lg font-semibold">{item.Name}</h3>
       <p className="text-muted-foreground text-sm">{item.Desc}</p>
-      <p className="mt-2 mb-1 text-[15px]">Technologies</p>
-      <ul className="m-0 mb-4 flex list-none flex-wrap gap-1.5 p-0">
-        {item.Techs.map((tool) => (
-          <li key={`${item.Name}-${tool}`}>
-            <Tag>{tool}</Tag>
-          </li>
-        ))}
-      </ul>
+      <TechList techs={item.Techs} className="mt-2 mb-4" />
       <div className="mt-auto flex flex-wrap gap-2">
         {item.button.map((action) => (
           <ActionLink key={`${item.Name}-${action.name}`} action={action} />
@@ -139,6 +132,7 @@ export default function Allprojects() {
             items={[{ label: "Home", to: "/" }, { label: "Projects" }]}
           />
           <SectionHeader
+            as="h1"
             title="Projects"
             subtitle="A broader collection of my work across Gen AI, machine learning, computer vision, and product-focused engineering."
             className="mb-6"
