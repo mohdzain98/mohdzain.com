@@ -3,6 +3,10 @@ import asset_sig from "@/assets/sig.webp";
 import asset_iit from "@/assets/iit.webp";
 import asset_utu from "@/assets/utu.webp";
 import asset_isc from "@/assets/isc.webp";
+import photo_sigmoid from "@/assets/cp/sigmoid.webp";
+import photo_iit from "@/assets/cp/iitism.webp";
+import photo_utu from "@/assets/cp/utu.webp";
+import photo_school from "@/assets/cp/school.webp";
 import { useEffect, useRef } from "react";
 import "@/features/home/styles/careerpath.css";
 import { Link } from "react-router-dom";
@@ -19,6 +23,7 @@ const nodes = [
     sub: "Data Scientist",
     period: "2024 – Present",
     logo: asset_sig,
+    photo: photo_sigmoid,
     href: "https://sigmoid.com",
     accent: "var(--primary)",
     alt: "sigmoid",
@@ -28,6 +33,7 @@ const nodes = [
     sub: "M.Tech · Data Analytics",
     period: "2022 – 2024",
     logo: asset_iit,
+    photo: photo_iit,
     href: "https://www.iitism.ac.in/",
     accent: "#198754",
     alt: "iit ism",
@@ -37,6 +43,7 @@ const nodes = [
     sub: "B.Tech · CSE",
     period: "2017 – 2021",
     logo: asset_utu,
+    photo: photo_utu,
     href: "https://uktech.ac.in/",
     accent: "#fd7e14",
     alt: "utu",
@@ -46,11 +53,35 @@ const nodes = [
     sub: "CISCE · Class XII",
     period: "2017",
     logo: asset_isc,
+    photo: photo_school,
     href: "https://www.cisce.org/",
     accent: "#6f42c1",
     alt: "school",
   },
 ];
+
+/** Card photo at ~50% strength: a half-opaque card-colored veil over the photo. */
+const photoBg = (photo: string): React.CSSProperties => {
+  const veil = "color-mix(in srgb, var(--card) 50%, transparent)";
+  return {
+    backgroundImage: `linear-gradient(${veil}, ${veil}), url(${photo})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+};
+
+/** Keeps the (transparent) logos readable on top of a photo. */
+const logoChip: React.CSSProperties = {
+  backgroundColor: "color-mix(in srgb, var(--card) 85%, transparent)",
+  padding: 4,
+};
+
+/** Mostly opaque strip behind the text so it stays crisp over the photo. */
+const textPanel: React.CSSProperties = {
+  backgroundColor: "color-mix(in srgb, var(--card) 88%, transparent)",
+  borderRadius: 6,
+  padding: "4px 6px",
+};
 
 const Careerpath = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -160,6 +191,7 @@ const Careerpath = () => {
                         style={{
                           borderRadius: 8,
                           backgroundColor: "var(--card)",
+                          ...photoBg(n.photo),
                           borderTop: `3px solid ${n.accent} !important`,
                           transition:
                             "transform 0.25s ease, box-shadow 0.25s ease",
@@ -183,36 +215,39 @@ const Careerpath = () => {
                             borderRadius: 8,
                             margin: "0 auto 8px",
                             display: "block",
+                            ...logoChip,
                           }}
                         />
-                        <p
-                          className="font-bold mb-0"
-                          style={{
-                            fontSize: "13px",
-                            color: "var(--foreground)",
-                          }}
-                        >
-                          {n.label}
-                        </p>
-                        <p
-                          style={{
-                            fontSize: "11px",
-                            color: n.accent,
-                            marginBottom: 2,
-                            fontWeight: 600,
-                          }}
-                        >
-                          {n.sub}
-                        </p>
-                        <p
-                          style={{
-                            fontSize: "11px",
-                            color: "var(--muted-foreground)",
-                            marginBottom: 0,
-                          }}
-                        >
-                          {n.period}
-                        </p>
+                        <div style={textPanel}>
+                          <p
+                            className="font-bold mb-0"
+                            style={{
+                              fontSize: "13px",
+                              color: "var(--foreground)",
+                            }}
+                          >
+                            {n.label}
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "11px",
+                              color: n.accent,
+                              marginBottom: 2,
+                              fontWeight: 600,
+                            }}
+                          >
+                            {n.sub}
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "11px",
+                              color: "var(--muted-foreground)",
+                              marginBottom: 0,
+                            }}
+                          >
+                            {n.period}
+                          </p>
+                        </div>
                       </div>
                     </Link>
                   </div>
@@ -267,6 +302,7 @@ const Careerpath = () => {
                     style={{
                       borderRadius: 8,
                       backgroundColor: "var(--card)",
+                      ...photoBg(n.photo),
                       borderLeft: `3px solid ${n.accent}`,
                     }}
                   >
@@ -278,9 +314,10 @@ const Careerpath = () => {
                         height: 40,
                         objectFit: "contain",
                         borderRadius: 6,
+                        ...logoChip,
                       }}
                     />
-                    <div>
+                    <div style={textPanel}>
                       <p
                         className="font-bold mb-0"
                         style={{ fontSize: "13px", color: "var(--foreground)" }}
