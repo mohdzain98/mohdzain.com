@@ -1,4 +1,4 @@
-import{t as e}from"./Breadcrumbs-ASs52s-y.js";import{r as t,t as n}from"./index.esm-GZntbE_w.js";import{c as r}from"./index-BrFtvIM2.js";import{t as i}from"./CodeBlock-C8TzS81j.js";/* empty css              */var a=t(),o=()=>{let t=r({query:`(max-width: 1224px)`});return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)(n,{children:[(0,a.jsx)(`title`,{children:`Minimal LangGraph Tracing Example`}),(0,a.jsx)(`meta`,{name:`description`,content:`Minimal working example of LangGraph agent tracing using OpenTelemetry and Arize Phoenix.`}),(0,a.jsx)(`meta`,{name:`robots`,content:`noindex`})]}),(0,a.jsxs)(`main`,{className:`container mx-auto px-4 py-12 ${t?`px-4`:`px-0`}`,style:{maxWidth:t?`100%`:`900px`,marginTop:t?`0px`:`10px`},children:[(0,a.jsx)(`div`,{className:`mb-6`,children:(0,a.jsx)(e,{items:[{label:`Home`,to:`/`},{label:`Blogs`,to:`/blogs`},{label:` Tracing Agentic LLMs `,to:`/blogs/tracing-agentic-llm-workflows-arize-phoenix-langgraph`},{label:`Example`}]})}),(0,a.jsxs)(`header`,{className:`mb-4`,children:[(0,a.jsx)(`h1`,{className:`font-extrabold`,children:`Minimal LangGraph Tracing Example`}),(0,a.jsx)(`p`,{className:`text-muted-foreground`,children:`This page shows a stripped-down example of agent tracing using only a Supervisor and a BI Agent. The code mirrors the setup used in the main blog post.`})]}),(0,a.jsx)(`hr`,{}),(0,a.jsx)(`h4`,{className:`mt-6 font-extrabold text-muted-foreground`,children:`agents.py`}),(0,a.jsx)(`p`,{className:`text-muted-foreground`,children:`Defines the BI agent logic as simple callable units without any tracing concerns.`}),(0,a.jsx)(i,{id:`agents-py`,language:`python`,code:`class BI_Agent:
+import{t as e}from"./Breadcrumbs-DQgiwcob.js";import{r as t,t as n}from"./index.esm-GZntbE_w.js";import{t as r}from"./CodeBlock-Bs1xLDsM.js";/* empty css              */var i=t(),a=()=>(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)(n,{children:[(0,i.jsx)(`title`,{children:`Minimal LangGraph Tracing Example`}),(0,i.jsx)(`meta`,{name:`description`,content:`Minimal working example of LangGraph agent tracing using OpenTelemetry and Arize Phoenix.`}),(0,i.jsx)(`meta`,{name:`robots`,content:`noindex`})]}),(0,i.jsxs)(`main`,{className:`mx-auto w-full px-6 pt-16 pb-12 md:px-12 xl:px-0`,style:{maxWidth:`900px`},children:[(0,i.jsx)(`div`,{className:`mb-6`,children:(0,i.jsx)(e,{items:[{label:`Home`,to:`/`},{label:`Blogs`,to:`/blogs`},{label:` Tracing Agentic LLMs `,to:`/blogs/tracing-agentic-llm-workflows-arize-phoenix-langgraph`},{label:`Example`}]})}),(0,i.jsxs)(`header`,{className:`mb-4`,children:[(0,i.jsx)(`h1`,{className:`font-extrabold`,children:`Minimal LangGraph Tracing Example`}),(0,i.jsx)(`p`,{className:`text-muted-foreground`,children:`This page shows a stripped-down example of agent tracing using only a Supervisor and a BI Agent. The code mirrors the setup used in the main blog post.`})]}),(0,i.jsx)(`hr`,{}),(0,i.jsx)(`h4`,{className:`mt-6 font-extrabold text-muted-foreground`,children:`agents.py`}),(0,i.jsx)(`p`,{className:`text-muted-foreground`,children:`Defines the BI agent logic as simple callable units without any tracing concerns.`}),(0,i.jsx)(r,{id:`agents-py`,language:`python`,code:`class BI_Agent:
     def __init__(
         self, llm, tools, dataset, data_description, data_sample, helper_functions=None
     ):
@@ -114,7 +114,7 @@ import{t as e}from"./Breadcrumbs-ASs52s-y.js";import{r as t,t as n}from"./index.
             f"Agent(name={self.agent_name}, "
             f"tools={[tool.name for tool in self.tools]}, "
             f"dataset_shape={self.dataset.shape})"
-        )`}),(0,a.jsx)(`h4`,{className:`mt-12 font-extrabold`,children:`graph.py - graph class`}),(0,a.jsx)(`p`,{className:`text-muted-foreground`,children:`Builds a minimal LangGraph with tracing enabled, showing how agent functions are wrapped using the traced_agent decorator.`}),(0,a.jsx)(i,{id:`graph-py`,language:`python`,code:`from src.agents import BI_Agent
+        )`}),(0,i.jsx)(`h4`,{className:`mt-12 font-extrabold`,children:`graph.py - graph class`}),(0,i.jsx)(`p`,{className:`text-muted-foreground`,children:`Builds a minimal LangGraph with tracing enabled, showing how agent functions are wrapped using the traced_agent decorator.`}),(0,i.jsx)(r,{id:`graph-py`,language:`python`,code:`from src.agents import BI_Agent
 from observability.tracing import setup_tracing, traced_agent
 
 TRACER = setup_tracing()
@@ -235,7 +235,7 @@ class Graph:
             },
         )
         return graph
-            `}),(0,a.jsx)(`h4`,{className:`mt-12 font-extrabold`,children:`graph.py - App class`}),(0,a.jsx)(`p`,{className:`text-muted-foreground`,children:`This is the app class which is the entry point to the langgraph root node`}),(0,a.jsx)(i,{id:`graph-app-py`,language:`python`,code:`class Graph:
+            `}),(0,i.jsx)(`h4`,{className:`mt-12 font-extrabold`,children:`graph.py - App class`}),(0,i.jsx)(`p`,{className:`text-muted-foreground`,children:`This is the app class which is the entry point to the langgraph root node`}),(0,i.jsx)(r,{id:`graph-app-py`,language:`python`,code:`class Graph:
     ...
     def app(
         self,
@@ -253,7 +253,7 @@ class Graph:
         graph = self.build()
         app = graph.compile(checkpointer=memory)
         
-        return app`}),(0,a.jsx)(`h4`,{className:`mt-6 font-extrabold`,children:`Running the app from the main `}),(0,a.jsx)(i,{id:`main-py`,language:`python`,code:`if __name__ == "__main__":
+        return app`}),(0,i.jsx)(`h4`,{className:`mt-6 font-extrabold`,children:`Running the app from the main `}),(0,i.jsx)(r,{id:`main-py`,language:`python`,code:`if __name__ == "__main__":
     thread = str(uuid4())
     graph = Graph()
     app = graph.app()
@@ -263,4 +263,4 @@ class Graph:
         "hop_count": 0,
         "thread_id": thread,
     }
-    app.invoke(state, config={"thread_id": thread})`}),(0,a.jsx)(`hr`,{className:`mt-12`}),(0,a.jsxs)(`footer`,{className:`mt-6 mb-12`,children:[(0,a.jsxs)(`p`,{className:`text-muted-foreground mb-1`,children:[(0,a.jsx)(`strong`,{children:`Note:`}),` This example assumes prior experience with LangGraph, including defining agents, managing state, and constructing graph nodes.`]}),(0,a.jsx)(`p`,{className:`text-muted-foreground mb-0`,children:`The code shown here focuses only on how tracing is integrated and omits full agent logic, routing conditions, and graph execution setup for clarity.`})]})]})]})};export{o as default};
+    app.invoke(state, config={"thread_id": thread})`}),(0,i.jsx)(`hr`,{className:`mt-12`}),(0,i.jsxs)(`footer`,{className:`mt-6 mb-12`,children:[(0,i.jsxs)(`p`,{className:`text-muted-foreground mb-1`,children:[(0,i.jsx)(`strong`,{children:`Note:`}),` This example assumes prior experience with LangGraph, including defining agents, managing state, and constructing graph nodes.`]}),(0,i.jsx)(`p`,{className:`text-muted-foreground mb-0`,children:`The code shown here focuses only on how tracing is integrated and omits full agent logic, routing conditions, and graph execution setup for clarity.`})]})]})]});export{a as default};
