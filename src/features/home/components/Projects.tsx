@@ -20,7 +20,7 @@ export default function Projects() {
               href={item.Live}
               target="_blank"
               rel="noopener noreferrer"
-              className="card-tint text-card-foreground flex flex-col p-6 no-underline  transition-transform hover:scale-[0.99]"
+              className="card-tint flex flex-col border border-solid border-border p-6 text-card-foreground no-underline transition-transform hover:scale-[0.99]"
             >
               <span className="text-primary mb-1 text-[11px] font-bold tracking-wider uppercase">
                 {item.type}

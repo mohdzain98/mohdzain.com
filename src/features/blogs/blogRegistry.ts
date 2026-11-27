@@ -24,7 +24,30 @@ const AxisSpendingBlog = lazy(
   () => import("@/features/blogs/axis-spending/AxisSpendingBlog"),
 );
 
+const RetailPricePromo = lazy(
+  () => import("@/features/blogs/retail-price-promo/RetailPricePromo"),
+);
+
 export const blogRegistry: Record<string, BlogEntry> = {
+  "retail-price-promo-optimization": {
+    component: RetailPricePromo,
+    example: null,
+    title: "Optimizing Retail Prices and Promotions",
+    description:
+      "A retail pricing pipeline that estimates price elasticity, forecasts baseline demand, and optimizes shelf prices and promotion calendars.",
+    excerpt: [
+      "How I built a retail pricing pipeline that separates regular-price elasticity from discount response and uses both to plan prices and promotions.",
+    ],
+    readTime: "7 min read",
+    date: "Nov 2026",
+    category: ["Machine Learning"],
+    tags: [
+      "Retail Analytics",
+      "Price Elasticity",
+      "Bayesian Modeling",
+      "Optimization",
+    ],
+  },
   "automated-spending-tracker-openclaw": {
     component: AxisSpendingBlog,
     example: null,
