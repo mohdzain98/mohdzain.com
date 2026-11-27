@@ -1,8 +1,10 @@
 import type { ComponentType, SVGProps } from "react";
 import { Brain, Bot, Code, Terminal } from "lucide-react";
 import {
+  siApachemaven,
   siApachetomcat,
   siCss,
+  siDocker,
   siFastapi,
   siFlask,
   siHtml5,
@@ -11,6 +13,7 @@ import {
   siMongodb,
   siMysql,
   siNginx,
+  siNpm,
   siPandas,
   siPostgresql,
   siPhp,
@@ -60,6 +63,9 @@ const ML: TechIconDef = { Icon: Brain };
 const TECH_ICONS: Record<string, TechIconDef> = {
   python: brand(siPython),
   pypi: brand(siPypi),
+  npm: brand(siNpm),
+  maven: brand(siApachemaven),
+  docker: brand(siDocker),
   langchain: image(langchainLogo),
   langgraph: brand(siLanggraph),
   "langchain/langgraph": image(langchainLogo),

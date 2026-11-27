@@ -1,141 +1,83 @@
-import { Icon } from "@/components/icons/Icon";
-import { Link } from "react-router-dom";
-import "@/features/blogs/styles/blogs-index.css";
-import { useMediaQuery } from "react-responsive";
-import { blogRegistry } from "@/features/blogs/blogRegistry";
+import { ArrowRight, Calendar } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import SectionHeader from "@/components/layout/SectionHeader";
+import { blogRegistry } from "@/features/blogs/blogRegistry";
 
-// Topics shown as pills even before a post is tagged with them.
-const EXTRA_CATEGORIES = ["RAG"];
+const blogEntries = Object.entries(blogRegistry);
+const breadcrumbs = [{ label: "Home", to: "/" }, { label: "Blog Posts" }];
+const description =
+  "Articles and research notes on data science, AI, and software engineering.";
 
-const Blogs = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-  const categories = [
-    ...new Set([
-      ...Object.values(blogRegistry).flatMap((entry) => entry.category || []),
-      ...EXTRA_CATEGORIES,
-    ]),
-  ];
-  const blogEntries = Object.entries(blogRegistry);
+export default function BlogsIndex() {
   return (
     <>
       <Helmet>
-        <title>Blogs | Mohd Zain</title>
-        <meta
-          name="description"
-          content="Articles, research notes, and write-ups by Mohd Zain on data science, AI, and software."
-        />
+        <title>Blog Posts | Mohd Zain</title>
+        <meta name="description" content={description} />
         <meta name="robots" content="index,follow" />
       </Helmet>
-      <div
-        id="blogs"
-        style={
-          isTabletOrMobile
-            ? {
-                padding: "2%",
-                backgroundColor: "var(--background)",
-                minHeight: "100vh",
-                paddingBottom: "80px",
-              }
-            : {
-                padding: "2% 15%",
-                backgroundColor: "var(--background)",
-                minHeight: "100vh",
-                paddingBottom: "80px",
-              }
-        }
-      >
-        <div className="container mx-auto px-4 p-6" style={{ marginTop: "1%" }}>
-          <center>
-            <h1
-              style={{
-                fontSize: "70px",
-                marginBottom: "1rem",
-                fontWeight: "lighter",
-                color: "var(--primary)",
-              }}
-            >
-              Zain's blog
-            </h1>
-          </center>
-          <hr />
-          <div className="my-6" id="top">
-            <ul className="m-0 flex list-none flex-wrap items-center justify-center gap-2.5 p-0">
-              {categories.map((category) => (
-                <li key={category}>
-                  <span className="bg-primary/10 text-primary inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold">
-                    {category}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <hr />
-          {blogEntries.map(([slug, entry]) => (
-            <div key={slug} style={{ margin: "50px 0" }}>
-              <h4>
-                <Link
-                  to={`/blogs/${slug}`}
-                  style={{ textDecoration: "none" }}
-                  className="head"
-                >
+      <div className="min-h-screen bg-background pt-8 pb-20">
+        <div className="mx-auto w-full max-w-[1200px] px-6 py-8 md:px-12">
+          <Breadcrumbs className="mb-7" items={breadcrumbs} />
+          <SectionHeader
+            as="h1"
+            title="Blog Posts"
+            subtitle={description}
+            className="mb-6"
+          />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {blogEntries.map(([slug, entry]) => (
+              <article
+                key={slug}
+                className="flex min-w-0 flex-col gap-2 rounded-lg border bg-card p-5 text-card-foreground sm:p-6"
+              >
+                <p className="mb-0 flex flex-wrap items-center gap-x-2 text-xs text-muted-foreground">
+                  <Calendar aria-hidden="true" className="size-4" />
+                  {entry.date}
+                  <span aria-hidden="true">·</span>
+                  {entry.readTime}
+                </p>
+                <h2 className="text-xl leading-snug font-semibold tracking-tight">
                   {entry.title}
-                </Link>
-              </h4>
-              {entry.externalLink ? (
-                <div className="flex flex-row gap-2">
-                  <a
-                    href={entry.externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <p className="text-primary font-extrabold">
-                      <Icon name="book" className="size-[0.875em]" /> research
-                      paper
-                    </p>
-                  </a>
-                </div>
-              ) : null}
-              <ul className="mt-1" id="aboutBlog">
-                {(Array.isArray(entry.excerpt)
-                  ? entry.excerpt
-                  : [entry.excerpt]
-                ).map((item) => (
-                  <li key={item}>
-                    <p
-                      className="justified"
-                      style={{ color: "var(--foreground)" }}
-                    >
-                      {item}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <p className="inline mr-4 text-muted-foreground inf">
-                {entry.readTime}
-              </p>
-              <p className="inline text-muted-foreground inf">{entry.date}</p>
-              {entry.tags?.length ? (
-                <ul className="m-0 mb-3 flex list-none flex-wrap gap-x-4 p-0">
+                </h2>
+                <p className="mb-0 text-sm text-muted-foreground">
+                  {entry.description}
+                </p>
+                <ul className="mb-0 flex list-none flex-wrap justify-start gap-2 ps-0 pt-[2px]">
                   {entry.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="inf text-muted-foreground inline-flex items-center gap-0.5"
+                      className="rounded bg-muted px-2 py-0.5 text-xs"
                     >
-                      <Icon name="hashtag" className="size-[0.75em]" />
                       {tag}
                     </li>
                   ))}
                 </ul>
-              ) : null}
-              <hr />
-            </div>
-          ))}
+                <footer className="mt-auto flex flex-wrap items-center justify-start gap-x-4 gap-y-2">
+                  <Link
+                    to={`/blogs/${slug}`}
+                    aria-label={`Read more about ${entry.title}`}
+                    className="inline-flex min-h-8 cursor-pointer items-center gap-1.5 rounded-sm text-sm font-medium text-card-foreground no-underline hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                  >
+                    <ArrowRight aria-hidden="true" className="size-4" />
+                    Read more
+                  </Link>
+                  {entry.externalLink ? (
+                    <a
+                      href={entry.externalLink}
+                      className="text-sm text-muted-foreground underline"
+                    >
+                      Research paper
+                    </a>
+                  ) : null}
+                </footer>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </>
   );
-};
-
-export default Blogs;
+}

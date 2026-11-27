@@ -1,4 +1,5 @@
 # Mohd Zain Portfolio
+![GNOST score](.gnost/badge.svg)
 
 Personal portfolio website showcasing professional work, projects, research, and blog posts.
 

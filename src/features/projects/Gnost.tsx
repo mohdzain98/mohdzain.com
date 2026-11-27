@@ -1,252 +1,233 @@
-import { buttonVariants } from "@/components/ui/button";
-import { Icon } from "@/components/icons/Icon";
-import { cn } from "@/lib/utils";
-import Breadcrumbs from "@/components/layout/Breadcrumbs";
-import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import folderView from "@/assets/Projects/gnost/viewer_folders.webp";
+import fileView from "@/assets/Projects/gnost/viewer_file_hover.webp";
+import reportView from "@/assets/Projects/gnost/report_example.webp";
+import Breadcrumbs from "@/components/layout/Breadcrumbs";
+import CodeBlock from "@/components/layout/CodeBlock";
 import SectionHeader from "@/components/layout/SectionHeader";
+import ExpandableImage from "@/components/ui/ExpandableImage";
+import { buttonVariants } from "@/components/ui/button";
 
-const FEATURES = [
-  {
-    icon: "play",
-    title: "Entry Point Detection",
-    desc: "Detects where execution starts in the codebase.",
-  },
-  {
-    icon: "diagram-project",
-    title: "Execution Flow",
-    desc: "Infers the high-level execution flow from those entry points.",
-  },
-  {
-    icon: "ranking-star",
-    title: "Hotspot Files",
-    desc: "Identifies the most important files in the code.",
-  },
-  {
-    icon: "triangle-exclamation",
-    title: "Caution Codes",
-    desc: "Flags the code that needs extra care before you change it.",
-  },
-  {
-    icon: "file-lines",
-    title: "Onboarding Documentation",
-    desc: "Generates onboarding documentation for the repository.",
-  },
-  {
-    icon: "sitemap",
-    title: "Mermaid Flow Diagrams",
-    desc: "Produces Mermaid diagrams of the execution flow.",
-  },
-  {
-    icon: "code",
-    title: "Multi-Language",
-    desc: "Works across multiple programming languages.",
-  },
+const repo = "https://github.com/mohdzain98/gnost";
+const docs = "https://gnost.readthedocs.io/en/latest";
+const title = "GNOST — Codebase Knowledge";
+const description =
+  "A static analysis CLI for onboarding to unfamiliar codebases, exploring dependencies, and reviewing code quality.";
+const guideLinkClass =
+  "inline-flex items-center gap-1.5 text-sm font-medium text-foreground no-underline hover:opacity-75";
+
+const packageLinks = [
+  ["npm", "https://www.npmjs.com/package/gnost-cli"],
+  ["Docker", repo + "/pkgs/container/gnost"],
+  [
+    "Maven Central",
+    "https://central.sonatype.com/artifact/io.github.mohdzain98/gnost-maven-plugin",
+  ],
 ];
 
-const Gnost = () => {
-  const [copied, setCopied] = useState(false);
-  const command = "pip install gnost";
+const headerLinks = [
+  ["GitHub", repo],
+  ["Documentation", docs + "/"],
+  ["Example reports", docs + "/gallery.html"],
+  ["Analysis", docs + "/analyze.html"],
+  ["Action Workflow", docs + "/ci.html"],
+];
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(command);
-      setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-      }, 2000);
-    } catch (err) {
-      console.error("Failed to copy text: ", err);
-    }
-  };
+const installationLinks = [
+  ["PyPI", "https://pypi.org/project/gnost/"],
+  ...packageLinks,
+  [
+    "GitHub Action",
+    "https://github.com/marketplace/actions/gnost-codebase-onboarding-and-quality-gate",
+  ],
+];
 
+export default function Gnost() {
   return (
     <>
       <Helmet>
-        <title>GNOST - Codebase Knowledge | Mohd Zain</title>
-        <meta
-          name="description"
-          content="GNOST is a Python package that helps you understand unfamiliar codebases by finding entry points, execution flow, and core logic."
-        />
+        <title>{title} | Mohd Zain</title>
+        <meta name="description" content={description} />
         <meta name="robots" content="index,follow" />
       </Helmet>
-      <div id="gnost" className="bg-background min-h-screen pt-8 pb-20">
-        <div className="mx-auto w-full max-w-[900px] px-6 py-8 md:px-0">
-          <Breadcrumbs
-            className="mb-7"
-            items={[
-              { label: "Home", to: "/" },
-              { label: "Projects", to: "/projects" },
-              { label: "Gnost" },
-            ]}
-          />
-          <SectionHeader
-            as="h1"
-            title="GNOST - Codebase Knowledge"
-            subtitle="A Python package that helps you understand unfamiliar codebases by finding entry points, execution flow, and core logic."
-            className="mb-6"
-          />
-          <div>
-            <div>
-              <div className="pb-6">
-                <p style={{ textAlign: "left" }}>
-                  GNOST is a python package that helps understand unfamiliar
-                  codebases by automatically identifying entry points, execution
-                  flow, and core logic. It provides a quick starting point for
-                  navigating large repositories and building a mental model of
-                  how a project works.
-                </p>
-                <p style={{ textAlign: "left" }}>
-                  The name GNOST is inspired by{" "}
-                  <span className="italic font-extrabold">gnosis</span> (Greek:
-                  γνῶσις) the Greek word for knowledge. It becomes GNOST to
-                  emphasize{" "}
-                  <span className="italic font-extrabold">code knowledge</span>
-                </p>
-                <h5 className="mt-6 mb-3">What GNOST Does</h5>
-                <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-                  {FEATURES.map((f, i) => (
-                    <div
-                      key={f.title}
-                      className="rounded-lg bg-card text-card-foreground border h-full p-4"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="bg-primary/10 text-primary flex size-[38px] shrink-0 items-center justify-center rounded-full">
-                          <Icon name={f.icon} className="size-[14px]" />
-                        </div>
-                        <div>
-                          <div className="mb-1 text-[14px] font-semibold">
-                            <span className="text-primary mr-1">
-                              {String(i + 1).padStart(2, "0")}
-                            </span>{" "}
-                            {f.title}
-                          </div>
-                          <div className="text-muted-foreground text-[13px]">
-                            {f.desc}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <h5 className="mt-6">Supported Languages</h5>
-                <div className="flex flex-wrap gap-2">
-                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-600/10 text-green-600 dark:text-green-400">
-                    <Icon name="python" className="size-[1em] mr-2" />
-                    Python
-                  </span>
-                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-600/10 text-green-600 dark:text-green-400">
-                    <Icon name="square-js" className="size-[1em] mr-2" />
-                    JavaScript
-                  </span>
-                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-600/10 text-green-600 dark:text-green-400">
-                    <Icon name="code" className="size-[1em] mr-2" />
-                    TypeScript
-                  </span>
-                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full bg-green-600/10 text-green-600 dark:text-green-400">
-                    <Icon name="java" className="size-[1em] mr-2" />
-                    Java
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="mt-2 grid grid-cols-1 items-start gap-4 md:grid-cols-2">
-              <div className="rounded-lg bg-card text-card-foreground border ">
-                <div className="p-4">
-                  <h5 className="">
-                    <Icon name="paperclip" className="size-[1em] mr-2" />
-                    Quick Links
-                  </h5>
-                  <p className="text-muted-foreground font-bold">
-                    Access the full documentation, PyPI package page and github
-                    repo.
-                  </p>
-                  <div className="grid gap-4">
-                    <a
-                      className={cn(
-                        buttonVariants({ variant: "default", size: "sm" }),
-                        "bg-sky-600 text-white hover:bg-sky-700",
-                      )}
-                      href="https://gnost.readthedocs.io"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Icon name="file" className="size-[1em] mr-2" />
-                      Full Documentation
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({ variant: "default", size: "sm" }),
-                        "bg-green-600 text-white hover:bg-green-700",
-                      )}
-                      href="https://pypi.org/project/gnost"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Icon name="download" className="size-[1em] mr-2" />
-                      PyPI Package
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({ variant: "default", size: "sm" }),
-                        "bg-neutral-900 text-white hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900",
-                      )}
-                      href="https://github.com/mohdzain98/gnost"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <Icon name="github" className="size-[1em] mr-2" />
-                      Source
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg border bg-card text-card-foreground">
-                <div className="p-4">
-                  <h5 className="">
-                    <Icon
-                      name="download"
-                      className="size-[0.875em] mr-2 mb-2"
-                    />
-                    Installation
-                  </h5>
-                  <div
-                    className="relative bg-muted border rounded-md p-4"
-                    style={{ maxWidth: "400px" }}
-                  >
-                    {/* The Code */}
-                    <code className="text-foreground">{command}</code>
-
-                    {/* The Button: position-absolute to float it right */}
-                    <button
-                      onClick={handleCopy}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "sm" }),
-                        "absolute top-1/2 right-0 -translate-y-1/2 mr-2",
-                      )}
-                      style={{ fontSize: "0.8rem" }}
-                      title="Copy to clipboard"
-                    >
-                      {/* Toggle Text or Icon based on state */}
-                      {copied ? (
-                        <span>
-                          <Icon name="check" className="size-[1em]" /> Copied!
-                        </span>
-                      ) : (
-                        <span>
-                          <Icon name="copy" className="size-[1em]" /> Copy
-                        </span>
-                      )}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <article className="mx-auto w-full max-w-[1000px] px-6 pt-16 pb-20 md:px-12 [&_section]:mt-10 [&_section]:p-0 [&_h2]:mb-4 [&_h2]:text-xl [&_h2]:font-bold">
+        <Breadcrumbs
+          className="mb-7"
+          items={[
+            { label: "Home", to: "/" },
+            { label: "Projects", to: "/projects" },
+            { label: "GNOST" },
+          ]}
+        />
+        <SectionHeader
+          as="h1"
+          title={title}
+          subtitle={description}
+          className="mb-3 md:mb-3"
+        />
+        <div className="flex flex-wrap gap-2">
+          {headerLinks.map(([label, href]) => (
+            <a
+              key={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonVariants({
+                variant: "secondary",
+                className: "bg-foreground/10 hover:bg-foreground/15",
+              })}
+            >
+              {label}
+            </a>
+          ))}
         </div>
-      </div>
+
+        <section>
+          <h2>Onboard to a codebase</h2>
+          <p>
+            Start with a local checkout or a Git repository URL. GNOST reads
+            source and project configuration without executing the project. It
+            finds likely entry points, traces imports, and identifies files
+            worth reading first. It also extracts setup, run, and test
+            instructions and environment variable names from files such as
+            package manifests, Makefiles, and example environment files.
+          </p>
+          <p>
+            Onboarding writes an <code>ONBOARD.md</code> guide,{" "}
+            <code>insights.json</code>, and Mermaid diagrams under{" "}
+            <code>.gnost/</code>. GNOST supports Python, JavaScript, TypeScript,
+            and Java using Python’s AST and Tree-sitter parsers. It detects HTTP
+            routes in supported frameworks, flags circular imports, and traces
+            function-level paths for Python.
+          </p>
+          <CodeBlock
+            id="gnost-onboard"
+            language="bash"
+            code={"pip install gnost\ngnost onboard .\ngnost open flow"}
+          />
+        </section>
+
+        <section>
+          <h2>Explore dependencies in the browser</h2>
+          <p>
+            Start with a folder map, drill into a folder, and select a file to
+            see what it imports and what depends on it. Hovering highlights
+            connected nodes. The explorer also supports zoom, theme switching,
+            and PNG export. These screenshots show GNOST analyzing its own
+            source.
+          </p>
+          <div className="grid gap-5 md:grid-cols-2">
+            <figure>
+              <ExpandableImage
+                src={folderView}
+                alt="GNOST folder dependency overview"
+                width={1500}
+                height={900}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground">
+                Folder dependency overview
+              </figcaption>
+            </figure>
+            <figure>
+              <ExpandableImage
+                src={fileView}
+                alt="GNOST file view highlighting a selected file and its connections"
+                width={1500}
+                height={900}
+              />
+              <figcaption className="mt-2 text-sm text-muted-foreground">
+                File-level connections
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <h2>Review code quality and change impact</h2>
+          <p>
+            <code>gnost analyze</code> scores maintainability, robustness,
+            observability, and readability, then ranks findings by priority.{" "}
+            <code>gnost changes</code> compares a change with a Git ref and
+            reports affected files, routes, and new dependency cycles.
+          </p>
+          <CodeBlock
+            id="gnost-review"
+            language="bash"
+            code={
+              "gnost analyze . --parallel -o\ngnost open report\ngnost changes origin/main"
+            }
+          />
+          <figure className="mx-auto my-6 max-w-3xl">
+            <ExpandableImage
+              src={reportView}
+              alt="GNOST code quality report with scores and prioritized findings"
+              width={2574}
+              height={1238}
+            />
+            <figcaption className="mt-2 text-sm text-muted-foreground">
+              Example code quality report
+            </figcaption>
+          </figure>
+          <p>
+            In CI, set a minimum quality score with <code>--fail-under</code> or
+            export findings as SARIF. The GitHub Action can summarize change
+            impact in a pull request, and an optional
+            <code> .gnost.toml</code> file controls exclusions, weights, and
+            thresholds.
+          </p>
+          <a
+            href={docs + "/ci.html"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={guideLinkClass}
+          >
+            Read the CI Guide{" "}
+            <ArrowRight aria-hidden="true" className="size-4" />
+          </a>
+        </section>
+
+        <section>
+          <h2>Installation channels</h2>
+          <p>
+            GNOST is available through pip, uv, pipx, npm, Docker, and Maven.
+            The npm package bundles standalone binaries for Apple silicon macOS,
+            x86-64 Linux, and x86-64 Windows. Maven exposes GNOST commands as
+            build goals.
+          </p>
+          <CodeBlock
+            id="gnost-npx"
+            language="bash"
+            code="npx gnost-cli onboard ."
+          />
+          <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
+            {installationLinks.map(([label, href]) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={buttonVariants({
+                    variant: "secondary",
+                    size: "sm",
+                  })}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={docs + "/install.html"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={guideLinkClass}
+          >
+            Read the Installation Guide{" "}
+            <ArrowRight aria-hidden="true" className="size-4" />
+          </a>
+        </section>
+      </article>
     </>
   );
-};
-
-export default Gnost;
+}

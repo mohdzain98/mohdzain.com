@@ -1,5 +1,7 @@
 import type { Project, ProjectEntry } from "@/types";
 
+const gnostTechs = ["Python", "PyPI", "npm", "Maven", "Docker"];
+
 const projects: Project[] = [
   {
     Name: "Docschat",
@@ -25,7 +27,7 @@ const projects: Project[] = [
     Name: "GNOST - Codebase Knowledge",
     Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
     type: "pip package",
-    Techs: ["Python", "pypi"],
+    Techs: gnostTechs,
     Tools: ["VS code", "Git"],
     Live: "https://pypi.org/project/gnost/",
     href: "View on PyPI",
@@ -49,7 +51,7 @@ const allprojects: ProjectEntry[] = [
     category: "python-package",
     type: "pip package",
     Desc: "GNOST is a python package that helps understand unfamiliar codebases by automatically identifying entry points, execution flow, and core logic.",
-    Techs: ["python", "pypi"],
+    Techs: gnostTechs,
     Tools: ["VS code", "Git"],
     img: "gnost.webp",
     button: [
@@ -307,24 +309,24 @@ const allprojects: ProjectEntry[] = [
     ],
   },
   {
-    Name: "Retail Price Optimization",
-    category: "deep-learning",
-    type: "prediction",
-    Desc: "Built an ANN-based retail price optimization model to predict optimal pricing using historical demand data.",
-    Techs: ["ANN", "Pandas", "Sklearn", "TensorFlow"],
+    Name: "Retail Price Promo Optimization",
+    category: "machine-learning",
+    type: "pricing & promotion optimization",
+    Desc: "Built a retail pricing pipeline that estimates shelf-price and discount elasticity, forecasts demand, and optimizes prices and a 13-week promotion calendar. The optimized scenario projected 18.7% more profit than current prices without promotions.",
+    Techs: ["Python", "PyMC", "NLopt", "PuLP", "HiGHS", "Streamlit"],
     Tools: ["Jupyter NB", "Git"],
     img: "rpo.webp",
     button: [
       {
-        name: "Details",
-        link: "https://old.mohdzain.com/projects/retail_price_optimization.html",
+        name: "Read the blog post",
+        link: "/blogs/retail-price-promo-optimization",
         icon: "arrow-up-right-from-square",
         bg: "primary",
-        ref: "_blank",
+        ref: "_self",
       },
       {
         name: "Github",
-        link: "https://github.com/mohdzain98/Retail_price_optimization",
+        link: "https://github.com/mohdzain98/retail-price-promo-optimization",
         icon: "github",
         bg: "dark",
         ref: "_blank",

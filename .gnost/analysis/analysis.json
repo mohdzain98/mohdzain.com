@@ -1,0 +1,3467 @@
+{
+  "id": "83d20bf6-96a1-4cfc-8e79-7f16d9bf8ad3",
+  "timestamp": "2026-11-27T21:49:45.918778",
+  "target_path": "/Users/mohdzain/Documents/GitHub/mohdzain.com",
+  "findings": [
+    {
+      "id": "31538cae-c477-4754-865b-97cca7a3d1a4",
+      "title": "Function is too long",
+      "description": "`RadarChart` is 164 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/common/RadarChart.tsx",
+        "line_number": 45,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "RadarChart",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.841729",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 1,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "d7d851db-4eb5-4071-9a09-4c13dbb02f44",
+      "title": "Function is too long",
+      "description": "`Navbar` is 214 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/layout/Navbar.tsx",
+        "line_number": 36,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Navbar",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.845533",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "1ff40292-fa08-4a95-a3d1-342ebdb7ce5c",
+      "title": "Function is too long",
+      "description": "`AxisSpending` is 544 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AxisSpending.tsx",
+        "line_number": 112,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "AxisSpending",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.882318",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "73210f84-df70-4e2c-99c1-b5d51e77bcd1",
+      "title": "Function is too long",
+      "description": "`Gnost` is 204 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/Gnost.tsx",
+        "line_number": 47,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Gnost",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.887929",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "f7086d0d-701a-49d1-acb1-b1425b55d395",
+      "title": "Function is too long",
+      "description": "`AxisSpendingSetup` is 189 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AxisSpendingSetup.tsx",
+        "line_number": 320,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "AxisSpendingSetup",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.894393",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "cca56a17-baa7-4f7f-a915-867f1b1e2241",
+      "title": "Function is too long",
+      "description": "`LoanLensAI` is 385 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/achievements/LoanLensAI.tsx",
+        "line_number": 117,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "LoanLensAI",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.899571",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "5a117370-e12a-47ca-a7ad-0c2e2928e745",
+      "title": "Function is too long",
+      "description": "`Blogs` is 129 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/BlogsIndex.tsx",
+        "line_number": 11,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Blogs",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.903413",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "9a6c84f2-059c-4130-980c-335e23e66036",
+      "title": "Function is too long",
+      "description": "`RetailPricePromo` is 172 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/retail-price-promo/RetailPricePromo.tsx",
+        "line_number": 51,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "RetailPricePromo",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.907824",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "f4698545-e08b-4e28-8086-a56cfb706367",
+      "title": "Function is too long",
+      "description": "`Results` is 458 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/Results.tsx",
+        "line_number": 34,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Results",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.912623",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "ddd94de9-1d41-4dac-ab76-d41f731f5e86",
+      "title": "Function is too long",
+      "description": "`Encryption` is 206 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/Encryption.tsx",
+        "line_number": 16,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Encryption",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.917077",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "e25a7612-cd63-4120-8029-91f9151d7ad1",
+      "title": "Function is too long",
+      "description": "`References` is 179 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/References.tsx",
+        "line_number": 3,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "References",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.919463",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 1,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "66b88b2f-09bb-4c63-9f82-98202fa2a04b",
+      "title": "Function is too long",
+      "description": "`Decryption` is 136 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/Decryption.tsx",
+        "line_number": 6,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Decryption",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.921284",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 1,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c190e30b-d5a8-4bf3-b5b0-e2fcd2841497",
+      "title": "Function is too long",
+      "description": "`CimagesCrypt` is 651 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/CimagesCrypt.tsx",
+        "line_number": 43,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "CimagesCrypt",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.926819",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "56283bbc-e9e5-421a-8a22-0ce8869f084b",
+      "title": "Function is too long",
+      "description": "`LLMTracing` is 390 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/tracing/LLMTracing.tsx",
+        "line_number": 12,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "LLMTracing",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.932778",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "de8d3444-7226-441e-ac81-7e011f0eb48e",
+      "title": "Function is too long",
+      "description": "`TracingExample` is 361 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/tracing/TracingExample.tsx",
+        "line_number": 6,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "TracingExample",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.935264",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 1,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "6ad7f4e1-986d-4a16-8b80-2227cc525c16",
+      "title": "Function is too long",
+      "description": "`AxisSpendingBlog` is 730 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/axis-spending/AxisSpendingBlog.tsx",
+        "line_number": 12,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "AxisSpendingBlog",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.940362",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "cc1f24c8-1c43-449f-a205-66e0c9a646ef",
+      "title": "Function is too long",
+      "description": "`Careerpath` is 271 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Careerpath.tsx",
+        "line_number": 86,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Careerpath",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.947699",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "cross_references": [
+          "18079a20-b8fe-4c86-b483-66f1e8f55d47",
+          "c73f0468-9bc2-409e-b09e-015ac3ccc9dc",
+          "fa374002-a449-4a18-a4ca-f1da008d6371"
+        ],
+        "file_issue_count": 4,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "45944ed8-1a20-4947-9e5a-b14d0c5c7051",
+      "title": "Function is too long",
+      "description": "`Intro` is 330 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Intro.tsx",
+        "line_number": 26,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Intro",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.955188",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 1,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "46615627-8068-4be8-a71f-5cfa2887bfe6",
+      "title": "Function is too long",
+      "description": "`ResearchItem` is 144 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Research.tsx",
+        "line_number": 20,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "ResearchItem",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.958659",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "7d8972c9-f60e-4443-835d-88d5ef27b66c",
+      "title": "Function is too long",
+      "description": "`Head` is 390 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Head.tsx",
+        "line_number": 67,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Head",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.963660",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "db7ba788-ea25-4f32-a338-5b1a5b871591",
+      "title": "Function is too long",
+      "description": "`Skills` is 164 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Skills.tsx",
+        "line_number": 285,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Skills",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.970119",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c24c3d0c-95d9-4243-b0bf-598909c38a9a",
+      "title": "Function is too long",
+      "description": "`Experience` is 150 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "medium",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/experience/Experience.tsx",
+        "line_number": 205,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "Experience",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.976683",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 59.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "9eea9fa2-2610-4205-8c28-895e213ffd62",
+      "title": "File is too long",
+      "description": "The file has 657 lines (limit 500)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AxisSpending.tsx",
+        "line_number": 1,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FILE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Split the file by responsibility.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.882387",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "8c9114ec-0e7e-4542-85b8-4ed52b37aff1",
+      "title": "File is too long",
+      "description": "The file has 510 lines (limit 500)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AxisSpendingSetup.tsx",
+        "line_number": 1,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FILE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Split the file by responsibility.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.894444",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "329452d6-a2f0-414b-b66d-c72893bf6bea",
+      "title": "File is too long",
+      "description": "The file has 503 lines (limit 500)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/achievements/LoanLensAI.tsx",
+        "line_number": 1,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FILE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Split the file by responsibility.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.899621",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "e697b0d9-4822-4d99-8761-43aeab470202",
+      "title": "Function is too long",
+      "description": "`<anonymous>` is 61 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/BlogsIndex.tsx",
+        "line_number": 74,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "<anonymous>",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.903420",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "e172e2f9-9173-4c7f-84d4-09e1f1867498",
+      "title": "File is too long",
+      "description": "The file has 695 lines (limit 500)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/CimagesCrypt.tsx",
+        "line_number": 1,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FILE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Split the file by responsibility.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.926914",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c4facf0c-74c6-45dd-aaca-6d11d2048fbd",
+      "title": "File is too long",
+      "description": "The file has 743 lines (limit 500)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/axis-spending/AxisSpendingBlog.tsx",
+        "line_number": 1,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FILE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Split the file by responsibility.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.940449",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c73f0468-9bc2-409e-b09e-015ac3ccc9dc",
+      "title": "Function is too long",
+      "description": "`<anonymous>` is 91 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Careerpath.tsx",
+        "line_number": 165,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "<anonymous>",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.947705",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "cross_references": [
+          "cc1f24c8-1c43-449f-a205-66e0c9a646ef",
+          "18079a20-b8fe-4c86-b483-66f1e8f55d47",
+          "fa374002-a449-4a18-a4ca-f1da008d6371"
+        ],
+        "file_issue_count": 4,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "fa374002-a449-4a18-a4ca-f1da008d6371",
+      "title": "Function is too long",
+      "description": "`<anonymous>` is 75 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Careerpath.tsx",
+        "line_number": 276,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "<anonymous>",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.947710",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "cross_references": [
+          "cc1f24c8-1c43-449f-a205-66e0c9a646ef",
+          "18079a20-b8fe-4c86-b483-66f1e8f55d47",
+          "c73f0468-9bc2-409e-b09e-015ac3ccc9dc"
+        ],
+        "file_issue_count": 4,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "093bddcd-57f6-45ed-857f-3eef4b35f38d",
+      "title": "Function is too complex",
+      "description": "`ResearchItem` has a cyclomatic complexity of 11 (limit 10)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Research.tsx",
+        "line_number": 20,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "ResearchItem",
+        "class_name": null
+      },
+      "rule_id": "MNT-COMPLEXITY",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Split the function into smaller ones, or replace long if/else chains with a lookup.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.958348",
+      "tags": [
+        "rule_engine",
+        "complexity",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "f39fc67a-2e03-45a3-bdfc-599573bf80eb",
+      "title": "Function is too long",
+      "description": "`<anonymous>` is 94 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Head.tsx",
+        "line_number": 73,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "<anonymous>",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.963666",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "0180ea29-96f5-483a-8219-f1216921036b",
+      "title": "Function is too long",
+      "description": "`<anonymous>` is 90 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Head.tsx",
+        "line_number": 74,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "<anonymous>",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.963671",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "b0c9a486-4ae2-472b-8bfd-dea0f30adda8",
+      "title": "Function is too long",
+      "description": "`ExperienceCard` is 105 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/experience/Experience.tsx",
+        "line_number": 99,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "ExperienceCard",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.976677",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 3,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "e6219aba-f0d3-4bfa-851a-ff500ae3fd3f",
+      "title": "Function is too long",
+      "description": "`CodeBlock` is 66 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/layout/CodeBlock.tsx",
+        "line_number": 28,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "CodeBlock",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.853165",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 1,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "01955817-c519-4af1-84f9-3c174a9b973e",
+      "title": "Function is too long",
+      "description": "`AchievementArt` is 104 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Achievements.tsx",
+        "line_number": 55,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "AchievementArt",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.951339",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "bee75fc6-45e6-4f5d-bc4e-15c1b4ef3189",
+      "title": "Function is too long",
+      "description": "`IndustryPreview` is 68 lines long (limit 60)",
+      "details": null,
+      "clubbed": null,
+      "category": "quality",
+      "severity": "low",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/IndustryPreview.tsx",
+        "line_number": 25,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": "IndustryPreview",
+        "class_name": null
+      },
+      "rule_id": "MNT-LONG-FUNCTION",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Extract the steps into named functions.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "maintainability",
+      "timestamp": "2026-11-27T21:49:47.973444",
+      "tags": [
+        "size",
+        "rule_engine",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 49.0,
+        "file_issue_count": 2,
+        "category_prevalence": 37,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "a07e6a0b-a5fd-4236-ab26-cbf3e277ff8f",
+      "title": "Line is too long",
+      "description": "The line is 136 characters (limit 120) (4 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/layout/Navbar.tsx",
+        "line_number": 32,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.073902",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "b50a09d2-6472-4a6d-8e6b-90235ac9c017",
+      "title": "Line is too long",
+      "description": "The line is 179 characters (limit 120) (17 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AxisSpending.tsx",
+        "line_number": 14,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.098138",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "e51f45f8-bfee-46c6-a366-0d4120c40903",
+      "title": "Line is too long",
+      "description": "The line is 149 characters (limit 120) (7 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/Gnost.tsx",
+        "line_number": 69,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.101236",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "507dde4b-4996-4cc9-bbc4-98b0eb93ad13",
+      "title": "Line is too long",
+      "description": "The line is 123 characters (limit 120) (6 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AxisSpendingSetup.tsx",
+        "line_number": 139,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.105174",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "9c337f7f-853f-400d-9103-af164ba4dd9d",
+      "title": "Line is too long",
+      "description": "The line is 144 characters (limit 120) (9 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/achievements/LoanLensAI.tsx",
+        "line_number": 67,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.108346",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c3c8d76d-a4ee-4ef2-9bde-be3d437c90fb",
+      "title": "Line is too long",
+      "description": "The line is 135 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/BlogsIndex.tsx",
+        "line_number": 66,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.110503",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "0f4db1c3-1753-4220-9260-7bb57192ed71",
+      "title": "Line is too long",
+      "description": "The line is 194 characters (limit 120) (4 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/retail-price-promo/RetailPricePromo.tsx",
+        "line_number": 8,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.113303",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "5bfdc40b-21d0-4933-b3cf-826121887ac5",
+      "title": "Line is too long",
+      "description": "The line is 142 characters (limit 120) (4 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/Results.tsx",
+        "line_number": 143,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.116022",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "2f4f9ad2-e201-44fc-a907-d7c9183a1bb6",
+      "title": "Line is too long",
+      "description": "The line is 162 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/Encryption.tsx",
+        "line_number": 103,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.118401",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "2fba927d-04b0-4991-a5e5-f2e95fe07007",
+      "title": "Line is too long",
+      "description": "The line is 144 characters (limit 120) (4 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/cryptosystem/CimagesCrypt.tsx",
+        "line_number": 64,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.123618",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "7f0baff7-4287-48c4-8e51-e3e05fda8ab4",
+      "title": "Line is too long",
+      "description": "The line is 138 characters (limit 120) (3 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/tracing/LLMTracing.tsx",
+        "line_number": 23,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.126835",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "231756d2-b9b6-4568-829b-be84ff201301",
+      "title": "Line is too long",
+      "description": "The line is 200 characters (limit 120) (6 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/axis-spending/AxisSpendingBlog.tsx",
+        "line_number": 23,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.130877",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "18079a20-b8fe-4c86-b483-66f1e8f55d47",
+      "title": "Line is too long",
+      "description": "The line is 129 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Careerpath.tsx",
+        "line_number": 139,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.135283",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "cross_references": [
+          "cc1f24c8-1c43-449f-a205-66e0c9a646ef",
+          "c73f0468-9bc2-409e-b09e-015ac3ccc9dc",
+          "fa374002-a449-4a18-a4ca-f1da008d6371"
+        ],
+        "file_issue_count": 4,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "ec5312f3-cc1f-41f0-957f-16ae1363efcf",
+      "title": "Line is too long",
+      "description": "The line is 130 characters (limit 120) (4 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Research.tsx",
+        "line_number": 83,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.142190",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "be896078-f4da-4305-83de-5992cf5369c0",
+      "title": "Line is too long",
+      "description": "The line is 135 characters (limit 120) (3 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Skills.tsx",
+        "line_number": 354,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.149295",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "8a59e394-7311-4374-af9c-ed29f93a266e",
+      "title": "Line is too long",
+      "description": "The line is 351 characters (limit 120) (14 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/experience/Experience.tsx",
+        "line_number": 33,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.157623",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 3,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "447a3f93-a52e-4b31-aabe-96af62f29772",
+      "title": "Line is too long",
+      "description": "The line is 131 characters (limit 120) (2 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Achievements.tsx",
+        "line_number": 164,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.137522",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "99ef2882-4908-4673-93a3-efdb13fcb3c4",
+      "title": "Line is too long",
+      "description": "The line is 145 characters (limit 120) (2 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/IndustryPreview.tsx",
+        "line_number": 33,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.151528",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 2,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "e06ef5f4-b44d-4f5d-8526-5fe83290542b",
+      "title": "Line is too long",
+      "description": "The line is 439 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/icons/Brands.tsx",
+        "line_number": 23,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.063759",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "ef1bf4e7-2865-4ad4-b37d-aaf2f50a6fe7",
+      "title": "Line is too long",
+      "description": "The line is 152 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/common/TechChip.tsx",
+        "line_number": 16,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.068466",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "212db4a2-9c90-4138-8f50-3ac31f6ddbe2",
+      "title": "Line is too long",
+      "description": "The line is 165 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/common/AnchorNav.tsx",
+        "line_number": 24,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.068920",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "3551db7a-c334-48f8-87ce-56333b3ffd21",
+      "title": "Line is too long",
+      "description": "The line is 130 characters (limit 120) (2 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/layout/Footer.tsx",
+        "line_number": 21,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.076603",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "d7d36b08-5777-4efa-baad-acf6086516f2",
+      "title": "Line is too long",
+      "description": "The line is 129 characters (limit 120) (2 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/layout/SectionHeader.tsx",
+        "line_number": 19,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.077036",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "272a991c-8d7a-4cf4-bc7f-65a083f1ed67",
+      "title": "Line is too long",
+      "description": "The line is 151 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/layout/ContentsMenu.tsx",
+        "line_number": 54,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.077516",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "3039ad98-64f1-465a-871d-4e5ae82dfa6e",
+      "title": "Line is too long",
+      "description": "The line is 278 characters (limit 120) (5 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/tabs.tsx",
+        "line_number": 26,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.079434",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "9f61b3fc-bf9b-4a3a-8c0a-596d9b52e902",
+      "title": "Line is too long",
+      "description": "The line is 163 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/card.tsx",
+        "line_number": 22,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.080084",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "4b5b09f0-5e92-482e-983c-ffb0ceccba0d",
+      "title": "Line is too long",
+      "description": "The line is 161 characters (limit 120) (6 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/sheet.tsx",
+        "line_number": 38,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.081303",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c86a6084-fe75-41c9-8b71-208e519c9eec",
+      "title": "Line is too long",
+      "description": "The line is 430 characters (limit 120) (2 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/tooltip.tsx",
+        "line_number": 44,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.082453",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "bf7b1622-de28-41d3-ad36-59b2b46ea7dc",
+      "title": "Line is too long",
+      "description": "The line is 424 characters (limit 120) (2 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/badge.tsx",
+        "line_number": 7,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.083746",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "011a550f-e525-4aa5-9525-e2c655fabe54",
+      "title": "Line is too long",
+      "description": "The line is 157 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/table.tsx",
+        "line_number": 70,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.084353",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "23534f4c-bf83-44a7-897b-026dee462280",
+      "title": "Line is too long",
+      "description": "The line is 169 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/separator.tsx",
+        "line_number": 17,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.084846",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "a8068cb4-a1c0-48eb-93d2-decbd26ccbf7",
+      "title": "Line is too long",
+      "description": "The line is 492 characters (limit 120) (3 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/button.tsx",
+        "line_number": 7,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.085304",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "ac28bbf0-b86f-4480-8386-7172b966e126",
+      "title": "Line is too long",
+      "description": "The line is 579 characters (limit 120) (6 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/dropdown-menu.tsx",
+        "line_number": 42,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.086498",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "37ce8e9e-6075-428e-9380-c7a34432eaf7",
+      "title": "Line is too long",
+      "description": "The line is 453 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/components/ui/input.tsx",
+        "line_number": 10,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.087317",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "cad5cd51-a040-4c49-9b4b-645cc6ab4160",
+      "title": "Line is too long",
+      "description": "The line is 137 characters (limit 120) (13 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/content/projects.ts",
+        "line_number": 6,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.089488",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "66bd6885-5575-4359-907d-5b19389e961b",
+      "title": "Line is too long",
+      "description": "The line is 271 characters (limit 120) (24 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/content/experience.ts",
+        "line_number": 9,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.091987",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "c2e9d98a-b48b-491f-979d-dec4f0c320d1",
+      "title": "Line is too long",
+      "description": "The line is 141 characters (limit 120) (10 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/industry/Industry.tsx",
+        "line_number": 18,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.095072",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "2cb47d5f-3e2a-4dc3-9ef5-ee1ea635f636",
+      "title": "Line is too long",
+      "description": "The line is 153 characters (limit 120) (7 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/projects/AllProjects.tsx",
+        "line_number": 20,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.102920",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "8b605e93-2659-4eff-80a0-63f591cfc3cd",
+      "title": "Line is too long",
+      "description": "The line is 146 characters (limit 120) (7 in this file, the first is shown)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/blogs/blogRegistry.ts",
+        "line_number": 37,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.111553",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "7a32d33a-838a-4b91-9f9e-870f8e6df153",
+      "title": "Line is too long",
+      "description": "The line is 174 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/Home.tsx",
+        "line_number": 18,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.133036",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "1ed9b095-1be7-496f-8109-090da2b6e5a2",
+      "title": "Line is too long",
+      "description": "The line is 128 characters (limit 120)",
+      "details": null,
+      "clubbed": null,
+      "category": "readability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "src/features/home/components/Projects.tsx",
+        "line_number": 23,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "RDB-LONG-LINE",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Break the line, or let a formatter (Prettier) do it.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "readability",
+      "timestamp": "2026-11-27T21:49:48.133441",
+      "tags": [
+        "rule_engine",
+        "formatting",
+        "typescript"
+      ],
+      "extra_data": {
+        "language": "typescript",
+        "priority_score": 37.0,
+        "file_issue_count": 1,
+        "category_prevalence": 41,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "6253ae84-36dd-4ccf-9d66-5bc082c56e2a",
+      "title": "Console output instead of a logger",
+      "description": "`console.log` is used for output",
+      "details": null,
+      "clubbed": null,
+      "category": "observability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "scripts/optimize-images.mjs",
+        "line_number": 50,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "OBS-PRINT-LOGGING",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Use a logger with levels (pino, winston, a framework logger) and remove debug output.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "observability",
+      "timestamp": "2026-11-27T21:49:48.060193",
+      "tags": [
+        "logging",
+        "javascript",
+        "rule_engine"
+      ],
+      "extra_data": {
+        "language": "javascript",
+        "priority_score": 36.0,
+        "file_issue_count": 1,
+        "category_prevalence": 2,
+        "complexity_rank": 1
+      }
+    },
+    {
+      "id": "57aa99dd-2eee-42da-95e3-ab9d6b63b55b",
+      "title": "Console output instead of a logger",
+      "description": "`console.log` is used for output",
+      "details": null,
+      "clubbed": null,
+      "category": "observability",
+      "severity": "info",
+      "confidence_score": 0.8,
+      "location": {
+        "file_path": "scripts/sitemap.mjs",
+        "line_number": 64,
+        "end_line_number": null,
+        "column": null,
+        "end_column": null,
+        "function_name": null,
+        "class_name": null
+      },
+      "rule_id": "OBS-PRINT-LOGGING",
+      "cwe_id": null,
+      "cve_id": null,
+      "code_snippet": null,
+      "remediation_guidance": "Use a logger with levels (pino, winston, a framework logger) and remove debug output.",
+      "remediation_complexity": "simple",
+      "compliance_frameworks": [],
+      "owasp_category": null,
+      "source_analyzer": "observability",
+      "timestamp": "2026-11-27T21:49:48.060893",
+      "tags": [
+        "logging",
+        "javascript",
+        "rule_engine"
+      ],
+      "extra_data": {
+        "language": "javascript",
+        "priority_score": 36.0,
+        "file_issue_count": 1,
+        "category_prevalence": 2,
+        "complexity_rank": 1
+      }
+    }
+  ],
+  "analysis_metrics": [
+    {
+      "analyzer_name": "robustness",
+      "execution_time_seconds": 1.9055750370025635,
+      "files_analyzed": 88,
+      "findings_count": 0,
+      "error_count": 0,
+      "warnings_count": 0,
+      "success": true,
+      "error_message": null,
+      "capped_by_severity": {}
+    },
+    {
+      "analyzer_name": "maintainability",
+      "execution_time_seconds": 0.16147780418395996,
+      "files_analyzed": 88,
+      "findings_count": 37,
+      "error_count": 0,
+      "warnings_count": 0,
+      "success": true,
+      "error_message": null,
+      "capped_by_severity": {}
+    },
+    {
+      "analyzer_name": "observability",
+      "execution_time_seconds": 0.07493090629577637,
+      "files_analyzed": 88,
+      "findings_count": 2,
+      "error_count": 0,
+      "warnings_count": 0,
+      "success": true,
+      "error_message": null,
+      "capped_by_severity": {}
+    },
+    {
+      "analyzer_name": "readability",
+      "execution_time_seconds": 0.10280084609985352,
+      "files_analyzed": 88,
+      "findings_count": 41,
+      "error_count": 0,
+      "warnings_count": 0,
+      "success": true,
+      "error_message": null,
+      "capped_by_severity": {}
+    }
+  ],
+  "total_execution_time": 2.2468929290771484,
+  "summary": {
+    "timestamp": "2026-11-27T21:49:48.165481",
+    "target_path": "/Users/mohdzain/Documents/GitHub/mohdzain.com",
+    "analysis_duration": 0.0,
+    "total_findings": 80,
+    "total_analyzers": 4,
+    "successful_analyzers": 4,
+    "failed_analyzers": 0,
+    "severity_breakdown": {
+      "critical": 0,
+      "high": 0,
+      "medium": 22,
+      "low": 15,
+      "info": 43
+    },
+    "category_breakdown": {
+      "security": 0,
+      "privacy": 0,
+      "quality": 37,
+      "performance": 0,
+      "testability": 0,
+      "readability": 41,
+      "observability": 2,
+      "dependency": 0,
+      "maintainability": 0,
+      "compliance": 0
+    },
+    "risk_score": 16.1,
+    "risk_level": "MINIMAL",
+    "files_with_issues": 50,
+    "top_problematic_files": [
+      {
+        "file": "src/features/home/components/Careerpath.tsx",
+        "total": 4,
+        "critical": 0,
+        "high": 0
+      },
+      {
+        "file": "src/features/projects/AxisSpending.tsx",
+        "total": 3,
+        "critical": 0,
+        "high": 0
+      },
+      {
+        "file": "src/features/projects/AxisSpendingSetup.tsx",
+        "total": 3,
+        "critical": 0,
+        "high": 0
+      },
+      {
+        "file": "src/features/achievements/LoanLensAI.tsx",
+        "total": 3,
+        "critical": 0,
+        "high": 0
+      },
+      {
+        "file": "src/features/blogs/BlogsIndex.tsx",
+        "total": 3,
+        "critical": 0,
+        "high": 0
+      }
+    ],
+    "remediation_complexity": {
+      "trivial": 0,
+      "simple": 80,
+      "moderate": 0,
+      "complex": 0,
+      "very_complex": 0
+    },
+    "quick_wins": 0,
+    "compliance_issues": {},
+    "analyzer_performance": {
+      "total_execution_time": 2.2447845935821533,
+      "average_time_per_analyzer": 0.5611961483955383,
+      "fastest_analyzer": "observability",
+      "slowest_analyzer": "robustness",
+      "success_rate": 1.0
+    },
+    "trend_analysis": {
+      "note": "Trend analysis requires historical data",
+      "current_timestamp": "2026-11-27T21:49:45.918778",
+      "baseline_established": true
+    },
+    "analyzed_lines": 11950,
+    "final_score": 8.76,
+    "score": {
+      "method": "density",
+      "final_score": 8.76,
+      "analyzed_lines": 11950,
+      "density": 0.858,
+      "analyzers": {
+        "maintainability": 8.97,
+        "observability": 9.98,
+        "readability": 9.68,
+        "robustness": 10.0
+      }
+    }
+  },
+  "compliance_status": [],
+  "trend_data": [],
+  "analysis_config": {
+    "target_path": "/Users/mohdzain/Documents/GitHub/mohdzain.com",
+    "file_patterns": [
+      "*.py"
+    ],
+    "exclude_patterns": [],
+    "enabled_analyzers": [],
+    "severity_threshold": "info",
+    "parallel_execution": true,
+    "timeout_seconds": 900,
+    "include_low_confidence": false,
+    "max_findings_per_analyzer": 1000
+  }
+}

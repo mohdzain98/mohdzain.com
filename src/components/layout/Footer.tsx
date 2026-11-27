@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="text-center sm:text-left">
           <p className="mb-1 text-sm">&copy; 2026 Mohd Zain</p>
           <p className="mb-0 text-xs text-white/60">
-            Updated on : 05 November, 2026 V: 3.1.0
+            Updated on : 27 November, 2026 V: 3.2.0
           </p>
         </div>
 
